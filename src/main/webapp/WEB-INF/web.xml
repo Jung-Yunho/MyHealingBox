@@ -47,19 +47,13 @@
 	</context-param>
 
 	<servlet>
-		<servlet-name>dispatcher</servlet-name>
-		<!-- <servlet-class>com.newlecture.controller.DispatcherController</servlet-class> -->
-		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
-
-		<!-- <init-param> <param-name>path</param-name> <param-value>/WEB-INF/mapper.properties</param-value> 
-			</init-param> -->
-
-		<init-param>
-			<param-name>contextConfigLocation</param-name>
-			<param-value>/WEB-INF/spring/servlet-context.xml</param-value>
-		</init-param>
-
-	</servlet>
+     <servlet-name>dispatcher</servlet-name>
+     <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+     <init-param>
+        <param-name>contextConfigLocation</param-name> <!-- 파라미터 키와 값 이라고 생각해 -->
+        <param-value>/WEB-INF/spring/servlet-context.xml</param-value>
+     </init-param>
+  </servlet>
 
 	<servlet-mapping>
 		<servlet-name>dispatcher</servlet-name>

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <beans xmlns="http://www.springframework.org/schema/beans"
-	xmlns:mvc="http://www.springframework.org/schema/mvc"
+   xmlns:mvc="http://www.springframework.org/schema/mvc"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:p="http://www.springframework.org/schema/p"
     xmlns:context="http://www.springframework.org/schema/context"
@@ -12,8 +13,9 @@
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context.xsd">
 
-	<mvc:annotation-driven><!--인터셉터 후 중간처리-->
-		<mvc:message-converters> <!-- @ResponseBody로 String 처리할때 한글처리 -->
+   <mvc:annotation-driven>     <!-- 인터셉터 확장 느낌?_? -->
+      <mvc:message-converters> 
+      <!-- @ResponseBody로 String 처리할때 한글처리 -->
          <bean class="org.springframework.http.converter.StringHttpMessageConverter">
             <property name="supportedMediaTypes">
                <list>
@@ -22,40 +24,42 @@
             </property>
          </bean>
       </mvc:message-converters>
-	</mvc:annotation-driven>
-	
+   </mvc:annotation-driven>
+   
     <mvc:resources location="/resources/" mapping="/resources/**"></mvc:resources>
-    
-    <context:component-scan base-package="myhealingbox.controller"/>
+   
+    <context:component-scan base-package="myhealingbox.controller"/>   
+ 
     
       <!-- 타일즈 설정 -->
-   <!-- <bean class="org.springframework.web.servlet.view.tiles3.TilesConfigurer">
+    <bean class="org.springframework.web.servlet.view.tiles3.TilesConfigurer">
        <property name="definitions"  value="/WEB-INF/tiles.xml"/>
-   </bean>
+    </bean>
     
     <bean class="org.springframework.web.servlet.view.UrlBasedViewResolver">
        <property name="viewClass"  value="org.springframework.web.servlet.view.tiles3.TilesView"/>
-       <property name="order"  value="2"/>
-    </bean> -->
+       <property name="order"  value="1"/>    <!-- order1. tiles 먼저 찾아봐 -->
+    </bean>
     
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
       <property name="prefix"  value="/WEB-INF/views/"/>
       <property name="suffix" value=".jsp" />
-    </bean>
-    
-    <bean id="multipartResolver"
+      <property name="order"  value="2"/>  <!-- order2. tiles에서 찾고 없으면 prefix, suffix붙여서 찾아봐 -->
+   </bean>
+   
+   
+   <bean id="multipartResolver"
         class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
-        
+ 
          <!-- setting maximum upload size -->
         <property name="maxUploadSize" value="314572800" />
     </bean>
-
-	
-	
-	<!-- 외부파일로 설정하는 방법 -->
-	<!-- <bean name="/index" class="com.newlecture.controller.IndexController"/>
-	<bean name="/note/list" class="com.newlecture.note.controller.ListController"/>
-	<bean name="/note/detail" class="com.newlecture.note.controller.DetailController"/> -->
+   
+  
+   
+  <!--  <bean name="/index" class="com.newlecture.controller.IndexController"/>
+   <bean name="/note/list" class="com.newlecture.note.controller.ListController"/>
+   <bean name="/note/detail" class="com.newlecture.note.controller.DetailController"/> -->
 
     <!-- ... -->
 

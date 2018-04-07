@@ -14,13 +14,17 @@
        user-scalable="1"
    >
    <title>Insert title here</title>
-   <link href="${root }/resources/css/style.css" type="text/css" rel="stylesheet" />
+   <link href="${root }/resources/css/night-style.css" type="text/css" rel="stylesheet" />
 </head>
 
 <body>
    <!-- header -->
    
    <tiles:insertAttribute name="header" />
+   
+   <!-- aside -->
+   
+   <tiles:insertAttribute name="aside" />
    
    <!-- main -->
    

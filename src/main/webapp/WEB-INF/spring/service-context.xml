@@ -23,14 +23,14 @@
 	   <property name="maxActive" value="30" />
 	</bean>
     
-   <!--  <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
       <property name="dataSource" ref="dataSource" />
-      <property name="mapperLocations" value="classpath:com/newlecture/dao/mybatis/mapper/*.xml" />
+      <property name="mapperLocations" value="classpath:myhealingbox/dao/mybatis/night/mapper/*.xml" />
     </bean>
    
     <bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate">
       <constructor-arg index="0" ref="sqlSessionFactory"></constructor-arg>
-    </bean> -->
+    </bean>
     
     <context:annotation-config /><!-- Autowired가 필요한 곳에서 설정함 -->
 	<!--알파벳 순으로 정렬-->    
@@ -40,7 +40,14 @@
     <bean class="com.newlecture.service.NoteService"/>
     
     <bean class="com.newlecture.service.author.NoteService"/> -->
-    
 
+    <!-- 공통 -->
+    <bean class="myhealingbox.service.MemberService"/>
+
+
+    <!-- 우진 -->
+	<bean class="myhealingbox.dao.mybatis.night.MyBatisVideoDao"/>
+
+	<bean class="myhealingbox.service.night.VideoService"/>
 
 </beans>
