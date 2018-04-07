@@ -1,20 +1,20 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %> 
-
+<c:set var="root" value="${pageContext.request.contextPath}"/>
 
 <header class="header">
       <h1>로고자리</h1>
       <nav class="main-menu">
          <h1 class="hidden">메인메뉴</h1>
          <ul>
-            <li id="ham-button"><a href=""><img src="resources/images/menu_icon.png"/></a></li>
+            <li id="ham-button"><a href=""><img src="${root }/resources/images/menu_icon.png"/></a></li>
             <li>
             	<div>
-		            <a href=""><img src="resources/images/MHB_icon.png"/></a>
+		            <a href=""><img src="${root }/resources/images/MHB_icon.png"/></a>
             	</div>
             	<div>
-		  			<a href=""><img src="resources/images/myinfo_icon.png"/></a>        	
+		  			<a href=""><img src="${root }/resources/images/myinfo_icon.png"/></a>        	
             	</div>
 	  		</li>            
          </ul>

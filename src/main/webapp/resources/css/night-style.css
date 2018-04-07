@@ -49,6 +49,8 @@ li{
    .main-menu{
       position: relative;
       top:-45px;   
+      padding-left:10px;
+      padding-right: 30px;
    }
       .main-menu ul{
          display: flex;
@@ -64,6 +66,10 @@ li{
             justify-content: center;
             align-items: center;
          }
+         
+        	 .main-menu li:last-child div:first-child img{
+					width: 32px;
+				}
      
          
 	/* --- .main----------------------------------------- */
