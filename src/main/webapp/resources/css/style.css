@@ -1,7 +1,8 @@
 @charset "UTF-8";
 
-
+/* 여기는 공통으로 사용하기 때문에 코드 수정/추가/삭제시 아래에 주석달아주세요 */
 /* 초기화, header, main-menu, aside, footer, main은 padding-top만*/
+
 /* -- tag style reset --------------------------- */
 html{
    height: 100%;
@@ -24,6 +25,10 @@ ul{
 
 li{
    
+}
+
+a{
+	/* 초기화가 모더라..(글적) */
 }
 
 /* --- my style cascade ------------------------------- */
@@ -80,11 +85,10 @@ li{
 /* --- .aside----------------------------------------- */				
 .aside{
    width:100%;
-   height: calc(100% - 55px);
+   height: 20%;
    background: #fff; /* #00000077 r,g,b,alpha(투명) */
-   /* position: relative; 밀어내버림 ㅠㅡㅠ */
    position: fixed;
-   top:46px;
+   top:56px;
    left:-85%;
    
    transition:1s;
@@ -92,7 +96,7 @@ li{
 
 .aside.show{
    left: 0%;
-   box-shadow: 3px 3px 3px #544954; /* 마지막 3은 깊이. 종이와 얼마나 떠있는지 */
+   box-shadow: 0px 3px 5px #544954; /* 마지막 3은 깊이. 종이와 얼마나 떠있는지 */
 }
            
          
