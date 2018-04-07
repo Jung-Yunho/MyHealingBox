@@ -1,2 +1,33 @@
 @charset "UTF-8";
 
+
+/* -----------------------.main -----------------------*/
+
+.main{
+	font-size: 11px;
+	font-family: ;
+	
+}
+
+
+/* ---------------------day-main---------------------*/
+
+.day-main{
+	display: flex;
+	flex-direction: column;	
+	justify-content: space-around;
+	align-items: center;	
+}
+
+	.day-main div:first-child img{
+		/* 사이즈 확인하고 넣자 */
+	}
+
+.nav-box{
+	width: 120px;
+	height: 70px;
+	
+	background: gray;
+	opacity: 30%;
+	
+}

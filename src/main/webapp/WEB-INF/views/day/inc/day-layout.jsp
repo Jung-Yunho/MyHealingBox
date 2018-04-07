@@ -5,19 +5,22 @@
 <c:set var="root" value="${pageContext.request.contextPath}"/> 
 <!DOCTYPE html>
 
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
-<meta charset="utf-8"/>
-   <meta name="viewport"  content="width=device-width, initial-scale=1"
+
+	<meta charset="utf-8"/>
+	<meta name="viewport"  content="width=device-width, initial-scale=1"
        minimum-scale="1"
-       user-scalable="1"
-   >
-   <title>Insert title here</title>
+       user-scalable="1"  >
+       
+   <title>나의 힐링 박스 - 낮(Day)</title>
    <link href="${root }/resources/css/style.css" type="text/css" rel="stylesheet" />
+   <link href="${root }/resources/css/day-style.css" type="text/css" rel="stylesheet" />
+   
 </head>
 
 <body>
+
    <!-- header -->
    
    <tiles:insertAttribute name="header" />

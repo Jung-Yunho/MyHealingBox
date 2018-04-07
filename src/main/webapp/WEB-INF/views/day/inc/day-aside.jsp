@@ -3,23 +3,14 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %> 
 
 
-<header class="header">
-      <h1>로고자리</h1>
-      <nav class="main-menu">
-         <h1 class="hidden">메인메뉴</h1>
-         <ul>
-            <li id="sle-button"><a href=""><img src="resources/images/menu_icon.png"/></a></li>
-            <li><a href=""><img src="resources/images/MHB_icon.png"/></a></li>
-  			<li><a href=""><img src="resources/images/myinfo_icon.png"/></a></li>
-            
-         </ul>
-      </nav>
-</header>
+<nav class="aside">
 
+	<h1 class="hidden">메뉴</h1>
+	<ul>
+		<li><a href="">나의 힐링 박스</a></li>
+		<li><a href="">나의 정보</a></li>	
+		<li><a href="">나의 박스</a></li>	
+	</ul>
 
-<script>
-var btn = $('.dot-nav');
-btn.click(function() {
-  $('.nav-view').toggleClass('active');
-});
-</script>
+</nav>
+
