@@ -1,4 +1,4 @@
-package myhealingbox.dao.day;
+/*package myhealingbox.dao.day;
 
 import java.util.List;
 
@@ -12,12 +12,13 @@ public interface WantToDoDao {
 	
 	List<WantToDo> getList(@Param("page") Integer page);
 
-	/*@Select("select * from Note order by regDate desc" + 
+	@Select("select * from Note order by regDate desc" + 
 	         "     limit ${(page-1)*15},15")
 	List<Video> getList(@Param("page") Integer page);
 
 	Video get(Integer id);
 
-	int insert(Video video);*/
+	int insert(Video video);
 
 }
+*/

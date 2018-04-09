@@ -1,4 +1,4 @@
-package myhealingbox.service.day;
+/*package myhealingbox.service.day;
 
 import java.util.List;
 
@@ -49,3 +49,4 @@ public class DayService {
 	
 
 }
+*/
