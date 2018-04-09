@@ -1,4 +1,4 @@
-package myhealingbox.controller.day;
+/*package myhealingbox.controller.day;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -124,3 +124,4 @@ public class DayController {
 	   }
 	   
 }
+*/

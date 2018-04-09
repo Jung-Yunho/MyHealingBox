@@ -1,4 +1,4 @@
-package myhealingbox.dao.day;
+/*package myhealingbox.dao.day;
 
 import java.util.List;
 
@@ -12,13 +12,14 @@ public interface DayCategoryDao {
 
 
 
-/*	@Select("select * from Note order by regDate desc" + 
+	@Select("select * from Note order by regDate desc" + 
 	         "     limit ${(page-1)*15},15")
-*/
+
 	List<DayCategory> getList();
 	
 	DayCategory get(Integer id);
 
-/*	int insert(Video video);
-*/
+	int insert(Video video);
+
 }
+*/
