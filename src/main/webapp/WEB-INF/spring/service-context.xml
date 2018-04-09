@@ -49,5 +49,9 @@
 	<bean class="myhealingbox.dao.mybatis.night.MyBatisVideoDao"/>
 
 	<bean class="myhealingbox.service.night.VideoService"/>
-
+	
+	<!-- 현영 -->
+	<bean class="myhealingbox.dao.mybatis.day.MyBatisDayCategoryDao"/>
+	<bean class="myhealingbox.dao.mybatis.day.MyBatisWantToDoDao"/>
+	<bean class="myhealingbox.service.day.DayService"/>
 </beans>
