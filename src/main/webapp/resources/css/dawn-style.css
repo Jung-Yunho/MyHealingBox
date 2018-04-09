@@ -1,0 +1,28 @@
+@charset "UTF-8";
+
+.main{
+	padding-top: 60px;
+}
+
+.aside{
+	width: 50%;
+	height: 35%;
+}
+
+.category-ul{
+	width: 100%;
+	height: inherit;
+}
+
+.category-list{
+	border-bottom: 2px solid #979797;
+	text-align: center;
+	font-size: 15px;
+	width: 100%;
+	height: 15%;
+}
+
+.category-modify{
+	display: flex;
+		justify-content: flex-end;
+}
