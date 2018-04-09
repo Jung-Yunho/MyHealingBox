@@ -4,7 +4,7 @@ import org.springframework.stereotype.Controller;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 
-@Controller
+@Controller("DayHomeController")
 @RequestMapping("/day/")
 public class HomeController {
 	
