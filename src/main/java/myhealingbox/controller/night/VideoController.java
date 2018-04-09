@@ -109,6 +109,12 @@ public class VideoController {
       return "안녕하세용";
    }
    
+   @RequestMapping("category")
+   public String category() {
+
+      return "night.category";
+   }
+   
    
 }
 
