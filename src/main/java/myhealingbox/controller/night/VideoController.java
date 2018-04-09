@@ -115,6 +115,12 @@ public class VideoController {
       return "night.category";
    }
    
+   @RequestMapping("category-edit")
+   public String categoryEdit() {
+
+      return "night.category-edit";
+   }
+   
    
 }
 

@@ -237,16 +237,32 @@ li{
 	border: 2px solid purple;
 	margin: 30px;
 }
+/* 	.box ul li >div:first-child {
+		display: flex;
+ 	   justify-content: flex-start;
+	} */
 .category-list {
 	padding-right: 30px;
 	padding-left: 30px;
 	padding-top: 30px;
 	border-bottom: 1px solid purple;
 	display: flex;
-    justify-content: center;
+	justify-content: center;
 }
 
-.category-edit {
+	.category-edit-list {
+    	justify-content: space-between;
+	}
+
+.category-button {
 	display: flex;
-	justify-content: flex-end;
+    margin-top: 50px;
+}
+	.category-edit-button {
+		justify-content: space-between;
+	}
+
+.edit-icon{
+	width:30px;
+	height: 30px;
 }
