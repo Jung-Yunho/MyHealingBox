@@ -1,4 +1,4 @@
-/*package myhealingbox.service.day;
+package myhealingbox.service.day;
 
 import java.util.List;
 
@@ -21,27 +21,61 @@ public class DayService {
 	@Autowired
 	private DayCategoryDao dayCategoryDao;
 	
+	
+	// 낮 카테고리 관련 ----------------------------------------------
 	public List<DayCategory> getDayCategoryList() {
 		List<DayCategory> categoryList = dayCategoryDao.getList();
 		
-		// 아직완성아님
+		// 아직완성아님!!!!!!!!!
 		
 		return categoryList;
 	}
+	
+	public DayCategory getDayCategory(Integer id) {
+		DayCategory dayCategory = dayCategoryDao.get(id);
+		
+		return dayCategory ;
+	}
+	
+	public int insertDayCategory(DayCategory dayCategory) {
+		
+		dayCategoryDao.insert(dayCategory);
+		return 0;
+	}
+	
 
+	// 낮 하고싶은일들 관련 -------------------------------------------
 	public List<WantToDo> getWantToDoList(int page) {
-		List<WantToDo> list = WantToDoDao.getList(page);
+		List<WantToDo> list = wantToDoDao.getList(page);
 
+		for(WantToDo n : list) {
+			String content = n.getContent();
+			
+			if(content==null)
+				continue;
+			
+			Document doc = Jsoup.parse(content);
+			String text = doc.text();
+			Element img = doc.select("img").first();
+			
+			if(img!=null) {
+				n.setContent(img.toString()+text);
+			}
+			else
+				n.setContent(text);
+		}
+		
 		return list;
 	}
 
 	public WantToDo getWantToDo(Integer id) {
-		// TODO Auto-generated method stub
-		return null;
+		WantToDo wantToDo = wantToDoDao.get(id);
+		
+		return wantToDo;
 	}
 
 	public int insertWantToDo(WantToDo wantToDo) {
-		// TODO Auto-generated method stub
+		wantToDoDao.insert(wantToDo);
 		return 0;
 	}
 	
@@ -49,4 +83,3 @@ public class DayService {
 	
 
 }
-*/
