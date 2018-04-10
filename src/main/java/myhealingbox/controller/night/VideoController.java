@@ -121,6 +121,21 @@ public class VideoController {
       return "night.category-edit";
    }
    
+   @RequestMapping("favorit")
+   public String favorit() {
+
+      return "night.favorit";
+   }
+   
+   @RequestMapping("list2")
+   public String list2(Model model) {
+      
+      List<Video> list = service.getVideoList(1);
+      
+      model.addAttribute("videos", list);
+      
+      return "night.list2";
+   }
    
 }
 

@@ -6,25 +6,9 @@
 	<section class="box">
 		<h1 class="hidden">자주 보는 영상</h1>
 		<ul>
-			<li>
-				<div class="folder-list">
-					<div>
-						<select class="select-list">
-							<option value="favorit" selected="selected">자주 보는 영상</option>
-							<option value="folder1">폴더1</option>
-							<option value="folder2">폴더2</option>
-							<option value="folder3">폴더3</option>
-						</select> 
-					</div>
-					
-					<div class="search">
-					<input type="text" value="" name="search"/>
-					<input id = "submit-button"type="submit" value="검색" />
-					</div>
-				</div>
-			</li>
+			<li><div class="favorit">자주보는영상</div></li>
 		
-			<li>
+				<li>
 			
 					<div class="video-list">
 						<p class="thm">
@@ -39,7 +23,7 @@
 		
 			</li>
 		
-			<li>
+				<li>
 			
 					<div class="video-list">
 						<p class="thm">
@@ -55,7 +39,7 @@
 			</li>
 			
 			
-			<li>
+				<li>
 			
 					<div class="video-list">
 						<p class="thm">
@@ -71,22 +55,10 @@
 			</li>
 			
 			
-			<!-- <li><div class="category-edit"></div></li> -->
+			<li><div class="category-edit"></div></li>
 		</ul>	
-		<%-- <div class="more-button">
+		<div class="more-button">
             <img class="edit-icon" src="${root }/resources/images/night/ic_keyboard_arrow_down_black_36dp_2x.png">
-         </div> --%>
-         
+         </div>
 	</section>
-	
-	 <nav class="btn-list">
-        <h1 class="hidden">리스트페이지버튼</h1>
-        <ul>
-           <li id="sel-button"> <a href="reg" ><img class="reg-button" src="${root }/resources/images/night/KakaoTalk_20180410_173420697.jpg"></a> </li>
-        </ul>
-     </nav>
-     
 </main>
-
-
-

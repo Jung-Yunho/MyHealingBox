@@ -2,19 +2,44 @@ package myhealingbox.dao.mybatis.day;
 
 import java.util.List;
 
-import org.apache.ibatis.annotations.Param;
-import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.session.SqlSession;
+import org.springframework.beans.factory.annotation.Autowired;
 
-import myhealingbox.entity.night.Video;
+import myhealingbox.dao.day.DayCategoryDao;
+import myhealingbox.entity.day.DayCategory;
 
-public interface MyBatisDayCategoryDao {
+public class MyBatisDayCategoryDao implements DayCategoryDao {
+	
+	@Autowired
+	private SqlSession sqlSession;
+	
+	@Override
+	public List<DayCategory> getList() {
+		DayCategoryDao dayCategoryDao = sqlSession.getMapper(DayCategoryDao.class);
+		
+		List<DayCategory> result = dayCategoryDao.getList();
+		
+		return result;
+	}
 
-	/*@Select("select * from Note order by regDate desc" + 
-	         "     limit ${(page-1)*15},15")
-	List<Video> getList(@Param("page") Integer page);
+	@Override
+	public DayCategory get(Integer id) {
+		DayCategoryDao dayCategoryDao = sqlSession.getMapper(DayCategoryDao.class);
+		
+		DayCategory result = dayCategoryDao.get(id);
+		
+		return result;
+	}
 
-	Video get(Integer id);
+	@Override
+	public int insert(DayCategory dayCategory) {
+		DayCategoryDao dayCategoryDao = sqlSession.getMapper(DayCategoryDao.class);
+		
+		int result = dayCategoryDao.insert(dayCategory);		
+		
+		return result;
+	}
 
-	int insert(Video video);*/
+
 
 }

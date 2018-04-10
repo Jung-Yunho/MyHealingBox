@@ -5,10 +5,11 @@
 <%@ taglib prefix="tiles" uri="http://tiles.apache.org/tags-tiles" %>
 <c:set var="root" value="${pageContext.request.contextPath }"/>
 
-<main class="main">
+<main class=main>
+	
 	<div class="day-main">
 		<div>
-			<img src="${root}/resources/images/day/day_main_logo.png" />
+			<img src="${root}/resources/images/day/day_main_logo2.png" />
 		</div>	
 		<div class="nav-box">오늘은 무엇을 하고 싶었나요?</div>
 		<div class="nav-box">오늘은 무엇을 해볼까요?</div>

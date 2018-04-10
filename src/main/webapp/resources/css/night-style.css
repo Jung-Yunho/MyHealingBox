@@ -235,7 +235,7 @@ li{
 	flex-direction: column;
 	justify-content: space-between;
 	border: 2px solid purple;
-	margin: 30px;
+	margin: 10px;
 }
 /* 	.box ul li >div:first-child {
 		display: flex;
@@ -266,3 +266,73 @@ li{
 	width:30px;
 	height: 30px;
 }
+
+.favorit {
+	display: flex;
+	font-size: 23px;
+	border-bottom: 1px solid purple;
+}
+
+.video-list {
+	display: flex;
+	justify-content: space-between;
+	padding-left: 6px;
+	/* padding-top: 10px;
+	padding-bottom: 10px; */
+	border-bottom: 1px solid purple;
+}
+
+.more-button{
+	display: flex;
+	justify-content: center;
+	margin-top:30px;
+}
+
+/* .thumbnail{
+	max-width: 95%; 이미지의 최대사이즈
+    width *: auto; IE8
+    height: auto;
+    vertical-align: bottom;
+} */
+
+.video-info{
+	display: flex;
+	justify-content: space-around;
+    flex-direction: column;
+	padding-right: 15px;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+.folder-list{
+	display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid purple;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.select-list{
+	height: 28px;
+    width: 120px;
+}
+.search{
+	display: flex;;
+}
+
+.htm{
+	position: absolute;
+    top: 10px;
+    width: 144px;
+    height: 75px;
+}
+.htm-img{
+	width: 180px;
+    height: 100px;
+}
+.reg-button{
+	width: 50px;
+    height: 50px;
+}
+
+
+
+

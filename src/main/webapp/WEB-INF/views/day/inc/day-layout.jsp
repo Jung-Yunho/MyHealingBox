@@ -13,7 +13,7 @@
        minimum-scale="1"
        user-scalable="1"  >
        
-   <title>나의 힐링 박스 - 낮(Day)</title>
+   <title>나의힐링박스 - 낮(Day)</title>
    <link href="${root }/resources/css/style.css" type="text/css" rel="stylesheet" />
    <link href="${root }/resources/css/day-style.css" type="text/css" rel="stylesheet" />
    
