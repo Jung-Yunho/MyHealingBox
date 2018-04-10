@@ -2,19 +2,44 @@ package myhealingbox.dao.mybatis.day;
 
 import java.util.List;
 
-import org.apache.ibatis.annotations.Param;
-import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.session.SqlSession;
+import org.springframework.beans.factory.annotation.Autowired;
 
-import myhealingbox.entity.night.Video;
+import myhealingbox.dao.day.WantToDoDao;
+import myhealingbox.entity.day.WantToDo;
 
-public interface MyBatisWantToDoDao {
+public class MyBatisWantToDoDao implements WantToDoDao{
 
-	/*@Select("select * from Note order by regDate desc" + 
-	         "     limit ${(page-1)*15},15")
-	List<Video> getList(@Param("page") Integer page);
+	@Autowired
+	private SqlSession sqlSession;
+	
+	@Override
+	public List<WantToDo> getList(Integer page) {
+		WantToDoDao wantToDoDao = sqlSession.getMapper(WantToDoDao.class);
+		
+		List<WantToDo> result = wantToDoDao.getList(page);
+		
+		return result;
+	}
 
-	Video get(Integer id);
+	@Override
+	public WantToDo get(Integer id) {
+		WantToDoDao wantToDoDao = sqlSession.getMapper(WantToDoDao.class);
+		
+		WantToDo result = wantToDoDao.get(id);
+		
+		return result;
+	}
 
-	int insert(Video video);*/
+	@Override
+	public int insert(WantToDo wantToDo) {
+		WantToDoDao wantToDoDao = sqlSession.getMapper(WantToDoDao.class);
+		
+		int result = wantToDoDao.insert(wantToDo);
+		
+		return result;
+	}
+	
+
 
 }
