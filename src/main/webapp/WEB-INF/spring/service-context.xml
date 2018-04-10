@@ -32,7 +32,7 @@
       <constructor-arg index="0" ref="sqlSessionFactory"></constructor-arg>
     </bean>
     
-    <context:annotation-config /><!-- Autowired가 필요한 곳에서 설정함 -->
+    <!-- <context:annotation-config /> --><!-- Autowired가 필요한 곳에서 설정함 -->
 	<!--알파벳 순으로 정렬-->    
   <!--   <bean class="com.newlecture.dao.mybatis.MyBatisNoteDao"/>
     
@@ -40,11 +40,18 @@
     <bean class="com.newlecture.service.NoteService"/>
     
     <bean class="com.newlecture.service.author.NoteService"/> -->
+	
 
     <!-- 공통 -->
-    <bean class="myhealingbox.service.MemberService"/>
+	<context:component-scan base-package="myhealingbox.service"/>
+	<context:component-scan base-package="myhealingbox.dao"/>
+    <!-- <bean class="myhealingbox.service.MemberService"/> -->
 
-
+	<!--윤호-->
+	<!-- <bean class="myhealingbox.service.dawn.CategoryService"/>
+	<bean class="myhealingbox.service.dawn.MemoryService"/> -->
+	<!--MyBatis = Repository-->
+	
     <!-- 우진 -->
 	<bean class="myhealingbox.dao.mybatis.night.MyBatisVideoDao"/>
 

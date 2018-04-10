@@ -11,9 +11,8 @@ public class Member {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Member(String id, String name, String pwd, String photo) {
+	public Member(String name, String pwd, String photo) {
 		super();
-		this.id = id;
 		this.name = name;
 		this.pwd = pwd;
 		this.photo = photo;

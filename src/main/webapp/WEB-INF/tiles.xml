@@ -13,12 +13,14 @@
 	</definition>
 	
 	<!--Dawn:윤호-->
-	<definition name="dawn.*" template="/WEB-INF/views/dawn/inc/dawn-layout.jsp">    
+	<definition name="dawn.*.*" template="/WEB-INF/views/dawn/inc/dawn-layout.jsp">    
 	   <put-attribute name="header" value="/WEB-INF/views/inc/header.jsp" />
 	   <put-attribute name="aside" value="/WEB-INF/views/dawn/inc/dawn-aside.jsp" />
-	   <put-attribute name="main" value="/WEB-INF/views/dawn/{1}.jsp" />
+	   <put-attribute name="main" value="/WEB-INF/views/dawn/{1}/{2}.jsp" />
 	   <put-attribute name="footer" value="/WEB-INF/views/inc/footer.jsp" />
 	</definition>
+	
+	
   
   	<!--Morning:건웅-->
 	<definition name="morning.*" template="/WEB-INF/views/morning/inc/morning-layout.jsp">    
