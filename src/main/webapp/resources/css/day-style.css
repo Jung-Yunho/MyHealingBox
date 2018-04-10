@@ -1,18 +1,24 @@
 @charset "UTF-8";
 
-
 /* -----------------------.main -----------------------*/
 
 .main{
-	font-size: 11px;
-	font-family: ;
+	font-size: 12px;
+	/* font-family: 아직안넣음; */
 	
+	width : 100%;
+	min-height : 500px; 
+
+	margin-left: 10px;
 }
 
 
 /* ---------------------day-main---------------------*/
 
 .day-main{
+	/* 아래의 margin-top은 모두 들어가야 함을 기억해! */
+	margin-top: 46px;
+
 	display: flex;
 	flex-direction: column;	
 	justify-content: space-around;
@@ -24,8 +30,10 @@
 	}
 
 .nav-box{
-	width: 120px;
+	width: 240px;
 	height: 70px;
+	
+	margin-bottom : 10px;
 	
 	background: gray;
 	opacity: 30%;
