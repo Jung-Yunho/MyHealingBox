@@ -25,21 +25,20 @@
     
     <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
       <property name="dataSource" ref="dataSource" />
-      <property name="mapperLocations" value="classpath:myhealingbox/dao/mybatis/night/mapper/*.xml" />
+      <property name="mapperLocations">
+      	<list>
+      		<value>classpath:myhealingbox/dao/mybatis/night/mapper/*.xml</value>
+      		<value>classpath:myhealingbox/dao/mybatis/dawn/mapper/*.xml</value>
+      	</list>
+      </property>
+      <!-- <property name="mapperLocations" value="classpath:myhealingbox/dao/mybatis/night/mapper/*.xml" /> -->
     </bean>
    
     <bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate">
       <constructor-arg index="0" ref="sqlSessionFactory"></constructor-arg>
     </bean>
     
-    <!-- <context:annotation-config /> --><!-- Autowired가 필요한 곳에서 설정함 -->
-	<!--알파벳 순으로 정렬-->    
-  <!--   <bean class="com.newlecture.dao.mybatis.MyBatisNoteDao"/>
-    
-    <bean class="com.newlecture.service.MemberService"/>
-    <bean class="com.newlecture.service.NoteService"/>
-    
-    <bean class="com.newlecture.service.author.NoteService"/> -->
+    <context:annotation-config /><!-- Autowired가 필요한 곳에서 설정함 -->
 	
 
     <!-- 공통 -->
