@@ -1,4 +1,33 @@
 @charset "UTF-8";
+/* -----------------------.초기화 -----------------------*/
+
+html{
+	background: #FFFFF2;
+	opacity: 30%;
+}
+
+a, a:hover, a:visited, a:link, a:active{
+	font-weight: bold;
+	display: inline-block;
+	text-decoration: none;	
+	color: inherit;
+}
+
+select{
+	width: 230px;
+	padding:.8em .5em;
+	font-family: inherit;
+	border: 3px solid #E4EFE6;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	background: url("../images/day/arrow_icon.png") no-repeat 95% 50%;
+}
+
+	select:-ms-expand{
+		display: none;
+	}
+
 
 /* -----------------------.main -----------------------*/
 
@@ -28,14 +57,41 @@
 	.day-main div:first-child img{
 		/* 사이즈 확인하고 넣자 */
 	}
+	
+	.day-main div img{
+		margin-bottom: 20px;
+	}
 
 .nav-box{
 	width: 240px;
-	height: 70px;
-	
+	height: 90px;
+
 	margin-bottom : 10px;
 	
-	background: gray;
-	opacity: 30%;
+	background: #F2FFF5;
+	
+	display:flex;
+	align-items : center;
+	justify-content:center;
+
+	font-size: 13px;
+	color: #C0C0C0;
 	
 }
+
+	.nav-box:hover{
+		border: solid 2px;
+		border-color: #E4EFE6;
+		background: #ffffff;
+	}
+	
+	
+/* ---------------------write---------------------*/
+#writeImage{
+	width: 45px;
+}
+
+
+
+
+	

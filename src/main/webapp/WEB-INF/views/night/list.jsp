@@ -3,88 +3,126 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %> 
 <c:set var="root" value="${pageContext.request.contextPath}"/>     
 <main class="main">
-	<section class="box">
-		<h1 class="hidden">자주 보는 영상</h1>
-		<ul>
-			<li>
-				<div class="folder-list">
-					<div>
-						<select class="select-list">
-							<option value="favorit" selected="selected">자주 보는 영상</option>
-							<option value="folder1">폴더1</option>
-							<option value="folder2">폴더2</option>
-							<option value="folder3">폴더3</option>
-						</select> 
-					</div>
-					
-					<div class="search">
-					<input type="text" value="" name="search"/>
-					<input id = "submit-button"type="submit" value="검색" />
-					</div>
-				</div>
-			</li>
-		
-			<li>
+
+<div class="home_feed">
+    <div class="home_tit">
+        <h3 class="tit">
+        
+			<span>각 폴더에 대한 리스트fasfdhsdfj</span>
 			
-					<div class="video-list">
-						<p class="thm">
-							<img class="htm-img" src="${root }/resources/images/night/KakaoTalk_20180328_233238324.png">
-						</p>
-						
-						<div class="video-info">
-							<div>제목:어쩌고저쩌고</div>
-							<div>조회수:250</div>
-							</div>
-						</div>
-		
-			</li>
-		
-			<li>
-			
-					<div class="video-list">
-						<p class="thm">
-							<img class="htm-img" src="${root }/resources/images/night/KakaoTalk_20180328_233238324.png">
-						</p>
-						
-						<div class="video-info">
-							<div>제목:어쩌고저쩌고</div>
-							<div>조회수:250</div>
-							</div>
-						</div>
-		
-			</li>
-			
-			
-			<li>
-			
-					<div class="video-list">
-						<p class="thm">
-							<img class="htm-img" src="${root }/resources/images/night/KakaoTalk_20180328_233238324.png">
-						</p>
-						
-						<div class="video-info">
-							<div>제목:어쩌고저쩌고</div>
-							<div>조회수:250</div>
-							</div>
-						</div>
-		
-			</li>
-			
-			
-			<!-- <li><div class="category-edit"></div></li> -->
-		</ul>	
-		<%-- <div class="more-button">
-            <img class="edit-icon" src="${root }/resources/images/night/ic_keyboard_arrow_down_black_36dp_2x.png">
-         </div> --%>
-         
-	</section>
-	
-	 <nav class="btn-list">
-        <h1 class="hidden">리스트페이지버튼</h1>
-        <ul>
-           <li id="sel-button"> <a href="reg" ><img class="reg-button" src="${root }/resources/images/night/KakaoTalk_20180410_173420697.jpg"></a> </li>
+        </h3>
+    </div>
+    <div class="mv_lst">
+        <ul class="cds_lst_type2">
+        <!-- [D]선택된 영상 class="on" 추가 -->
+        
+	        <li class="">
+	            <div class="list_a">
+	                <p class="cds_thm">
+	                    <img src="${root }/resources/images/night/KakaoTalk_20180328_233238324.png" data-src="http://tvcast2.phinf.naver.net/20180410_82/9kqvd_1523370769157bGfc4_JPEG/T3201804100002.jpg?type=f246_140" data-aflag="false" width="123" height="70" alt="《메이킹》 얼굴도 마음도 세젤예 과외 선생님 박수영 (#태희아프지말자ㅠㅠ)" border="0" class="_p_check_visible visible">
+						<span class="tm_b">2:15</span>
+	                </p>
+	                <div class="inner">
+	                    <dl>
+	                    <dt class="title">
+	                        <h3><span>삘릴리개굴개굴삘릴릴리무지개연못에</span></h3>
+	                    </dt>
+	                    <dd class="ch">
+	                        <a href="" class="ch_txt">폴더1</a>
+	                   </dd>
+	                    <dd class="meta">
+	                        <span class="cds_ifc cnp">조회수 330</span>
+	                    </dd>
+	                    </dl>
+	                </div>
+	                
+	                <a href="http://m.tv.naver.com/v/3018359" data-moveclipno="3018359" class="cds_a" onclick="tvcast.m.ServiceClickLog.send(this, 'out.clip', '3018359', '1'); nclk(this,'out.clip','','',1);"><span class="hidden">본문 바로가기</span></a>
+	            </div>
+				
+	        </li>
+	        
+	        <li class="">
+	            <div class="list_a">
+	                <p class="cds_thm">
+	                    <img src="${root }/resources/images/night/KakaoTalk_20180328_233238324.png" data-src="http://tvcast2.phinf.naver.net/20180410_82/9kqvd_1523370769157bGfc4_JPEG/T3201804100002.jpg?type=f246_140" data-aflag="false" width="123" height="70" alt="《메이킹》 얼굴도 마음도 세젤예 과외 선생님 박수영 (#태희아프지말자ㅠㅠ)" border="0" class="_p_check_visible visible">
+						<span class="tm_b">2:15</span>
+	                </p>
+	                <div class="inner">
+	                    <dl>
+	                    <dt class="title">
+	                        <h3><span>삘릴리개굴개굴삘릴릴리무지개연못에</span></h3>
+	                    </dt>
+	                    <dd class="ch">
+	                        <a href="" class="ch_txt">폴더1</a>
+	                   </dd>
+	                    <dd class="meta">
+	                        <span class="cds_ifc cnp">조회수 330</span>
+	                    </dd>
+	                    </dl>
+	                </div>
+	                
+	                <a href="http://m.tv.naver.com/v/3018359" data-moveclipno="3018359" class="cds_a" onclick="tvcast.m.ServiceClickLog.send(this, 'out.clip', '3018359', '1'); nclk(this,'out.clip','','',1);"><span class="hidden">본문 바로가기</span></a>
+	            </div>
+				
+	        </li>
+	        
+	        <li class="">
+	            <div class="list_a">
+	                <p class="cds_thm">
+	                    <img src="${root }/resources/images/night/KakaoTalk_20180328_233238324.png" data-src="http://tvcast2.phinf.naver.net/20180410_82/9kqvd_1523370769157bGfc4_JPEG/T3201804100002.jpg?type=f246_140" data-aflag="false" width="123" height="70" alt="《메이킹》 얼굴도 마음도 세젤예 과외 선생님 박수영 (#태희아프지말자ㅠㅠ)" border="0" class="_p_check_visible visible">
+						<span class="tm_b">2:15</span>
+	                </p>
+	                <div class="inner">
+	                    <dl>
+	                    <dt class="title">
+	                        <h3><span>삘릴리개굴개굴삘릴릴리무지개연못에</span></h3>
+	                    </dt>
+	                    <dd class="ch">
+	                        <a href="" class="ch_txt">폴더1</a>
+	                   </dd>
+	                    <dd class="meta">
+	                        <span class="cds_ifc cnp">조회수 330</span>
+	                    </dd>
+	                    </dl>
+	                </div>
+	                
+	                <a href="http://m.tv.naver.com/v/3018359" data-moveclipno="3018359" class="cds_a" onclick="tvcast.m.ServiceClickLog.send(this, 'out.clip', '3018359', '1'); nclk(this,'out.clip','','',1);"><span class="hidden">본문 바로가기</span></a>
+	            </div>
+				
+	        </li>
+	        
+	        <li class="">
+	            <div class="list_a">
+	                <p class="cds_thm">
+	                    <img src="${root }/resources/images/night/KakaoTalk_20180328_233238324.png" data-src="http://tvcast2.phinf.naver.net/20180410_82/9kqvd_1523370769157bGfc4_JPEG/T3201804100002.jpg?type=f246_140" data-aflag="false" width="123" height="70" alt="《메이킹》 얼굴도 마음도 세젤예 과외 선생님 박수영 (#태희아프지말자ㅠㅠ)" border="0" class="_p_check_visible visible">
+						<span class="tm_b">2:15</span>
+	                </p>
+	                <div class="inner">
+	                    <dl>
+	                    <dt class="title">
+	                        <h3><span>삘릴리개굴개굴삘릴릴리무지개연못에</span></h3>
+	                    </dt>
+	                    <dd class="ch">
+	                        <a href="" class="ch_txt">폴더1</a>
+	                   </dd>
+	                    <dd class="meta">
+	                        <span class="cds_ifc cnp">조회수 330</span>
+	                    </dd>
+	                    </dl>
+	                </div>
+	                <a href="http://m.tv.naver.com/v/3018359" data-moveclipno="3018359" class="cds_a" onclick="tvcast.m.ServiceClickLog.send(this, 'out.clip', '3018359', '1'); nclk(this,'out.clip','','',1);"><span class="hidden">본문 바로가기</span></a>
+	            </div>
+				
+	        </li>
+        
+        
+        
+
         </ul>
-     </nav>
+    </div>
+</div>
+
+
      
 </main>
 
