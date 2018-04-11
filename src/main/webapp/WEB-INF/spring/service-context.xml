@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
-	xmlns:mvc="http://www.springframework.org/schema/mvc"
+   xmlns:mvc="http://www.springframework.org/schema/mvc"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:p="http://www.springframework.org/schema/p"
     xmlns:context="http://www.springframework.org/schema/context"
@@ -19,17 +19,17 @@
        <property name="password" value="cclass"/>
        
        <property name="removeAbandoned" value="true"/>
-	   <property name="initialSize" value="20" />
-	   <property name="maxActive" value="30" />
-	</bean>
+      <property name="initialSize" value="20" />
+      <property name="maxActive" value="30" />
+   </bean>
     
     <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
       <property name="dataSource" ref="dataSource" />
       <property name="mapperLocations">
-      	<list>
-      		<value>classpath:myhealingbox/dao/mybatis/night/mapper/*.xml</value>
-      		<value>classpath:myhealingbox/dao/mybatis/dawn/mapper/*.xml</value>
-      	</list>
+         <list>
+            <value>classpath:myhealingbox/dao/mybatis/night/mapper/*.xml</value>
+            <value>classpath:myhealingbox/dao/mybatis/dawn/mapper/*.xml</value>
+         </list>
       </property>
       <!-- <property name="mapperLocations" value="classpath:myhealingbox/dao/mybatis/night/mapper/*.xml" /> -->
     </bean>
@@ -39,26 +39,26 @@
     </bean>
     
     <context:annotation-config /><!-- Autowired가 필요한 곳에서 설정함 -->
-	
+   
 
     <!-- 공통 -->
-	<context:component-scan base-package="myhealingbox.service"/>
-	<context:component-scan base-package="myhealingbox.dao"/>
+   <context:component-scan base-package="myhealingbox.service"/>
+   <context:component-scan base-package="myhealingbox.dao"/>
     <!-- <bean class="myhealingbox.service.MemberService"/> -->
 
-	<!--윤호-->
-	<!-- <bean class="myhealingbox.service.dawn.CategoryService"/>
-	<bean class="myhealingbox.service.dawn.MemoryService"/> -->
-	<!--MyBatis = Repository-->
-	
+   <!--윤호-->
+   <!-- <bean class="myhealingbox.service.dawn.CategoryService"/>
+   <bean class="myhealingbox.service.dawn.MemoryService"/> -->
+   <!--MyBatis = Repository-->
+   
     <!-- 우진 -->
-	<bean class="myhealingbox.dao.mybatis.night.MyBatisVideoDao"/>
+   <bean class="myhealingbox.dao.mybatis.night.MyBatisVideoDao"/>
 
-	<bean class="myhealingbox.service.night.VideoService"/>
-	
-	<!-- 현영 -->
-	<bean class="myhealingbox.dao.mybatis.day.MyBatisDayCategoryDao"/>
-	<bean class="myhealingbox.dao.mybatis.day.MyBatisWantToDoDao"/>
-	
-	<bean class="myhealingbox.service.day.DayService"/>
+   <bean class="myhealingbox.service.night.VideoService"/>
+   
+   <!-- 현영 -->
+   <bean class="myhealingbox.dao.mybatis.day.MyBatisDayCategoryDao"/>
+   <bean class="myhealingbox.dao.mybatis.day.MyBatisWantToDoDao"/>
+   
+   <bean class="myhealingbox.service.day.DayService"/>
 </beans>
