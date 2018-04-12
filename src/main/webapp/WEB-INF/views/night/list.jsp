@@ -181,20 +181,16 @@
     </li>
     
     
-    
- 
- 
- 
-    
             </ul>
+            
             <a href="" class="link_more"><span class="ico_kakaotv"><img class="more-img" src="${root }/resources/images/night/ic_keyboard_arrow_down_black_36dp_2x.png"></span></a>
         </div>
     </div>
 
-  <nav class="btn-list">
+   <nav class="btn-list">
 		<h1 class="hidden">버튼목록</h1>
 		<ul>
-			<li id="add-button"> <a href="reg" ><img src="${root }/resources/images/night/KakaoTalk_20180410_173420697.jpg"></a></li>
+			<li id="add-button"> <a href="reg" >추가</a></li>
 		</ul>
 	</nav>
 
