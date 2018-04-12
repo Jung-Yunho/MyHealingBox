@@ -9,7 +9,7 @@
 	
 	<div class="day-main">
 		<div>
-			<img src="${root}/resources/images/day/day_main_logo2.png" />
+			<img src="${root}/resources/images/day/day_main_logo.png" />
 		</div>	
 		<div class="nav-box"><a href="${root}/day/write">오늘은 무엇을 하고 싶었나요?</a></div>
 		<div class="nav-box"><a href="${root}/day/categoryList">오늘은 무엇을 해볼까요?</a></div>

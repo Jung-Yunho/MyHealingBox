@@ -2,7 +2,7 @@
 /* -----------------------.초기화 -----------------------*/
 
 html{
-	background: #FFFFF2;
+	/* background: #FFFFF2; */
 	opacity: 30%;
 }
 
@@ -17,7 +17,7 @@ select{
 	width: 230px;
 	padding:.8em .5em;
 	font-family: inherit;
-	border: 3px solid #E4EFE6;
+	border: 2px solid #E4EFE6;
 	-webkit-appearance: none;
 	-moz-appearance: none;
 	appearance: none;
@@ -29,7 +29,7 @@ select{
 	}
 
 
-/* -----------------------.main -----------------------*/
+/* -----------------------.main .body -----------------------*/
 
 .main{
 	font-size: 12px;
@@ -41,8 +41,12 @@ select{
 	margin-left: 10px;
 }
 
+.body{
+	margin-top: 46px;
+}
 
-/* ---------------------day-main---------------------*/
+
+/* ---------------------day main---------------------*/
 
 .day-main{
 	/* 아래의 margin-top은 모두 들어가야 함을 기억해! */
@@ -57,10 +61,6 @@ select{
 	.day-main div:first-child img{
 		/* 사이즈 확인하고 넣자 */
 	}
-	
-	.day-main div img{
-		margin-bottom: 20px;
-	}
 
 .nav-box{
 	width: 240px;
@@ -68,28 +68,56 @@ select{
 
 	margin-bottom : 10px;
 	
-	background: #F2FFF5;
+	background: #E9F7EF ;
 	
 	display:flex;
 	align-items : center;
 	justify-content:center;
 
 	font-size: 13px;
-	color: #C0C0C0;
+	color: #808079;
 	
 }
 
 	.nav-box:hover{
-		border: solid 2px;
-		border-color: #E4EFE6;
+		border: solid 3px #E4EFE6;
 		background: #ffffff;
 	}
 	
 	
-/* ---------------------write---------------------*/
+/* ---------------------day write---------------------*/
+
 #writeImage{
-	width: 45px;
+	width: 42px;
+	height: 42px;
+	margin-left: 10px;
 }
+
+.write-box{
+	width : 320px;
+	min-height : 300px;
+	margin-top: 10px;
+	margin-right: 0px;
+	padding:10px 7px;
+	
+	
+	display: flex;
+	flex-direction: column;
+	align-content: space-around;
+	
+	border: solid 3px #E4EFE6;
+}
+
+	.write-box h3{
+		margin-bottom : 5px;
+		color: #808079;
+	}
+	
+	.write-box textarea,
+	.write-box input{
+		margin-bottom: 10px;
+	}
+
 
 
 
