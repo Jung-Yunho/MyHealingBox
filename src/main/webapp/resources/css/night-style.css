@@ -333,14 +333,11 @@ li {
 }
 
 .form {
-	padding-left: 20px;
-	padding-right: 10px;
+	padding-left: 15px;
+	padding-right: 15px;
 	padding-top: 45px;
 	display: flex;
 	justify-content: space-between;
-}
-.search{
-	display: flex;
 }
 
 .btn-list{
@@ -384,15 +381,69 @@ li {
     align-items: center;
     min-height: 300px;
 }
+.search-img{
+	width: 30px;
+    height: 30px;
+}
 
+/* .search-box {
+	width: 190px;
+	height: 10px;
+	background: #fff; #00000077 r,g,b,alpha(투명)
+	position: relative; 밀어내버림 ㅠㅡㅠ
+	position: fixed;
+	left:130px;
+	top: -40px;
+	transition: 1s;
+}
+ */
+/* .search-box.show {
+	z-index: 1;
+	top: 65px;
+	bottom: 30%;
+	height: 50px;
+	box-shadow: 3px 3px 3px #544954; 마지막 3은 깊이. 종이와 얼마나 떠있는지
+	마지막 3은 깊이. 종이와 얼마나 떠있는지
+} */
+.search{
+	display: flex;
+}
+.search-box{
+	border: none;
+}
+.search-box.show{
+	border-bottom: 1px solid black;
+}
+.u_bt_top {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 44px;
+    height: 44px;
+    margin: 0 8px 8px 0;
+    z-index: 10000;
+}
+	.u_bt_top a {
+ /*    display: block;
+    overflow: hidden; */
+    width: 42px;
+    height: 42px;
+    background-position: 0 -208px;
+   /*  font-size: 1px; */
+    line-height: 1px;
+    vertical-align: top;
+   /*  color: transparent; */
+}
 
-
-
-
-
-
-
-
+.btn_top {
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+    display: block;
+    opacity: 1;
+    border: 1px solid black;
+    border-radius: 5px;
+}
 
 
 

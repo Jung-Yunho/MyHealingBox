@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="myhealingbox.dao.night.NightCategoryDao">
+
+	<select id="get" resultType="myhealingbox.entity.night.NightCategory">
+		select * from NightCategory where id=#{id}
+	</select>
+	
+	<select id="insert" parameterType="myhealingbox.entity.night.NightCategory">
+		insert into NightCategory(title)
+		values(#{title})
+	</select>
+	
+	<select id="update" parameterType="myhealingbox.entity.night.NightCategory">
+		update NightCategory set title=#{title} where id=#{id};
+	</select>
+	
+	<select id="delete" parameterType="myhealingbox.entity.night.NightCategory">
+		delete from NightCategory where id=#{id};
+	</select>
+  
+  </mapper>

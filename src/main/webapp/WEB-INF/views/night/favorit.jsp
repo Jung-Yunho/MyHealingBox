@@ -176,7 +176,9 @@
             <a href="" class="link_more"><span class="ico_kakaotv"><img class="more-img" src="${root }/resources/images/night/ic_keyboard_arrow_down_black_36dp_2x.png"></span></a>
         </div>
     </div>
-
+    <div id="btn_top" class="u_bt_top" style="position: fixed; bottom: 0px; right: 0px; display: block; opacity: 1;">
+    <a href="javascript:tvcast.m.TopButtonManager.fScrollToTop();">TOP</a>
+</div>
 
 
 
