@@ -32,8 +32,8 @@ public class MemoryController {
 	public String list(@RequestParam(value="p", defaultValue="1")Integer page,
 							Model model) {
 		
-		List<Memory> memoryList = service.getMemoryList(page);
-		model.addAttribute("memoryList", memoryList);
+		//List<Memory> memoryList = service.getMemoryList(page);
+		//model.addAttribute("memoryList", memoryList);
 		
 		return "dawn.memory.list";
 	}
@@ -91,9 +91,18 @@ public class MemoryController {
 		return "redirect:list";
 	}
 	
-	@RequestMapping("edit")
+	@RequestMapping(value="edit", method=RequestMethod.GET)
 	public String edit() {
 		
 		return "dawn.memory.edit";
+	}
+	
+	@RequestMapping(value="edit", method=RequestMethod.POST)
+	public String edit(Memory memory,
+						MultipartFile file, HttpServletRequest request) {
+		
+		int result = service.updateMemory(memory);
+		
+		return "redirect:dawn.memory.list";
 	}
 }

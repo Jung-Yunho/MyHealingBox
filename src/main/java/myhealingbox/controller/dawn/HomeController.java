@@ -27,8 +27,8 @@ public class HomeController {
 	public String index(@RequestParam(value="p", defaultValue="1")
 					Integer page, Model model) {
 		
-		List<DawnCategory> categoryList = service.getCategoryList(page);
-		model.addAttribute("categoryList", categoryList);
+		//List<DawnCategory> categoryList = service.getCategoryList(page);
+		//model.addAttribute("categoryList", categoryList);
 		
 		return "dawn.home.index";
 	}
@@ -51,12 +51,22 @@ public class HomeController {
 	public String reg(DawnCategory dawnCategory,
 					MultipartFile file, HttpServletRequest request) {
 		
-		return "redirect:dawn.home.reg";
+		int result = service.insertDawnCategory(dawnCategory);
+		
+		return "redirect:dawn.home.index";
 	}
 	
-	@RequestMapping("edit")
+	@RequestMapping(value="edit", method=RequestMethod.GET)
 	public String edit() {
 		
 		return "dawn.home.edit";
+	}
+	
+	@RequestMapping(value="edit", method=RequestMethod.POST)
+	public String edit(DawnCategory dawnCategory,HttpServletRequest request) {
+		
+		int result = service.updateDawnCategory(dawnCategory);
+		
+		return "redirect:dawn.home.index";
 	}
 }
