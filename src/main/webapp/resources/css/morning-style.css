@@ -1,2 +1,30 @@
 @charset "UTF-8";
 
+.main{
+	width: 100%;
+	min-height: 500px;
+	
+	margin-left: 10px;
+}
+
+.body{
+	margin-top: 46px;
+}
+
+.morning-list {
+	text-align: center;
+}
+
+.addtodo {
+	width: 86%;
+}
+
+.todolist {
+	width: 86%;
+	min-height:200px;
+}
+
+.donelist {
+	width: 86%;
+	min-height:100px;
+}
