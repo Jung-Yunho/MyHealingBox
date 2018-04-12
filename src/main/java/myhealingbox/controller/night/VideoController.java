@@ -24,7 +24,7 @@ import myhealingbox.service.night.VideoService;
 
 
 @Controller("videoController")
-@RequestMapping("/video/")
+@RequestMapping("/night/video/")
 public class VideoController {
    
    @Autowired

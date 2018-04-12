@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<main class="main">
-	<section class="box">
+<main class="box">
+	<section>
 		<h1 class="hidden">카테고리</h1>
 		<ul>
 			<li><div class="category-list">자주보는영상</div></li>
