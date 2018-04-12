@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="myhealingbox.dao.dawn.MemoryDao">
+	
+	<!-- <select id="getList" resultMap="myhealingbox.entity.dawn.Memory">
+		select * from Memory
+		limit ${(_parameter-1)*15},15
+	</select> -->
+
+	<select id="get" resultType="myhealingbox.entity.dawn.Memory">
+		select * from Memory where id=#{id}
+	</select>
+	
+	<select id="insert" parameterType="myhealingbox.entity.dawn.Memory">
+		insert into Memory(title,content,attachedFile)
+		values(#{title},${content},${attachedFile})
+	</select>
+	
+	<select id="update" parameterType="myhealingbox.entity.dawn.Memory">
+		update Memory set title=#{title}, content=#{content}, attachedFile=${attachedFile}
+		where id=#{id};
+	</select>
+	
+	<select id="delete" parameterType="myhealingbox.entity.dawn.Memory">
+		delete from Memory where id=#{id};
+	</select>
+</mapper>
