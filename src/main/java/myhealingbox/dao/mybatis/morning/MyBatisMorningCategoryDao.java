@@ -20,9 +20,9 @@ public class MyBatisMorningCategoryDao implements MorningCategoryDao {
 		
 		MorningCategoryDao morningCategoryDao = sqlSession.getMapper(MorningCategoryDao.class);
 		
-		List<MorningCategory> morningCategory = morningCategoryDao.getList(page);
+		List<MorningCategory> result = morningCategoryDao.getList(page);
 		
-		return morningCategory;
+		return result;
 	}
 
 	@Override
@@ -30,9 +30,9 @@ public class MyBatisMorningCategoryDao implements MorningCategoryDao {
 		
 		MorningCategoryDao morningCategoryDao = sqlSession.getMapper(MorningCategoryDao.class);
 		
-		MorningCategory morningCategory = morningCategoryDao.get(id);
+		MorningCategory result = morningCategoryDao.get(id);
 		
-		return morningCategory;
+		return result;
 	}
 
 	@Override
