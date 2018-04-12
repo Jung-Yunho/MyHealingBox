@@ -91,7 +91,7 @@ a{
    background: #fff; /* #00000077 r,g,b,alpha(투명) */
    position: fixed;
    top:56px;
-   left:-85%;
+   left:-100%;
    
    transition:1s;
 }
