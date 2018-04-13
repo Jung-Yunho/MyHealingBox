@@ -3,15 +3,16 @@
 <main class="box">
 	<section>
 		<h1 class="hidden">카테고리</h1>
-		<ul>
-			<li><div class="category-list">자주보는영상</div></li>
-			<li><div class="category-list">폴더1</div></li>
-			<li><div class="category-list">폴더2</div></li>
-			<li><div class="category-list">폴더3</div></li>
-			<li><div class="category-edit"></div></li>
+		<ul class="category-box">
+			<li class="category-list"><div>자주보는영상</div></li>
+			<li class="category-list"><div>폴더1</div></li>
+			<li class="category-list"><div>폴더2</div></li>
+			<li class="category-list"><div>폴더3</div></li>
+			
+			<li><div></div></li>
 		</ul>	
-		<div class="category-button category-edit-button">
+	</section>
+		<div>
             <input type="submit" value="편집"/>
          </div>
-	</section>
 </main>
