@@ -6,11 +6,21 @@ html{
 	opacity: 30%;
 }
 
+p{
+	margin-bottom: 5px;
+}
+
 a, a:hover, a:visited, a:link, a:active{
 	font-weight: bold;
 	display: inline-block;
 	text-decoration: none;	
 	color: inherit;
+}
+
+hr{
+	border: 1px soli	d #E4EFE6;
+	width: 340px;
+	margin-bottom: 15px;
 }
 
 select{
@@ -28,21 +38,17 @@ select{
 		display: none;
 	}
 
-/* -----------------------.main .body -----------------------*/
+/* -----------------------.main -----------------------*/
 
 .main{
 	font-size: 12px;
 	/* font-family: 아직안넣음; */
+	color: #808079;	
 	
-	/* width : 100%; */
-	min-height : 500px; 
-
-	/* margin-left: 5px; */
+	
+	min-height : 500px;
 }
 
-.body{
-	margin-top: 46px;
-}
 
 
 /* ---------------------day main---------------------*/
@@ -57,25 +63,19 @@ select{
 	align-items: center;	
 }
 
-	.day-main div:first-child img{
-		/* 사이즈 확인하고 넣자 */
-	}
-
 .nav-box{
 	width: 240px;
 	height: 90px;
-
 	margin-bottom : 10px;
-	
-	background: #E9F7EF ;
 	
 	display:flex;
 	align-items : center;
 	justify-content:center;
+	
+	background: #E9F7EF;	
 
 	font-size: 13px;
-	color: #808079;
-	
+	color: #808079;	
 }
 
 	.nav-box:hover{
@@ -95,6 +95,7 @@ select{
 .write-box{
 	width : 320px;
 	min-height : 300px;
+	
 	margin-top: 10px;
 	margin-right: 0px;
 	padding:10px 7px;	
@@ -117,6 +118,52 @@ select{
 	}
 
 
+/* ----------------day categoryList----------------*/
+
+.day-list{
+	margin-top: 40px;
+	padding:0px 10px;
+	
+	display: flex;
+	flex-direction: column;
+}
+
+
+.category-list{
+	margin-bottom: 5px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+}
+
+	.category-list img{
+		width: 28px;		
+	}
+
+
+/* ----------------day categoryList----------------*/
+
+.day-list h3{
+	color: #20E3B4;
+}
+
+.list-bottom{
+	margin-bottom: 10px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	
+	border-bottom: 0.5px solid;
+	
+}
+	
+	.list-bottom img{
+		width: 24px;
+	}
+
+
+/* ---------------------button---------------------*/
 
 .button-put{
 	/* 버튼 flex하려구 만듬 ㅠㅠ */
@@ -126,15 +173,19 @@ select{
 }
 
 .submit-button{
-	-webkit-appearance: none;
+	/* -webkit-appearance: none; */
 	
 	width: 330px;
 	height : 50px;
+	
 	margin-top:10px;
 	margin-bottom:20px;
 	margin-right:10px;
 	margin-left:0px;
+	
 	background: #E4EFE6;
+	color: #808079;
+	font-weight: bold;
 	
 }
 

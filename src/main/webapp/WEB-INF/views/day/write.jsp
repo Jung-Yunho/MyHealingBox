@@ -5,31 +5,26 @@
 <%@ taglib prefix="tiles" uri="http://tiles.apache.org/tags-tiles" %>
 <c:set var="root" value="${pageContext.request.contextPath }"/>
 
+
 <main class="main">
-	<div class="body">
-		<form method="post" style="margin-left: 10px">
-			<div style="display: flex; justify-content: flex-start;">
-				
-					<select name="categoryCheckbox" >나의 박스
-						<option value="default-category" selected="selected"> 기본 카테고리 </option>
-						<option value=""> 디비에서 카테고리 받아오기 </option>
-					</select>
-				
-				<img id="writeImage" src="${root}/resources/images/day/write_icon.png">
-			</div>
-			<div class="write-box">
-				<h3>| 제목</h3>
-				<input type="text" required="required" size="5">
-				<h3>| 내용</h3>
-				<textarea rows="15" cols="50" ></textarea>
-				<input type="file">
-			</div>
-			<div class="button-put">
-				<input class="submit-button" type="submit" value="작성완료" />
-			</div>
-		</form>
+	<form method="post" style="margin-left: 10px; margin-top: 40px;">
+		<div style="display: flex; justify-content: flex-start;">
+			<select name="category">나의 박스
+				<option value="default-category" selected="selected">기본 카테고리</option>
+				<option value="">디비에서 카테고리 받아오기</option>
+			</select>
+			<img id="writeImage" src="${root}/resources/images/day/write_icon.png">
+		</div>
 		
-	</div>
-
-
+		<div class="write-box">
+			<h3>| 제목</h3>
+			<input type="text" required="required" size="5">
+			<h3>| 내용</h3>
+			<textarea rows="15" cols="50"></textarea>
+			<input type="file">
+		</div>
+		<div class="button-put">
+			<input class="submit-button" type="submit" value="작성완료" />
+		</div>
+	</form>
 </main>
