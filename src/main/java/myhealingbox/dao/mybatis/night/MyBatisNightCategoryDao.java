@@ -5,9 +5,7 @@ import java.util.List;
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import myhealingbox.dao.dawn.DawnCategoryDao;
 import myhealingbox.dao.night.NightCategoryDao;
-import myhealingbox.entity.dawn.DawnCategory;
 import myhealingbox.entity.night.NightCategory;
 
 public class MyBatisNightCategoryDao implements NightCategoryDao{
