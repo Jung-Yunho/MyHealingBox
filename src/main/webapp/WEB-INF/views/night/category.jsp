@@ -12,7 +12,7 @@
 			<li><div></div></li>
 		</ul>	
 	</section>
-		<div>
+		<div class="button-box">
             <input type="submit" value="편집"/>
          </div>
 </main>

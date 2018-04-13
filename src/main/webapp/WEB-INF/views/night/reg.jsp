@@ -3,29 +3,36 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=1">
 <!--장비넓이에 맞게 / 최소사이즈 / 줌 인,아웃  -->
 
-   <main class="main">
-      <section>
-      <h1 class="hidden">노트 등록 폼</h1> 
-      <form method="post" enctype="multipart/form-data">
-         <table>
-            <tr>
-               <td>제목</td>
-               <td><input type="text" value="" name="title"/></td>
-            </tr>
+   <main class="box">
+	<div>
+		<div>
+			<form>
+			
+				<select name="categoryCheckbox" >
+				<h3>| 카테고리</h3>
+				
+					<option value="default-category" selected="selected"> 폴더1 </option>
+					<option value=""> 폴더2 </option>
+					<option value=""> 폴더3 </option>
+				</select>
+			</form>
+			<div>
+			<h3>| 제목</h3>
+			<input type="text"/>
+			</div>
+		</div>
+		
+		<div>
+			<h3 class="hidden">내용</h3>
+			<textarea rows="15" cols="50" ></textarea>
+		</div>
+	
+	</div>
 
-            <tr>
-               <td>
-                  <textarea rows="10" cols="40" name="content"></textarea>
-               </td>
-            </tr>
-         </table>
-         <div>
+<div class="button-box">
             <input type="submit" value="등록"/>
          </div>
-      </form>
-      
-      </section>
-   </main>
+</main>
 
 
 <script>
