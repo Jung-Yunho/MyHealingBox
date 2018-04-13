@@ -13,8 +13,8 @@
  
     <div class="form">
     	<select>
-			<option value="자주 보는 영상" selected="selected">자주 보는 영상</option>
-			<option value="폴더1">폴더1</option>
+			<option value="자주 보는 영상">자주 보는 영상</option>
+			<option value="폴더1" selected="selected">폴더1</option>
 			<option value="폴더2">폴더2</option>
 			<option value="폴더3">폴더3</option>
 		</select>

@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 import myhealingbox.dao.morning.MorningCategoryDao;
 import myhealingbox.entity.morning.MorningCategory;
 
-@Service
+//@Service
 public class CategoryService {
 
 	@Autowired
