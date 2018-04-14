@@ -6,5 +6,5 @@
 <c:set var="root" value="${pageContext.request.contextPath }"/>
 
 <main class="main">
-
+	
 </main>

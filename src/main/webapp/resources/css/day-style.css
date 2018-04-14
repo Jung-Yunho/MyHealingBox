@@ -11,7 +11,7 @@ p{
 }
 
 a, a:hover, a:visited, a:link, a:active{
-	font-weight: bold;
+	/* font-weight: bold; */
 	display: inline-block;
 	text-decoration: none;	
 	color: inherit;
@@ -142,7 +142,7 @@ select{
 	}
 
 
-/* ----------------day categoryList----------------*/
+/* ----------------day list----------------*/
 
 .day-list h3{
 	color: #20E3B4;
@@ -162,18 +162,26 @@ select{
 		width: 24px;
 	}
 
+#detail-click a{
+	width: inherit;
+}
+
+#healingSaying{
+	width: 250px;
+	height: 63px;
+}
 
 /* ---------------------button---------------------*/
 
-.button-put{
+.btn-put{
 	/* 버튼 flex하려구 만듬 ㅠㅠ */
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
 
-.submit-button{
-	/* -webkit-appearance: none; */
+.btn-submit{
+	-webkit-appearance: none;
 	
 	width: 330px;
 	height : 50px;
@@ -185,11 +193,54 @@ select{
 	
 	background: #E4EFE6;
 	color: #808079;
-	font-weight: bold;
+	font-weight: bold; 
+	
+	border:none 5px;
+	/*  -moz-border-radius-topleft: 5px;
+	-moz-border-radius-topright:5px;
+	-moz-border-radius-bottomleft:5px;
+	-moz-border-radius-bottomright:5px;
+	-webkit-border-top-left-radius:5px;
+	-webkit-border-top-right-radius:5px;
+	-webkit-border-bottom-left-radius:5px;
+	-webkit-border-bottom-right-radius:5px; */
 	
 }
 
+.btn-write-go{
+	position: fixed;
+	right : 25px;
+	bottom : 30px;
+
+}	
+
+.btn-write-go img{
+	width: 58px;
+}
 
 
+/* ---------------------text---------------------*/
 
-	
+.text {
+	position: relative;
+}
+
+.text-concat {
+	position: relative;
+	display: inline-block;
+	word-wrap: break-word;
+	overflow: hidden; /* max-height를 넘어서면 숨긴다. */
+	max-height: 2.4em;
+	/* (Number of lines you want visible) * (line-height) */
+	line-height: 1.2em;
+	text-align: justify;
+	/* text-overflow: ellipsis; */
+}
+
+.text.ellipsis::after {
+	text-overflow:ellipsis;
+	content: "...";
+	position: absolute;
+	right: -12px;
+	bottom: 4px;
+}

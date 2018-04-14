@@ -13,7 +13,9 @@
 				<option value="default-category" selected="selected">기본 카테고리</option>
 				<option value="">디비에서 카테고리 받아오기</option>
 			</select>
-			<img id="writeImage" src="${root}/resources/images/day/write_icon.png">
+			<a href="write">
+				<img id="writeImage" src="${root}/resources/images/day/write_icon.png">
+			</a>	
 		</div>
 		
 		<div class="write-box">
@@ -23,8 +25,8 @@
 			<textarea rows="15" cols="50"></textarea>
 			<input type="file">
 		</div>
-		<div class="button-put">
-			<input class="submit-button" type="submit" value="작성완료" />
+		<div class="btn-put">
+			<input class="btn-submit" type="submit" value="작성완료" />
 		</div>
 	</form>
 </main>
