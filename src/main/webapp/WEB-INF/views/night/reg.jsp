@@ -4,34 +4,34 @@
 <!--장비넓이에 맞게 / 최소사이즈 / 줌 인,아웃  -->
 
    <main class="box">
-	<div>
-		<div>
-			<form>
-			
-				<select name="categoryCheckbox" >
-				<h3>| 카테고리</h3>
+   <div>
+	<div class="reg-box">
+			<div class="category-size">
+				<h3>카테고리</h3>
+				<select class="select-box" >
 				
-					<option value="default-category" selected="selected"> 폴더1 </option>
+					<option value="default-category" selected="selected"> 폴더1</option>
 					<option value=""> 폴더2 </option>
 					<option value=""> 폴더3 </option>
 				</select>
-			</form>
-			<div>
-			<h3>| 제목</h3>
-			<input type="text"/>
+				</div>
+			
+			<div class="title">
+			<h3>제목</h3>
+			<input type="text" class="title-style"/>
 			</div>
 		</div>
 		
-		<div>
+		<div class="editor">
 			<h3 class="hidden">내용</h3>
 			<textarea rows="15" cols="50" ></textarea>
 		</div>
-	
 	</div>
-
+	
 <div class="button-box">
             <input type="submit" value="등록"/>
          </div>
+ 
 </main>
 
 

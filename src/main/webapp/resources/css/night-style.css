@@ -378,9 +378,8 @@ li {
 .box{
 	display: flex;
     justify-content: center;
-    align-items: center;
     min-height: 300px;
-    height: calc(100% - 80px);
+    height: 100%;
     flex-direction: column;
 }
 .search-img{
@@ -458,15 +457,42 @@ li {
 }
 
 .button-box{
-	padding-left: 280px;
+	display: flex;
+    justify-content: flex-end;
+    padding-top: 30px;
 }
 
+.editor{
+	padding-top: 30px;
+	padding-left: 30px;
+}
+.select-box{
+	width: 95px;
+    height: 24px;
+}
 
+.title{
+	display: flex;
+    padding-top: 10px;
+}
 
-
-
-
-
+.category-size{
+	display: flex;
+    padding-top: 10px;
+}
+.reg-box{
+	padding-left: 30px;	
+	padding-top: 50px;
+}
+.reg-box h3{
+	font-size: 13px;
+    color: #929292;
+    padding-right: 20px;
+}
+.title-style{
+	margin-left: 26px;
+    width: 235px;
+}
 
 
 
