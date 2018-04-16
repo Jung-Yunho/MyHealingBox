@@ -79,7 +79,7 @@ li {
          
 
 /* --- .main----------------------------------------- */
-.main {
+.list-main {
 	padding-top: 25px;
 	min-height: 300px;
 }
@@ -377,7 +377,7 @@ li {
 
 .box{
 	display: flex;
-    justify-content: center;
+  
     min-height: 300px;
     height: 100%;
     flex-direction: column;
@@ -454,6 +454,9 @@ li {
 }
 .category-list{
 	margin-bottom: 30px;
+	display: flex;
+    justify-content: space-around;
+}
 }
 
 .button-box{
@@ -464,7 +467,6 @@ li {
 
 .editor{
 	padding-top: 30px;
-	padding-left: 30px;
 }
 .select-box{
 	width: 95px;
@@ -481,7 +483,6 @@ li {
     padding-top: 10px;
 }
 .reg-box{
-	padding-left: 30px;	
 	padding-top: 50px;
 }
 .reg-box h3{
@@ -494,20 +495,23 @@ li {
     width: 235px;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.main-box {
+	display: flex;
+	justify-content: center;
+	min-height: 300px;
+	height: 83%;
+	flex-direction: column;
+}
+.main-box div:last-child{
+	display: flex;
+	justify-content: space-around;
+}
+.reg-form{
+	padding-top: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 
 
