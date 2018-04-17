@@ -12,7 +12,10 @@
 			<li><div></div></li>
 		</ul>	
 	</section>
-		<div class="button-box">
+		<div class="button-box" style="
+    display:  flex;
+    justify-content:  flex-end;
+">
             <input type="submit" value="편집"/>
          </div>
          
