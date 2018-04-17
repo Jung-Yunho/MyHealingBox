@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<main class="box">
+<main class="main-box">
 	<section>
 		<h1 class="hidden">카테고리</h1>
 		<ul class="category-box">
@@ -15,4 +15,6 @@
 		<div class="button-box">
             <input type="submit" value="편집"/>
          </div>
+         
+     
 </main>

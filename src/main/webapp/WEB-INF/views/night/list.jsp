@@ -3,7 +3,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %> 
 <c:set var="root" value="${pageContext.request.contextPath}"/>     
 
-<main class="main">
+<main class="list-main">
 
 <section>
 

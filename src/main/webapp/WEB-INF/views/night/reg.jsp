@@ -4,7 +4,7 @@
 <!--장비넓이에 맞게 / 최소사이즈 / 줌 인,아웃  -->
 
    <main class="box">
-   <div>
+   <div class="reg-form">
 	<div class="reg-box">
 			<div class="category-size">
 				<h3>카테고리</h3>
@@ -53,9 +53,9 @@
 		});
 	</script>
 
+
 <script src="http://js.nicedit.com/nicEdit-latest.js" type="text/javascript"></script>
 <script type="text/javascript">bkLib.onDomLoaded(nicEditors.allTextAreas);</script>
-
 
 
 
