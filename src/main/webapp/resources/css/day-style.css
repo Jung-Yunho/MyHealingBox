@@ -53,7 +53,7 @@ select{
 
 
 /* ---------------------day main---------------------*/
-
+/* 낮의 메인 페이지 */
 .day-main{
 	/* 아래의 margin-top은 모두 들어가야 함을 기억해! */
 	margin-top: 46px;
@@ -171,6 +171,18 @@ select{
 	width: 250px;
 	height: 63px;
 }
+
+/* ----------------day detail----------------*/
+.day-detail{
+	margin-top: 40px;
+	padding:0px 10px;
+}
+
+.img-attached-file{
+	width:300px;
+
+}
+
 
 /* ---------------------button---------------------*/
 
