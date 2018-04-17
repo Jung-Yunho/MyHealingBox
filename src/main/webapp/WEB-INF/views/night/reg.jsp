@@ -28,7 +28,10 @@
 		</div>
 	</div>
 	
-<div class="button-box">
+<div style="
+    display:  flex;
+    justify-content:  flex-end;
+">
             <input type="submit" value="등록"/>
          </div>
  

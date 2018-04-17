@@ -137,6 +137,13 @@ public class VideoController {
       return "night.list2";
    }
    
+   @RequestMapping("detail")
+   public String detail() {
+      
+      return "night.detail";
+   }
+   
+   
 }
 
 
