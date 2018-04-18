@@ -3,6 +3,7 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %> 
 <c:set var="root" value="${pageContext.request.contextPath}"/>  
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=1">
 
 <main class="box" style="
     padding-top: 82px;
@@ -28,8 +29,10 @@
 			</div>
 			<div class="detail-textarea"><span>삘릴리개굴개굴yaho</span></div>
 		</div>
-	<div>
-		
+	<div class="list-button">
+		<a href="${root }/night/video/list">
+		<input class="list-button" type="submit" value="목록"/>
+		</a>
 	</div>
    
    
@@ -37,7 +40,7 @@
       <h1 class="hidden">버튼목록</h1>
       <ul>
          <li> <span id="sel-button">선택</span> </li>
-         <li id="edit-button"> <a href="" >수정</a> </li>
+         <li id="edit-button"> <a href="${root }/night/video/reg-edit" >수정</a> </li>
          <li id="del-button"> <a href="" >삭제</a> </li>
       </ul>
    </nav>
@@ -52,11 +55,10 @@
 
 		selButton.onclick = function() {
 			if (editButton.classList.contains("show")) {
-				//editButton.style.bottom = ?;
 				editButton.classList.remove("show");
 				delButton.classList.remove("show");
-				//editButton.classList.remove("?");
-			} else {
+			}
+			else {
 				editButton.classList.add("show");
 				delButton.classList.add("show");
 

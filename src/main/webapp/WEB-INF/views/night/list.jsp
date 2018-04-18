@@ -191,7 +191,7 @@
    <nav class="btn-list">
 		<h1 class="hidden">버튼목록</h1>
 		<ul>
-			<li id="add-button"> <a href="reg" >추가</a></li>
+			<li id="add-button"> <a href="reg" ><img src="${root }/resources/images/night/plus.png"></a></li>
 		</ul>
 	</nav>
 

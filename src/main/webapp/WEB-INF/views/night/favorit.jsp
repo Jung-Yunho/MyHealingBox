@@ -2,7 +2,7 @@
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %> 
 <c:set var="root" value="${pageContext.request.contextPath}"/>     
-<main class="main">
+<main class="list-main">
 
 <section>
 
@@ -165,19 +165,14 @@
             </span>
         </div>
     </li>
-    
-    
-    
- 
- 
- 
+
     
             </ul>
             <a href="" class="link_more"><span class="ico_kakaotv"><img class="more-img" src="${root }/resources/images/night/ic_keyboard_arrow_down_black_36dp_2x.png"></span></a>
         </div>
     </div>
-    <div id="btn_top" class="u_bt_top" style="position: fixed; bottom: 0px; right: 0px; display: block; opacity: 1;">
-    <a href="javascript:tvcast.m.TopButtonManager.fScrollToTop();">TOP</a>
+    <div class="u_bt_top" style="position: fixed; bottom: 0px; right: 0px; display: block; opacity: 1;">
+    <a href="#">TOP</a>
 </div>
 
 
