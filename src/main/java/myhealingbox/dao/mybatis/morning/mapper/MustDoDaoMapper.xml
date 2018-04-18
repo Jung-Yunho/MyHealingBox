@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="myhealingbox.dao.morning.MustDoDao">
+	
+	<!-- <select id="getList" resultMap="myhealingbox.entity.morning.MustDo">
+		select * from MustDo
+		limit ${(_parameter-1)*15},15
+	</select> -->
+
+	<select id="get" resultType="myhealingbox.entity.morning.MustDo">
+		select * from MustDo where id=#{id}
+	</select>
+	
+	<select id="insert" parameterType="myhealingbox.entity.morning.MustDo">
+		insert into MustDo(title,content,attachedFile)
+		values(#{title},${content},${attachedFile})
+	</select>
+	
+	<select id="update" parameterType="myhealingbox.entity.morning.MustDo">
+		update MustDo set title=#{title}, content=#{content}, attachedFile=${attachedFile}
+		where id=#{id};
+	</select>
+	
+	<select id="delete" parameterType="myhealingbox.entity.morning.MustDo">
+		delete from MustDo where id=#{id};
+	</select>
+</mapper>

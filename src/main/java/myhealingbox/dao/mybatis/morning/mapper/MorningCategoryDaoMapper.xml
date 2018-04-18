@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="myhealingbox.dao.morning.MorningCategoryDao">
+
+	<!-- <select id="getList" resultMap="myhealingbox.entity.morning.MorningCategory">
+		select * from MorningCategory
+		limit ${(_parameter-1)*15},15
+	</select> -->
+	
+	<select id="get" resultType="myhealingbox.entity.morning.MorningCategory">
+		select * from MorningCategory where id=#{id}
+	</select>
+	
+	<select id="insert" parameterType="myhealingbox.entity.morning.MorningCategory">
+		insert into MorningCategory(title)
+		values(#{title})
+	</select>
+	
+	<select id="update" parameterType="myhealingbox.entity.morning.MorningCategory">
+		update MorningCategory set title=#{title} where id=#{id};
+	</select>
+	
+	<select id="delete" parameterType="myhealingbox.entity.morning.MorningCategory">
+		delete from MorningCategory where id=#{id};
+	</select>
+
+</mapper>

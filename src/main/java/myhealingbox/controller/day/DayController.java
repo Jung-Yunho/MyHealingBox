@@ -34,9 +34,9 @@ public class DayController {
 		@RequestMapping("categoryList")
 		public String categoryList(Model model) {
 	
-			List<DayCategory> categoryList = service.getDayCategoryList();
+			//List<DayCategory> categoryList = service.getDayCategoryList();
 	
-			model.addAttribute("categoryLists", categoryList);
+			//model.addAttribute("categoryLists", categoryList);
 	
 			return "day.categoryList";
 		}
@@ -45,15 +45,15 @@ public class DayController {
 	   @RequestMapping("list")
 	   public String list(Model model) {
 	      
-	      List<WantToDo> list = service.getWantToDoList(1);
+	      //List<WantToDo> list = service.getWantToDoList(1);
 	      
-	      model.addAttribute("videos", list);
+	      //model.addAttribute("videos", list);
 	      
 	      return "day.list";
 	   }
 	   
 	   // detail
-	   @RequestMapping("{id}")
+	   /*@RequestMapping("{id}")
 	   public String detail(@PathVariable("id") Integer id, Model model) {
 	      
 		   WantToDo wantToDo = service.getWantToDo(id);
@@ -61,7 +61,13 @@ public class DayController {
 	      model.addAttribute("WantToDo", wantToDo);
 	      
 	      return "day.detail";
-	   }
+	   }*/
+	   
+	   @RequestMapping("detail")
+	   public String detail() {
+		   return "day.detail";
+		}
+	   
 	   
 	   // edit
 	   @RequestMapping("edit")

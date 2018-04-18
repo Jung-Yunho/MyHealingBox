@@ -9,9 +9,26 @@
 	
 	<div class="day-main">
 		<div>
-			<img src="${root}/resources/images/day/day_main_logo2.png" />
+			<img src="${root}/resources/images/day/day_main_logo.png" />
 		</div>	
-		<div class="nav-box"><a href="${root}/day/write">오늘은 무엇을 하고 싶었나요?</a></div>
-		<div class="nav-box"><a href="${root}/day/categoryList">오늘은 무엇을 해볼까요?</a></div>
+		<div class="nav-box" id="go-write"><a href="${root}/day/write">오늘은 무엇을 하고 싶었나요?</a></div>
+		<div class="nav-box" id="go-category"><a href="${root}/day/categoryList">오늘은 무엇을 해볼까요?</a></div>
 	</div>
 </main>
+
+<script>
+	window.addEventListener("load",function(event){
+		var goButton1 = document.querySelector("#go-write");
+		var goButton2 = document.querySelector("#go-category");
+
+		goButton1.onclick = function(e){
+			alert("test");
+		}
+
+		goButton2.onclick = function(e){
+
+		}
+
+	});
+
+</script>

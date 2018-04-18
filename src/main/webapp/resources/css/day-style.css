@@ -2,22 +2,32 @@
 /* -----------------------.초기화 -----------------------*/
 
 html{
-	background: #FFFFF2;
+	/* background: #FFFFF2; */
 	opacity: 30%;
 }
 
+p{
+	margin-bottom: 5px;
+}
+
 a, a:hover, a:visited, a:link, a:active{
-	font-weight: bold;
+	/* font-weight: bold; */
 	display: inline-block;
 	text-decoration: none;	
 	color: inherit;
+}
+
+hr{
+	border: 1px solid #E4EFE6;
+	width: 340px;
+	margin-bottom: 15px;
 }
 
 select{
 	width: 230px;
 	padding:.8em .5em;
 	font-family: inherit;
-	border: 3px solid #E4EFE6;
+	border: 2px solid #E4EFE6;
 	-webkit-appearance: none;
 	-moz-appearance: none;
 	appearance: none;
@@ -34,16 +44,16 @@ select{
 .main{
 	font-size: 12px;
 	/* font-family: 아직안넣음; */
+	color: #808079;	
 	
-	width : 100%;
-	min-height : 500px; 
-
-	margin-left: 10px;
+	
+	min-height : 500px;
 }
 
 
-/* ---------------------day-main---------------------*/
 
+/* ---------------------day main---------------------*/
+/* 낮의 메인 페이지 */
 .day-main{
 	/* 아래의 margin-top은 모두 들어가야 함을 기억해! */
 	margin-top: 46px;
@@ -54,44 +64,196 @@ select{
 	align-items: center;	
 }
 
-	.day-main div:first-child img{
-		/* 사이즈 확인하고 넣자 */
-	}
-	
-	.day-main div img{
-		margin-bottom: 20px;
-	}
-
 .nav-box{
 	width: 240px;
 	height: 90px;
-
 	margin-bottom : 10px;
-	
-	background: #F2FFF5;
 	
 	display:flex;
 	align-items : center;
 	justify-content:center;
+	
+	background: #E9F7EF;	
 
 	font-size: 13px;
-	color: #C0C0C0;
-	
+	color: #808079;	
 }
 
 	.nav-box:hover{
-		border: solid 2px;
-		border-color: #E4EFE6;
+		border: solid 3px #E4EFE6;
 		background: #ffffff;
 	}
 	
 	
-/* ---------------------write---------------------*/
+/* ---------------------day write---------------------*/
+
 #writeImage{
-	width: 45px;
+	width: 42px;
+	height: 42px;
+	margin-left: 10px;
+}
+
+.write-box{
+	width : 320px;
+	min-height : 300px;
+	
+	margin-top: 10px;
+	margin-right: 0px;
+	padding:10px 7px;	
+	
+	display: flex;
+	flex-direction: column;
+	align-content: space-around;
+	
+	border: solid 3px #E4EFE6;
+}
+
+	.write-box h3{
+		margin-bottom : 5px;
+		color: #808079;
+	}
+	
+	.write-box textarea,
+	.write-box input{
+		margin-bottom: 10px;
+	}
+
+
+/* ----------------day categoryList----------------*/
+
+.day-list{
+	margin-top: 40px;
+	padding:0px 10px;
+	
+	display: flex;
+	flex-direction: column;
 }
 
 
+.category-list{
+	margin-bottom: 5px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+}
+
+	.category-list img{
+		width: 28px;		
+	}
 
 
+/* ----------------day list----------------*/
+
+.day-list h3{
+	color: #20E3B4;
+}
+
+.list-bottom{
+	margin-bottom: 10px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 	
+	border-bottom: 0.5px solid;
+	
+}
+	
+	.list-bottom img{
+		width: 24px;
+	}
+
+#detail-click a{
+	width: inherit;
+}
+
+#healingSaying{
+	width: 250px;
+	height: 63px;
+}
+
+/* ----------------day detail----------------*/
+.day-detail{
+	margin-top: 40px;
+	padding:0px 10px;
+}
+
+.img-attached-file{
+	width:300px;
+
+}
+
+
+/* ---------------------button---------------------*/
+
+.btn-put{
+	/* 버튼 flex하려구 만듬 ㅠㅠ */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.btn-submit{
+	-webkit-appearance: none;
+	
+	width: 330px;
+	height : 50px;
+	
+	margin-top:10px;
+	margin-bottom:20px;
+	margin-right:10px;
+	margin-left:0px;
+	
+	background: #E4EFE6;
+	color: #808079;
+	font-weight: bold; 
+	
+	border:none 5px;
+	/*  -moz-border-radius-topleft: 5px;
+	-moz-border-radius-topright:5px;
+	-moz-border-radius-bottomleft:5px;
+	-moz-border-radius-bottomright:5px;
+	-webkit-border-top-left-radius:5px;
+	-webkit-border-top-right-radius:5px;
+	-webkit-border-bottom-left-radius:5px;
+	-webkit-border-bottom-right-radius:5px; */
+	
+}
+
+.btn-write-go{
+	position: fixed;
+	right : 25px;
+	bottom : 30px;
+
+}	
+
+.btn-write-go img{
+	width: 58px;
+}
+
+
+/* ---------------------text---------------------*/
+
+.text {
+	position: relative;
+}
+
+.text-concat {
+	position: relative;
+	display: inline-block;
+	word-wrap: break-word;
+	overflow: hidden; /* max-height를 넘어서면 숨긴다. */
+	max-height: 2.4em;
+	/* (Number of lines you want visible) * (line-height) */
+	line-height: 1.2em;
+	text-align: justify;
+	/* text-overflow: ellipsis; */
+}
+
+.text.ellipsis::after {
+	text-overflow:ellipsis;
+	content: "...";
+	position: absolute;
+	right: -12px;
+	bottom: 4px;
+}

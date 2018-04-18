@@ -24,7 +24,7 @@ import myhealingbox.service.night.VideoService;
 
 
 @Controller("videoController")
-@RequestMapping("/video/")
+@RequestMapping("/night/video/")
 public class VideoController {
    
    @Autowired
@@ -136,6 +136,13 @@ public class VideoController {
       
       return "night.list2";
    }
+   
+   @RequestMapping("detail")
+   public String detail() {
+      
+      return "night.detail";
+   }
+   
    
 }
 
