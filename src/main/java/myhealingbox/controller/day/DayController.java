@@ -53,7 +53,7 @@ public class DayController {
 	   }
 	   
 	   // detail
-	   @RequestMapping("{id}")
+	   /*@RequestMapping("{id}")
 	   public String detail(@PathVariable("id") Integer id, Model model) {
 	      
 		   WantToDo wantToDo = service.getWantToDo(id);
@@ -61,7 +61,13 @@ public class DayController {
 	      model.addAttribute("WantToDo", wantToDo);
 	      
 	      return "day.detail";
-	   }
+	   }*/
+	   
+	   @RequestMapping("detail")
+	   public String detail() {
+		   return "day.detail";
+		}
+	   
 	   
 	   // edit
 	   @RequestMapping("edit")

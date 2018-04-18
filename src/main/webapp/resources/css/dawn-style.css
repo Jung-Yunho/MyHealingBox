@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
-.main{
-	padding-top: 60px;
+.dawn-main{
+	
 }
 
 .aside{
@@ -9,7 +9,22 @@
 	height: 35%;
 }
 
-.category-ul{
+select{
+   width: 100px;
+   padding:.8em .5em;
+   font-family: inherit;
+   border: 3px solid #E4EFE6;
+   -webkit-appearance: none;
+   -moz-appearance: none;
+   appearance: none;
+   background: url("../images/day/arrow_icon.png") no-repeat 95% 50%;
+}
+
+   select:-ms-expand{
+      display: none;
+   }
+/*--------------------DawnCategory List--------------------*/
+/* .category-ul{
 	width: 100%;
 	height: inherit;
 }
@@ -25,4 +40,70 @@
 .category-modify{
 	display: flex;
 		justify-content: flex-end;
+} */
+/*--------------------Memory List--------------------*/
+
+.memory-list{
+	width:100%;
+	height:100%;
+	margin-top: 20px;
 }
+
+.memory-title-box{
+	display: flex;
+		justify-content: space-between;
+	width: 100%;
+	height: 50px;
+	margin-bottom: 10px;
+	border-bottom: 2px solid #979797;
+}
+
+.memory-title{
+	font-size: 20px;
+	padding-left: 10px;
+}
+
+.memory-content-ul{
+	width:100%;
+	height: 100px;
+	display: flex;
+		justify-content: space-between;
+	border-bottom: 1px solid #979797;
+	padding-bottom: 5px;
+	padding-top: 5px;
+}
+
+	.memory-content-box{
+		width: 60%;
+	}
+	
+		.memory-content-box div:first-child{
+			padding-bottom: 10px;
+		}
+		
+	.memory-img-box{
+		width: 23%;
+		height: 100%;
+	}
+	
+		.memory-img{
+			width: 100%;
+			height: 100%;
+		}
+	
+	.memory-edit-box{
+		width: 17%;
+		display: flex;
+			justify-content: space-around;
+		padding-top: 15px;
+	}
+	
+.memory-button-box{
+	width: 90px;
+	height: 90px;
+}
+
+	.memory-button-img{
+		width: 100%;
+		height: 100%;
+	}
