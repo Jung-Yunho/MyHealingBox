@@ -48,7 +48,7 @@
 	
 	<!--member:혹시 모를 것에 대한 예비용-->
 	<definition name="member.*" template="/WEB-INF/views/member/inc/member-layout.jsp">    
-	   <put-attribute name="header" value="/WEB-INF/views/inc/header.jsp" />
+	   <put-attribute name="header" value="/WEB-INF/views/member/inc/header.jsp" />
 	   <put-attribute name="aside" value="/WEB-INF/views/member/inc/member-aside.jsp" />
 	   <put-attribute name="main" value="/WEB-INF/views/member/{1}.jsp" />
 	   <put-attribute name="footer" value="/WEB-INF/views/inc/footer.jsp" />
