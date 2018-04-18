@@ -6,7 +6,7 @@
 <c:set var="root" value="${pageContext.request.contextPath }"/>
 
 <main class="main">
-	<section>
+	<%-- <section>
 		<h1 class="hidden">새벽 인덱스</h1>
 		<ul class="category-ul">
 			<c:forEach var="i" begin="0" end="4">
@@ -20,5 +20,5 @@
 		<ul>
 			<li class="category-modify"><a href=""><img src="">편집</a></li>
 		</ul>
-	</nav>
+	</nav> --%>
 </main>
