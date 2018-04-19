@@ -7,25 +7,30 @@
 
 
 <main class="mhb-main">
-	<div class="back-img">
-	
-		<div>
-			<a href="${root}/night/category">밤</a>
+		
+		<div >
+			<a href="${root}/night/video/category">밤</a>
 		</div>
+		
+		<div>
+			<img class="logo-main" alt="" src="${root }/resources/images/logo3.png">
+		
+		</div>
+			
 		
 		<div>
 			<a href="${root}/dawn/home/index">새벽</a>	
 		</div>
 		
 		<div>
-			<a href="${root}/night/category">아침</a>	
+			<a href="${root}/morning/list">아침</a>	
 		</div>
 		
 		<div>
 			<a href="${root}/day/main">낮</a>	
 		</div>
 	
-	</div>
+
 	<%-- <img style="width: 100%; height: 100%;" src="${root}/resources/images/daynight9.jpg"> --%>
 	
 </main>
