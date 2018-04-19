@@ -29,12 +29,16 @@
 				<fieldset class="todolist">
 					<legend>할일목록</legend>
 					<c:forEach var="i" begin="0" end="4">
-						<div>
-							<span><input class="checkBox" type="checkbox"></span>
+						<div class="todolist-detail">
+							<div>
+								<input class="checkBox" type="checkbox">
+								<span class="todolist-title">
+									<a href="detail">제목부분</a>
+								</span>
+							</div>
 							<span>
-							<a href="detail">제목부분</a>
+								<input class="checkBox" type="checkbox">
 							</span>
-							<span><input class="checkBox" type="checkbox"></span>
 						</div>
 					</c:forEach>
 				</fieldset>
