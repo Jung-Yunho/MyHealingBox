@@ -8,6 +8,11 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @RequestMapping("/member/")
 public class MemberController {
 
+	@RequestMapping("index")
+	public String index() {
+		
+		return "member.index";
+	}
    
    @RequestMapping(value="login", method=RequestMethod.GET)
    public String login() {

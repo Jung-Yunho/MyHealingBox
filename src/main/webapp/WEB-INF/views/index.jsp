@@ -6,26 +6,7 @@
 <c:set var="root" value="${pageContext.request.contextPath }"/>
 
 
-<main class="mhb-main">
-	<div style="background-image: url('${root}/resources/images/daynight9.jpg');">
-	
-		<div>
-			<a href="${root}/night/category">밤</a>
-		</div>
-		
-		<div>
-			<a href="${root}/dawn/home/index">새벽</a>	
-		</div>
-		
-		<div>
-			<a href="${root}/night/category">아침</a>	
-		</div>
-		
-		<div>
-			<a href="${root}/day/main">낮</a>	
-		</div>
-	
-	</div>
-	<%-- <img style="width: 100%; height: 100%;" src="${root}/resources/images/daynight9.jpg"> --%>
-	
-</main>
+<html>
+이것은 그냥 index이고 아무것도 아니다....쥬륵
+
+</html>

@@ -2,7 +2,7 @@
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %> 
 <c:set var="root" value="${pageContext.request.contextPath}"/> 
-<main class="main-box">
+<main class="main-box" style="height:570px;">
 	<section>
 		<h1 class="hidden">카테고리</h1>
 		<ul style="
@@ -40,7 +40,9 @@
 		
 			<div class="category-button category-edit-button">
             <input type="submit" value="추가"/>
-            <input type="submit" value="완료"/>
+            <a href="${root }/night/video/category">
+           		<input type="submit" value="완료"/>
+            </a>
          </div>
 	</section>
 </main>

@@ -13,18 +13,14 @@
        minimum-scale="1"
        user-scalable="1"
    >
-   <title>Insert title here</title>
-   <link href="${root }/resources/css/style.css" type="text/css" rel="stylesheet" />
+   <title>나의 힐링 박스</title>
+   <link href="${root }/resources/css/mhb-style.css" type="text/css" rel="stylesheet" />
 </head>
 
 <body>
    <!-- header -->
    
    <tiles:insertAttribute name="header" />
-   
-   <!-- aside -->
-   
-   <tiles:insertAttribute name="aside" />
    
    <!-- main -->
    

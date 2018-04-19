@@ -30,20 +30,29 @@
 		</div>
 	</div>
 	
-<div style="
-    display:  flex;
-    justify-content:  center;
-">			<a href="${root }/night/video/list">
-            <input class = "button-submit"type="submit" value="등록"/>
+	<div class="reg-buttons">
+	
+         <div>
+         	<a href="${root }/night/video/detail">
+            	<input id="cancellation"type="submit" value="취소"/>
             </a>
          </div>
+	
+	<div>	
+		<a href="${root }/night/video/list">
+            <input id="reg" type="submit" value="등록"/>
+            </a>
+         </div>
+         
+ </div>
+ 
  
 </main>
 
 
 <script>
 		window.addEventListener("load", function(){
-			var submitButton = document.querySelector("input[type='submit']");
+			var submitButton = document.querySelector("input[id='reg']");
 
 			submitButton.onclick = function(e){
 

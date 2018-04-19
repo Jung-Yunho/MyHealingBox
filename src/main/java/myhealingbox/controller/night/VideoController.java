@@ -50,12 +50,12 @@ public class VideoController {
       
       return "night.detail";
    }
-   
+ /*  
    @RequestMapping("edit")
    public String edit() {
 
       return "night.edit";
-   }
+   }*/
 
    //reg는 get과 post 둘 다 처리 하기 때문에 둘로 나눠
    @RequestMapping(value="reg", method=RequestMethod.GET)
@@ -106,7 +106,7 @@ public class VideoController {
    @ResponseBody
    public String data() {
 
-      return "안녕하세용";
+      return "등록이 완료되었습니다.";
    }
    
    @RequestMapping("category")
@@ -141,6 +141,12 @@ public class VideoController {
    public String detail() {
       
       return "night.detail";
+   }
+   
+   @RequestMapping("reg-edit")
+   public String regEdit() {
+      
+      return "night.reg-edit";
    }
    
    
