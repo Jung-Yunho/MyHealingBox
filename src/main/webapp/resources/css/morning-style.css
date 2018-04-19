@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 .main{
-	width: 100%;
+	/* width: 100%; */
 	min-height: 500px;
 	
 	margin-left: 10px;
@@ -16,15 +16,15 @@
 }
 
 .addtodo {
-	width: 86%;
+	width: 88.5%;
 }
 
 .todolist {
-	width: 86%;
+	width: 88.5%;
 	min-height:200px;
 }
 
 .donelist {
-	width: 86%;
+	width: 88.5%;
 	min-height:100px;
 }
