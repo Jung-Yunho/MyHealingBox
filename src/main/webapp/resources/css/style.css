@@ -123,3 +123,251 @@ a{
 	
 	background: #ededed;
 }
+
+/*------login 공사즁. 놀라지마세요-----------*/
+#kakaoContent{
+	display:block;
+	overflow:hidden;
+	margin-bottom:60px;
+}
+
+#kakaoContent .wrap_login{
+	width:304px;
+	min-height:410px;
+	height:auto;
+	position:absolute;
+	top:50%;left:50%;
+	margin:-250px 0 0 -152px;
+	padding:20px 0;
+	letter-spacing:0;
+}
+.set_login .btn_emailaccount{
+	color:#fff;
+	etter-spacing:-1px;
+}
+.cont_login .info_user{
+	position:relative;
+	left:auto;
+	right:auto;
+	bottom:auto;
+	padding:0;
+	margin-top:13px;
+	border:0 none;
+	font-size:12px;
+}
+#kakaoContent .bg_login{
+	width:100%;
+	height:100%;
+}
+#kakaoContent{
+	min-height:100%;
+	margin-bottom:0;
+
+}
+#mArticle{
+	width:940px;
+	margin:60px auto 20px;
+}
+#mArticle:after{
+	display:block;
+	overflow:hidden;
+	height:0;
+	clear:both;
+	content:''
+}
+#mArticle{
+	width:100%;
+	min-height:0;
+}
+.dimmed_layer{
+	display:none;
+	position:fixed;
+	top:0;
+	left:0;
+	z-index:50;
+	width:100%;
+	height:100%;
+	background-color:#000;
+	opacity:.6;
+	filter:alpha(opacity=60);
+}
+.screen_out {
+    overflow: hidden;
+    position: absolute;
+    width: 0;
+    height: 0;
+    line-height: 0;
+    text-indent: -9999px;
+}
+
+.info_etc{
+	float:left;
+	width:540px;
+	height:394px;
+	margin-right:40px;
+	text-align:left;
+}
+.info_etc .img_etc{
+	display:block;
+
+}
+.info_etc{
+	display:none;
+}
+
+.cont_login{	
+	position:relative;
+	float:left;width:304px;
+	min-height:299px;
+	margin-top:10px;
+	padding:21px 19px 74px;
+		
+}
+.tit_kakao{
+	margin-bottom:23px;
+
+}
+.tit_kakao .img_kakao{
+	display:block;
+    width: 30px;
+    height: 30px;
+}
+.txt_bar{
+	display:inline-block;
+	font-size:11px;
+	color:#d4d4d4;
+}
+.login_tooltip{
+	display:none;
+	position:absolute;
+	min-height:32px;
+	padding:12px 12px 11px;
+	color:#fff;
+	line-height:16px;
+	z-index:10;
+	background-color:#000;
+	opacity:.9;
+	filter:alpha(opacity=90);
+}
+
+.cont_login .tit_intro{
+	display:block;
+	width:270px;
+	height:93px;
+	margin-bottom:20px;
+}
+.cont_login .login_inp{
+	position:relative;
+	height:38px;
+	margin:0 2px 8px 0;
+	border:1px solid #ddd;
+	z-index:1;
+}
+.login_inp .inp_login{
+	display:block;
+	min-width:268px;
+	width:100%;
+	height:100%;
+	padding:0 10px;
+	border:1px solid transparent;
+	color:#000;
+	line-height:25px;
+	box-sizing:border-box;
+}
+.cont_login .set_login{
+	position:relative;
+	margin-top:10px;
+	line-height:20px;
+}
+.cont_login .desc_error{
+	margin:12px 2px 12px 0;
+	padding:12px;
+	line-height:16px;
+	z-index:5;
+	color:#fff;
+	background-color:#000;
+	opacity:.9;
+	filter:alpha(opacity=90);
+}
+.cont_login .desc_error .txt_info{
+	display:block;
+	margin-top:6px;
+	color:#f9df33;
+}
+.cont_login .desc_error .link_more{
+	color:#f9df33;
+	text-decoration:underline;
+}
+.cont_login .btn_login{
+	display:block;
+	width:302px;
+	height:46px;
+	margin-top:15px;
+	border:1px solid rgba(0,0,0,0.1);
+	border-radius:4px;
+	font-size:16px;
+	color:#222;
+	background:#849CBC;
+	font-weight:bold;
+}
+.cont_login .inp_on{
+	z-index:10;
+}
+.cont_login .info_user{
+	position:absolute;
+	left:25px;
+	right:25px;
+	bottom:18px;
+	padding-top:7px;
+	margin-right:2px;
+	border-top:1px solid #e0e0e0;
+	letter-spacing:-1px;
+}
+.cont_login .info_user:after{
+	display:block;
+	overflow:hidden;
+	height:0;
+	clear:both;
+	content:'';
+}
+.cont_login .user_more{
+	display:block;
+	margin-top:6px;
+}
+.cont_login .wrap_captcha{
+	width:304px;
+	height:78px;
+	margin-top:12px;
+}
+.cont_login .btn_login{
+	margin-top:17px;
+}
+.cont_login .wrap_captcha{
+	margin-top:17px;
+}
+.set_login .inp_check {
+    position: absolute;
+    top: 4px;
+    left: 0;
+    width: 12px;
+    height: 12px;
+    -webkit-appearance: none;
+    opacity: 0;
+}
+.set_login .lab_check {
+    display: inline-block;
+    padding-left: 17px;
+    margin-top: -3px;
+    cursor: pointer;
+    vertical-align: top;
+}
+
+
+
+
+
+
+
+
+
+
