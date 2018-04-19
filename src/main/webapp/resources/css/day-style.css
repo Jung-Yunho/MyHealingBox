@@ -146,7 +146,8 @@ select{
 /* ----------------day list----------------*/
 
 .day-list h3{
-	color: #20E3B4;
+	color: #808079;
+	font-size: 15px;
 }
 
 .list-bottom{
@@ -155,8 +156,7 @@ select{
 	justify-content: space-between;
 	align-items: center;
 	
-	border-bottom: 0.5px solid;
-	
+	border-bottom: 0.5px solid;	
 }
 	
 	.list-bottom img{
@@ -178,8 +178,32 @@ select{
 	padding:0px 10px;
 }
 
+	.day-detail h4{
+		color: #a2a29b;
+		margin-bottom: 5px;
+	}
+	
+	.day-detail .list-bottom{
+		border-bottom: 0px;
+	}	
+
+.box-detail{
+	display: flex;
+	flex-direction: column;
+	align-items : center;
+	
+	padding-left: 7px;
+	padding-right: 7px;
+}
+
+.box-detail >p{
+	margin-top:0px;
+	margin-bottom: 10px;
+}
+
 .img-attached-file{
 	width:300px;
+	margin-bottom: 15px;
 
 }
 

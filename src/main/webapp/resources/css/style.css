@@ -28,8 +28,11 @@ li{
    
 }
 
-a{
-	/* 초기화가 모더라..(글적) */
+a, a:hover, a:visited, a:link, a:active{
+	/* font-weight: bold; */
+	display: inline-block;
+	text-decoration: none;	
+	color: inherit;
 }
 
 /* --- my style cascade ------------------------------- */

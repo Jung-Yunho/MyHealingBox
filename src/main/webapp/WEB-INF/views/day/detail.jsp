@@ -13,7 +13,7 @@
 		</div>	
 		<hr/>
 		
-		<div style="display: flex; justify-content: center;">
+		<div class="box-detail">
 			<p>지금은 5시 40분이고 배가 너무 아프고 정신이 하나도 없고 종료까지 10분 남았고 오드빅스는 20분 남았는데 멘탈이가 나갔고 너무 정신없고 나 오늘 뭐했지...휴ㅠ</p>
 			<img class="img-attached-file" alt="여기는 첨부 이미지"
 					src="${root}/resources/images/day/test.jpg">

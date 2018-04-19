@@ -20,7 +20,7 @@
 			<form>
 				<fieldset class="addtodo">
 					<legend>할일추가</legend>
-					<input type="text"><input type="button" value="등록"><br> 
+					<input type="text" placeholder="할일을 입력해주세요"><input type="button" value="등록"><br> 
 				</fieldset>
 			</form>
 		</div>
@@ -28,6 +28,15 @@
 			<form>
 				<fieldset class="todolist">
 					<legend>할일목록</legend>
+					<c:forEach var="i" begin="0" end="4">
+						<div>
+							<span><input class="checkBox" type="checkbox"></span>
+							<span>
+							<a href="detail">제목부분</a>
+							</span>
+							<span><input class="checkBox" type="checkbox"></span>
+						</div>
+					</c:forEach>
 				</fieldset>
 			</form>
 		</div>
