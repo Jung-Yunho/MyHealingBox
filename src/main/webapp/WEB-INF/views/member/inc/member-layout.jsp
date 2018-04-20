@@ -15,6 +15,7 @@
    >
    <title>나의 힐링 박스</title>
    <link href="${root }/resources/css/mhb-style.css" type="text/css" rel="stylesheet" />
+   <!-- <script type="text/javascript" src="member.js"></script> -->
 </head>
 
 <body>
