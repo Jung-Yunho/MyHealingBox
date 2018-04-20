@@ -561,7 +561,9 @@ li {
     font-weight: bold;
     border: none 5px;
 }
-
+.input-text{
+	text-align: center;
+}
 
 
 
