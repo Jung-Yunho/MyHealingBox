@@ -172,7 +172,7 @@
         </div>
     </div>
     <div class="u_bt_top" style="position: fixed; bottom: 0px; right: 0px; display: block; opacity: 1;">
-    <a href="#">TOP</a>
+    <a href="#"><img src="/myhealingbox/resources/images/night/ic_arrow_upward_black_24dp_1x.png" style="border-radius: 50px;"></a>
 </div>
 
 
