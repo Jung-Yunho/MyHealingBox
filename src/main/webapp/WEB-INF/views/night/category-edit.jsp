@@ -6,32 +6,35 @@
 	<section>
 		<h1 class="hidden">카테고리</h1>
 		<ul style="
-    padding-bottom:  20px;
+    padding-bottom:  30px;
 ">
 			<li><div class="category-list">자주보는영상</div></li>
 			
 			<li>
-				<div class="category-list"><input type="checkbox"/>폴더1
+				<div class="category-list"><input type="checkbox"/>
+				<input class="input-text" "text" value="폴더1"/>
 				<div class="category-edit-list">
-						<img class="edit-icon" src="${root }/resources/images/night/ic_create_black_24dp_1x.png">
+						<img class="edit-icon" src="${root }/resources/images/night/ic_create_black_24dp_1x.png" style="padding-right: 15px;">
 						<img class="edit-icon" src="${root }/resources/images/night/ic_clear_black_24dp_1x.png">
 						</div>
 				</div>
 			</li>
 			
 			<li>
-				<div class="category-list"><input type="checkbox"/>폴더2
+				<div class="category-list"><input type="checkbox"/>
+				<input class="input-text" type="text" value="폴더2"/>
 				<div class="category-edit-list">
-						<img class="edit-icon" src="${root }/resources/images/night/ic_create_black_24dp_1x.png">
+						<img class="edit-icon" src="${root }/resources/images/night/ic_create_black_24dp_1x.png" style="padding-right: 15px;">
 						<img class="edit-icon" src="${root }/resources/images/night/ic_clear_black_24dp_1x.png">
 						</div>
 				</div>
 			</li>
 			
 			<li>
-				<div class="category-list"><input type="checkbox"/>폴더3
+				<div class="category-list"><input type="checkbox"/>
+				<input class="input-text" type="text" value="폴더3"/>
 				<div class="category-edit-list">
-						<img class="edit-icon" src="${root }/resources/images/night/ic_create_black_24dp_1x.png">
+						<img class="edit-icon" src="${root }/resources/images/night/ic_create_black_24dp_1x.png" style="padding-right: 15px;">
 						<img class="edit-icon" src="${root }/resources/images/night/ic_clear_black_24dp_1x.png">
 						</div>
 				</div>

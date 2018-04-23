@@ -55,13 +55,9 @@
     <button type="submit" class="btn_login submit btn_disabled">로그인</button>
     <div class="info_user">
       <div class="join_user">
-        <a href="" id="signUp">회원가입</a>
+        <a href="${root }/member/join" id="signUp">회원가입</a>
       </div>
-      <ul class="list_user">
-        <li>
-          <a href="">비밀번호 재설정</a>
-        </li>
-      </ul>
+      
     </div>
   </fieldset>
 </form>

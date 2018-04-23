@@ -8,29 +8,45 @@
 
 <main class="mhb-main">
 		
-		<div >
-			<a href="${root}/night/video/category">밤</a>
+		<div>
+			<section id="night">밤</section>
 		</div>
 		
 		<div>
-			<img class="logo-main" alt="" src="${root }/resources/images/logo3.png">
-		
+			<img class="logo-main" alt="" src="${root}/resources/images/mhb-logo.png">
 		</div>
-			
+					
+		<div>
+			<section id="dawn">새벽</section>
+		</div>	
 		
 		<div>
-			<a href="${root}/dawn/home/index">새벽</a>	
-		</div>
-		
-		<div>
-			<a href="${root}/morning/list">아침</a>	
+			<section id="morning">아침</section>
 		</div>
 		
 		<div>
-			<a href="${root}/day/main">낮</a>	
+			<section id="day">낮</section>
 		</div>
 	
 
 	<%-- <img style="width: 100%; height: 100%;" src="${root}/resources/images/daynight9.jpg"> --%>
 	
 </main>
+
+<script>
+	window.addEventListener("load",function(){
+		var mainScreen = document.querySelector(".logo-main");
+		var nightButton = document.querySelector("#night");
+		var dawnButton = document.querySelector("#dawn");
+		var morningButton = document.querySelector("#morning");
+		var dayButton = document.querySelector("#day");
+		
+		mainScreen.onclick=function(){
+			alert("됏당!");
+			nightButton = append(img)
+		};
+
+
+	});
+
+</script>
