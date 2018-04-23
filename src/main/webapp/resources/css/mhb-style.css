@@ -253,12 +253,14 @@ form {
 }
 .tit_kakao{
 	margin-bottom:23px;
+	display: flex;
+    justify-content: center;
 
 }
 .tit_kakao .img_kakao{
 	display:block;
-    width: 30px;
-    height: 30px;
+    width: 280px;
+    height: 75px;
 }
 .txt_bar{
 	display:inline-block;
@@ -334,8 +336,8 @@ form {
 	border:1px solid rgba(0,0,0,0.1);
 	border-radius:4px;
 	font-size:16px;
-	color:#222;
-	background:#849CBC;
+	color: #f2f4f6;
+    background: -webkit-linear-gradient(left, #2c3e50 0%,#283E51 100%);
 	font-weight:bold;
 }
 .cont_login .inp_on{
@@ -345,10 +347,8 @@ form {
 	position:absolute;
 	left:25px;
 	right:25px;
-	bottom:18px;
 	padding-top:7px;
 	margin-right:2px;
-	border-top:1px solid #e0e0e0;
 	letter-spacing:-1px;
 }
 .cont_login .info_user:after{
@@ -384,7 +384,7 @@ form {
 }
 .set_login .lab_check {
     display: inline-block;
-    padding-left: 17px;
+    padding-left: 10px;
     margin-top: -3px;
     cursor: pointer;
     vertical-align: top;
@@ -398,7 +398,16 @@ form {
     font-size: 12px;
     color: #898989;
 }
-
+.lab_check .ico_check {
+    position: absolute;
+    top: 3px;
+    left: 0;
+    width: 12px;
+    height: 12px;
+    background-position: -16px -44px;
+    z-index: 1;
+    /* background-color: #243B55; */
+}
 
 
 
