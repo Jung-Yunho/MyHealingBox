@@ -57,6 +57,7 @@ select{
 .day-main{
 	/* 아래의 margin-top은 모두 들어가야 함을 기억해! */
 	margin-top: 46px;
+	min-height: 500px;
 
 	display: flex;
 	flex-direction: column;	
@@ -64,26 +65,35 @@ select{
 	align-items: center;	
 }
 
+	.day-main img:first-child{
+		width: 350px;
+	}
+	
 .nav-box{
-	width: 240px;
-	height: 90px;
-	margin-bottom : 10px;
+	width: 350px;
+
+	margin-bottom : 5px;
 	
 	display:flex;
 	align-items : center;
 	justify-content:center;
 	
-	background: #E9F7EF;	
+	/* background: #e9e9e9; */
 
 	font-size: 13px;
 	color: #808079;	
 }
 
-	.nav-box:hover{
-		border: solid 3px #E4EFE6;
-		background: #ffffff;
+	.nav-box img{
+		width: 350px;
 	}
 	
+	/* .nav-box a{
+		width: inherit;
+
+		text-align: center;
+	} */
+
 	
 /* ---------------------day write---------------------*/
 
@@ -251,9 +261,20 @@ select{
 
 }	
 
-.btn-write-go img{
-	width: 58px;
-}
+	.btn-write-go img{
+		width: 58px;
+	}
+	
+.btn-category-add{
+	position: fixed;
+	right : 25px;
+	bottom : 100px;
+
+}	
+
+	.btn-category-add img{
+		width: 58px;
+	}
 
 
 /* ---------------------text---------------------*/

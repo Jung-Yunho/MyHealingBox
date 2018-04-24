@@ -27,9 +27,16 @@
 			</div>
 		</c:forEach>
 		
-		<hr/>
-		<div style="display: flex; justify-content: center;">
+		<!-- <hr/> -->
+		<%-- <div style="display: flex; justify-content: center;">
 			<img alt="카테고리 추가" src="${root}/resources/images/day/categoryPlus_icon.png" style="width: 48px; height: 48px;">
-		</div>
+		</div> --%>
+		
 	</div>
+	
+	<nav class="btn-category-add">
+		<ul>		
+			<li ><img src="${root}/resources/images/day/categoryPlus_icon.png"></li>
+		</ul>
+	</nav>
 </main>

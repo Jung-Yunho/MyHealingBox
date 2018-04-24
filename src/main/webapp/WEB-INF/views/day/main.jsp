@@ -8,11 +8,13 @@
 <main class=main>
 	
 	<div class="day-main">
-		<div>
-			<img src="${root}/resources/images/day/day_main_logo.png" />
-		</div>	
-		<div class="nav-box" id="go-write"><a href="${root}/day/write">오늘은 무엇을 하고 싶었나요?</a></div>
-		<div class="nav-box" id="go-category"><a href="${root}/day/categoryList">오늘은 무엇을 해볼까요?</a></div>
+		
+		<img src="${root}/resources/images/day/day_main_logo.png" />
+		
+		<%-- <div class="nav-box" id="go-write"><a href="${root}/day/write">오늘의 하고 싶은 일 기록</a></div> --%>
+		<%-- <div class="nav-box" id="go-category"><a href="${root}/day/categoryList">나의 하고 싶은 일 박스</a></div> --%>
+		<div class="nav-box" id="go-write"><img src="${root }/resources/images/day/writeGo_img.png" /></div>
+		<div class="nav-box" id="go-category"><img src="${root }/resources/images/day/categoryGo_img.png"/></div>
 	</div>
 </main>
 
@@ -21,14 +23,15 @@
 		var goButton1 = document.querySelector("#go-write");
 		var goButton2 = document.querySelector("#go-category");
 
-		goButton1.onclick = function(e){
-			alert("test");
-		}
+		goButton1.onclick = function(){
+			window.location.href="${root}/day/write";
+		};
 
-		goButton2.onclick = function(e){
-
-		}
+		goButton2.onclick = function(){
+			window.location.href="${root}/day/categoryList"
+		};
 
 	});
+
 
 </script>
