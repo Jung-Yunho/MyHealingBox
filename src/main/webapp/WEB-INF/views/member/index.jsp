@@ -9,23 +9,23 @@
 <main class="mhb-main">
 		
 		<div>
-			<section id="night">밤</section>
+			<section id="night"><%-- <a href="${root }/day/main"></a> --%></section>
 		</div>
 		
 		<div>
-			<img class="logo-main" alt="" src="${root}/resources/images/mhb-logo.png">
+			<img class="logo-img" alt="나의힐링박스 로고" src="${root}/resources/images/mhb-logo.png">
 		</div>
 					
 		<div>
-			<section id="dawn">새벽</section>
+			<section id="dawn"></section>
 		</div>	
 		
 		<div>
-			<section id="morning">아침</section>
+			<section id="morning"></section>
 		</div>
 		
 		<div>
-			<section id="day">낮</section>
+			<section id="day"></section>
 		</div>
 	
 
@@ -34,16 +34,54 @@
 </main>
 
 <script>
-	window.addEventListener("load",function(){
-		var mainScreen = document.querySelector(".logo-main");
-		var nightButton = document.querySelector("#night");
-		var dawnButton = document.querySelector("#dawn");
-		var morningButton = document.querySelector("#morning");
-		var dayButton = document.querySelector("#day");
+	window.addEventListener("load",function(event){
+		var mainScreen = document.querySelector(".logo-img");
+		var nightBox = document.querySelector("#night");
+		var dawnBox = document.querySelector("#dawn");
+		var morningBox = document.querySelector("#morning");
+		var dayBox = document.querySelector("#day");
 		
-		mainScreen.onclick=function(){
-			alert("됏당!");
-			nightButton = append(img)
+		mainScreen.onclick=function(e){
+			var nightLogo = document.createElement("img");
+			var dawnLogo = document.createElement("img");
+			var morningLogo = document.createElement("img");
+			var dayLogo = document.createElement("img");
+
+			nightLogo.style.width = "40px";
+			nightLogo.src = "${root}/resources/images/night-logo.png";
+
+			dawnLogo.style.width = "40px";
+			dawnLogo.src = "${root}/resources/images/dawn-logo.png";
+
+			morningLogo.style.width = "40px";
+			morningLogo.src = "${root}/resources/images/morning-logo.png";
+
+			dayLogo.style.width = "40px";
+			dayLogo.src = "${root}/resources/images/day-logo.png";
+			
+			nightBox.appendChild(nightLogo);
+			dawnBox.appendChild(dawnLogo);
+			morningBox.appendChild(morningLogo);
+			dayBox.appendChild(dayLogo);
+		
+		};
+		/* if(mainScreen.contains("nightLogo"))
+			e.preventDefault(); */
+
+		nightBox.onclick=function(){
+			window.location.href="${root}/night/video/list";
+		};
+
+		dawnBox.onclick=function(){
+			window.location.href="${root}/dawn/list";
+		};
+
+		morningBox.onclick=function(){
+			window.location.href="${root}/morning/list";
+		};
+
+		dayBox.onclick=function(){
+			window.location.href="${root}/day/main";
 		};
 
 
