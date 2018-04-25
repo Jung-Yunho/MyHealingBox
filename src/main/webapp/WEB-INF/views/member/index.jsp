@@ -9,39 +9,28 @@
 <main class="mhb-main">
 		
 		<div>
-			<section id="night"><%-- <a href="${root }/day/main"></a> --%></section>
-		</div>
-		
-		<div>
-			<img class="logo-img" alt="나의힐링박스 로고" src="${root}/resources/images/mhb-logo.png">
-		</div>
-					
-		<div>
-			<section id="dawn"></section>
-		</div>	
-		
-		<div>
-			<section id="morning"></section>
-		</div>
-		
-		<div>
-			<section id="day"></section>
+			<img id="btn-intro" src="${root}/resources/images/intro-icon.png" alt="나의힐링박스 서비스 소개" />
 		</div>
 	
-
-	<%-- <img style="width: 100%; height: 100%;" src="${root}/resources/images/daynight9.jpg"> --%>
+		<div class="main-nav">		
+			<div id="morning"></div>			
+			<div id="day"></div>			
+			<div id="night"></div>			
+			<div id="dawn"></div>		
+		</div>
 	
 </main>
 
 <script>
 	window.addEventListener("load",function(event){
-		var mainScreen = document.querySelector(".logo-img");
 		var nightBox = document.querySelector("#night");
 		var dawnBox = document.querySelector("#dawn");
 		var morningBox = document.querySelector("#morning");
 		var dayBox = document.querySelector("#day");
 		
-		mainScreen.onclick=function(e){
+		var introButton = document.querySelector("#btn-intro");
+		
+		/* mainScreen.onclick=function(e){
 			var nightLogo = document.createElement("img");
 			var dawnLogo = document.createElement("img");
 			var morningLogo = document.createElement("img");
@@ -64,7 +53,7 @@
 			morningBox.appendChild(morningLogo);
 			dayBox.appendChild(dayLogo);
 		
-		};
+		}; */
 		/* if(mainScreen.contains("nightLogo"))
 			e.preventDefault(); */
 
@@ -82,6 +71,10 @@
 
 		dayBox.onclick=function(){
 			window.location.href="${root}/day/main";
+		};
+		
+		introButton.onclick=function(){
+			window.location.href="${root}/member/intro";
 		};
 
 

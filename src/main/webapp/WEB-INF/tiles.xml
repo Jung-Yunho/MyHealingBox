@@ -32,7 +32,7 @@
   
   	<!--Day:현영-->
 	<definition name="day.*" template="/WEB-INF/views/day/inc/day-layout.jsp">    
-	   <put-attribute name="header" value="/WEB-INF/views/inc/header.jsp" />
+	   <put-attribute name="header" value="/WEB-INF/views/day/inc/day-header.jsp" />
 	   <put-attribute name="aside" value="/WEB-INF/views/day/inc/day-aside.jsp" />
 	   <put-attribute name="main" value="/WEB-INF/views/day/{1}.jsp" />
 	   <put-attribute name="footer" value="/WEB-INF/views/inc/footer.jsp" />

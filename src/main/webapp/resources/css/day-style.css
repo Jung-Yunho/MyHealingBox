@@ -1,9 +1,16 @@
 @charset "UTF-8";
+@import url('https://fonts.googleapis.com/css?family=Hi+Melody|Nanum+Gothic|Nanum+Myeongjo|Sunflower:300');
 /* -----------------------.초기화 -----------------------*/
 
 html{
 	/* background: #FFFFF2; */
 	opacity: 30%;
+	font-family: 'Nanum Gothic', sans-serif;
+	/* font-family: 'Sunflower', sans-serif; */
+	/* font-family: 'Nanum Myeongjo', serif; */
+	/* font-family: 'Hi Melody', cursive; */
+	font-size:12px;
+	line-hight:18px;
 }
 
 p{
@@ -37,20 +44,35 @@ select{
 	select:-ms-expand{
 		display: none;
 	}
+	
+	
+/* -----------------------.header -----------------------*/
+
+.header{
+   height: 55px;
+   width:100%;
+   position: fixed;
+	background: -webkit-linear-gradient(top,  #237A57 30%, #A5CC82 80%);
+   border-bottom: 1px solid #e9e9e9;
+   z-index: 1;
+}
+
+   .header > h1{
+      font-size: 14px;
+      height:inherit;
+      display: flex;
+      justify-content: center;
+      align-items: center;      
+   }
+
 
 
 /* -----------------------.main -----------------------*/
 
 .main{
-	font-size: 12px;
-	/* font-family: 아직안넣음; */
-	color: #808079;	
-	
-	
+	color: #808079;		
 	min-height : 500px;
 }
-
-
 
 /* ---------------------day main---------------------*/
 /* 낮의 메인 페이지 */
@@ -301,4 +323,9 @@ select{
 	position: absolute;
 	right: -12px;
 	bottom: 4px;
+}
+
+/* --------------------.day(logo!)---------------------*/
+.day{
+	width: 48px;
 }
