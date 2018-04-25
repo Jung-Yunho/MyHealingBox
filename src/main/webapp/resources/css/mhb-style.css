@@ -409,6 +409,9 @@ form {
     z-index: 1;
     /* background-color: #243B55; */
 }
+.hidden{
+	display: none;
+}
 
 
 

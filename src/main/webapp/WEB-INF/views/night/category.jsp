@@ -10,11 +10,9 @@
 	
 		<ul class="category-box">
 			<li class="category-list"><div>자주보는영상</div></li>
-			<li class="category-list"><div>폴더1</div></li>
+			<li class="category-list"><div><input class="input-text" "text" value="폴더1"/></div></li>
 			<li class="category-list"><div>폴더2</div></li>
 			<li class="category-list"><div>폴더3</div></li>
-			
-			<li><div></div></li>
 		</ul>	
 		
 	
