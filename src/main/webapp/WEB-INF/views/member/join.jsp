@@ -21,8 +21,8 @@
 		</div>
 		<div class="cont_login">
 			<h3 class="tit_kakao">
-				<img alt="MHB" class="img_kakao" height="20"
-					src="${root }/resources/images/mhb-logo.png" width="64">
+				<img alt="MHB" class="title-img"
+					src="${root }/resources/images/mhb-title-logo.png">
 			</h3>
 			<form method="post" id="login-form" data-error-target=".desc_error">
 				<fieldset style="border: none;">

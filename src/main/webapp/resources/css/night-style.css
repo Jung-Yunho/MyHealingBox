@@ -22,6 +22,13 @@ ul {
 	padding: 0px;
 	margin: 0px;
 }
+
+a{
+	    font-size: 13px;
+    color: #929292;
+    text-decoration: none;
+}
+
 /* 
 li {
 	padding: 0;
@@ -50,8 +57,13 @@ li {
       height:inherit;
       display: flex;
       justify-content: center;
-      align-items: center;      
+      align-items: center;     
+      z-index: 998; 
    }
+   
+   .header>h1>a {
+		z-index: 999;
+	}
    
    .header-logo{
    		width: 58px;
@@ -93,45 +105,11 @@ li {
 	min-height: 300px;
 }
 
-/* .main .note-list {
-	font-size: 14px;
-	line-height: 19px;
-	color: #595959;
-}
-
-.main .note-list ul {
-	
-}
-
-.main .note-list li {
-	padding: 15px;
-	border-bottom: 1px solid #777;
-}
-
-.note-list li>div:first-child {
-	font-size: 17px;
-	line-height: 21px;
-	color: black;
-}
-
-.note-list li>div:not (:first-child ){
-	margin-top: 4px;
-}
-
-.note-list li>div:last-child {
-	font-size: 13px;
-	display: flex;
-	justify-content: space-between;
-}
-
-.note-list li>div>span:first-child {
-	color: #6bacca;
-} */
 
 /* --- .aside----------------------------------------- */				
 .aside{
 	width:80%;
-	height: 130px;
+	height: 150px;
 	background: #fff; /* #00000077 r,g,b,alpha(투명) */
 	/* position: relative; 밀어내버림 ㅠㅡㅠ */
 	position: fixed;
@@ -390,35 +368,13 @@ li {
     height: 100%;
     /* flex-direction: column; */
 }
-/* .box div:last-child{
-		display: flex;
-    justify-content: flex-end;
-    padding-top: 30px;
-} */
+
 .search-img{
 	width: 30px;
     height: 30px;
 }
 
-/* .search-box {
-	width: 190px;
-	height: 10px;
-	background: #fff; #00000077 r,g,b,alpha(투명)
-	position: relative; 밀어내버림 ㅠㅡㅠ
-	position: fixed;
-	left:130px;
-	top: -40px;
-	transition: 1s;
-}
- */
-/* .search-box.show {
-	z-index: 1;
-	top: 65px;
-	bottom: 30%;
-	height: 50px;
-	box-shadow: 3px 3px 3px #544954; 마지막 3은 깊이. 종이와 얼마나 떠있는지
-	마지막 3은 깊이. 종이와 얼마나 떠있는지
-} */
+
 .search{
 	display: flex;
 }
@@ -564,8 +520,8 @@ li {
     height: 50px;
     margin-top: 10px;
     margin-bottom: 20px;
-    background: #E2EEF6;
-    color: #808079;
+    background: #243B54;
+    color: #E2EEF6;
     font-weight: bold;
     border: none 5px;
 }

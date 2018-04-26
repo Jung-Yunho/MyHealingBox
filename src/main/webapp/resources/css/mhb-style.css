@@ -10,6 +10,7 @@ html{
 body{
    margin: 0px;
    height: 100%;
+   background: -webkit-linear-gradient(top, #243949 0%,#517fa4 100%);
 }
 
 h1,h2,h3,h4,h5,h6{
@@ -168,7 +169,7 @@ form {
 
 .footer{
 	height: 70px;
-  	padding :10px;
+  	padding :19px;
 	
 	font-size: 10px;
 	color : #ABB2B9;
@@ -435,6 +436,9 @@ form {
 .hidden{
 	display: none;
 }
-
+.title-img{
+	width: 200px;
+    height: 100px;
+}
 
 

@@ -29,11 +29,11 @@
 			</div>
 			<div class="detail-textarea"><span>삘릴리개굴개굴yaho</span></div>
 		</div>
-	<div class="list-button">
+	<%-- <div class="list-button">
 		<a href="${root }/night/video/list">
 		<input class="list-button" type="submit" value="목록"/>
 		</a>
-	</div>
+	</div> --%>
    
    
    <nav class="btn-list">
