@@ -8,7 +8,7 @@
 
 	<h1 class="hidden">메뉴</h1>
 	<ul>
-		<li><a href="">나의 힐링 박스</a></li>
+		<li><a href="${root}/member/index">나의 힐링 박스</a></li>
 		<li><a href="${root}/member/mypage">나의 정보</a></li>	
 		<li><a href="${root}/day/categoryList">나의 박스</a></li>	
 	</ul>

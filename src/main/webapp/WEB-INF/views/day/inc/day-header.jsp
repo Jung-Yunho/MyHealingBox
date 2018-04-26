@@ -4,17 +4,24 @@
 <c:set var="root" value="${pageContext.request.contextPath}"/>
 
 <header class="header">
-      <h1><img class="day" src="${root }/resources/images/day-logo.png" /></h1>
+      <h1>
+      	<a href="${root }/day/main">
+    		<img class="day" src="${root }/resources/images/day-logo.png" />
+      	</a>
+	  </h1>
+	  
       <nav class="main-menu">
          <h1 class="hidden">메인메뉴</h1>
          <ul>
-            <li id="ham-button"><a href=""><img src="${root }/resources/images/menu_icon.png"/></a></li>
+            <li id="ham-button">
+            	<img src="${root }/resources/images/menu_icon.png"/>
+            </li>
             <li>
             	<div>
-		            <a href=""><img src="${root }/resources/images/MHB_icon.png"/></a>
+		            <a href="${root }/member/index"><img src="${root }/resources/images/MHB_icon.png"/></a>
             	</div>
             	<div>
-		  			<a href=""><img src="${root }/resources/images/myinfo_icon.png"/></a>        	
+		  			<a href="${root }/member/mypage"><img src="${root }/resources/images/myinfo_icon.png"/></a>        	
             	</div>
 	  		</li>            
          </ul>
@@ -42,6 +49,7 @@
 				aside.classList.add("show");
 			e.preventDefault();
 		};
+	
 
 	});
 
