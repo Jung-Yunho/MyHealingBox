@@ -34,13 +34,13 @@
 	
          <div>
          	<a href="${root }/night/video/detail">
-            	<input id="cancellation"type="submit" value="취소"/>
+            	<input class="btn-default" id="cancellation"type="submit" value="취소"/>
             </a>
          </div>
 	
 	<div>	
 		<a href="${root }/night/video/list">
-            <input id="reg" type="submit" value="등록"/>
+            <input class="btn-default" id="reg" type="submit" value="등록"/>
             </a>
          </div>
          

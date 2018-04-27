@@ -22,7 +22,7 @@
     justify-content:  flex-end;
 ">
 			<a href="${root }/night/video/category-edit">
-            	<input type="submit" value="편집"/>
+            	<input class="btn-default" type="submit" value="편집"/>
          	</a>
          </div>
          
