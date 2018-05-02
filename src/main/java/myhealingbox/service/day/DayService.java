@@ -24,12 +24,11 @@ public class DayService {
 	private DayCategoryDao dayCategoryDao;
 	
 	
-	// 낮 카테고리 관련 ----------------------------------------------
+	// 낮 _카테고리 관련 ----------------------------------------------
 	public List<DayCategory> getDayCategoryList() {
 		List<DayCategory> categoryList = dayCategoryDao.getList();
 		
-		// 아직완성아님!!!!!!!!!
-		
+		 		
 		return categoryList;
 	}
 	
@@ -46,7 +45,7 @@ public class DayService {
 	}
 	
 
-	// 낮 하고싶은일들 관련 -------------------------------------------
+	// 낮 _하고싶은일들 관련 -------------------------------------------
 	public List<WantToDo> getWantToDoList(int page) {
 		List<WantToDo> list = wantToDoDao.getList(page);
 

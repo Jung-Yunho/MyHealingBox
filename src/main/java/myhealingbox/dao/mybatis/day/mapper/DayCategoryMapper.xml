@@ -5,17 +5,17 @@
 <mapper namespace="myhealingbox.dao.day.DayCategoryDao">
 
 	<select id="getList" resultType="myhealingbox.entity.day.DayCategory">
-		select * from Note
-		limit #{(_parameter-1)*15},15
+		select * from DayCategory
+		<!-- limit #{(_parameter-1)*15},15 -->
 	</select>
 
 	<select id="get" resultType="myhealingbox.entity.day.DayCategory">
-		select * from Note where id=#{id}
+		select * from DayCategory where id=#{id}
 	</select>
 
 	<insert id="insert" parameterType="myhealingbox.entity.day.DayCategory">
-		insert into Note(title,content,writerId)
-		values(#{title},#{content},#{writerId})
+		insert into DayCategory(title)
+		values(#{title})
 	</insert>
   
 </mapper>

@@ -34,9 +34,9 @@ public class DayController {
 		@RequestMapping("categoryList")
 		public String categoryList(Model model) {
 	
-			//List<DayCategory> categoryList = service.getDayCategoryList();
+			List<DayCategory> categoryList = service.getDayCategoryList();
 	
-			//model.addAttribute("categoryLists", categoryList);
+			model.addAttribute("categoryList", categoryList);
 	
 			return "day.categoryList";
 		}

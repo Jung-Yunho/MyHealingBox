@@ -29,6 +29,7 @@
          <list>
             <value>classpath:myhealingbox/dao/mybatis/night/mapper/*.xml</value>
             <value>classpath:myhealingbox/dao/mybatis/dawn/mapper/*.xml</value>
+            <value>classpath:myhealingbox/dao/mybatis/day/mapper/*.xml</value>
          </list>
       </property>
       <!-- <property name="mapperLocations" value="classpath:myhealingbox/dao/mybatis/night/mapper/*.xml" /> -->
