@@ -79,3 +79,16 @@
 	</article>
 </div>
 </main>
+
+<script>
+	window.addEventListener("load",function(event){
+		var titleImg = document.querySelector(".title-img");
+		
+		titleImg.onclick=function(){
+			window.location.href="${root}/member/index";
+			
+		};
+		
+	});
+
+</script>

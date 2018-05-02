@@ -14,7 +14,6 @@ public class DayCategory {
 	}
 	
 	public DayCategory(String title) {
-		super();
 		this.title = title;
 	}
 	
@@ -50,6 +49,12 @@ public class DayCategory {
 	public void setMemberId(long memberId) {
 		this.memberId = memberId;
 	}
+
+	@Override
+	public String toString() {
+		return "DayCategory [id=" + id + ", title=" + title + ", regDate=" + regDate + ", memberId=" + memberId + "]";
+	}
 		
+	
 	
 }
