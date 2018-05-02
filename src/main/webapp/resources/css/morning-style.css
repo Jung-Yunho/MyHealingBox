@@ -53,3 +53,13 @@
 	justify-content: center;
 	margin-top: 15px;
 }
+/* -----------------------.header -----------------------*/
+.header {
+	background: -webkit-linear-gradient(top,  #005aa7 30%, #fffde4 100%);
+}
+
+/* --------------------.header-logo! ---------------------*/
+
+.header-logo {
+	width: 48px;
+}

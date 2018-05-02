@@ -24,7 +24,7 @@
   
   	<!--Morning:건웅-->
 	<definition name="morning.*" template="/WEB-INF/views/morning/inc/morning-layout.jsp">    
-	   <put-attribute name="header" value="/WEB-INF/views/inc/header.jsp" />
+	   <put-attribute name="header" value="/WEB-INF/views/morning/inc/morning-header.jsp" />
 	   <put-attribute name="aside" value="/WEB-INF/views/morning/inc/morning-aside.jsp" />
 	   <put-attribute name="main" value="/WEB-INF/views/morning/{1}.jsp" />
 	   <put-attribute name="footer" value="/WEB-INF/views/inc/footer.jsp" />

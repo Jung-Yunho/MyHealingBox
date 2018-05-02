@@ -13,5 +13,17 @@ public class HomeController {
 		return "morning.list";
 	}
 	
+	@RequestMapping("detail")
+	public String detail(){
+		
+		return "morning.detail";
+	}
+	
+	@RequestMapping("edit")
+	public String edit(){
+		
+		return "morning.edit";
+	}
+	
 	
 }
