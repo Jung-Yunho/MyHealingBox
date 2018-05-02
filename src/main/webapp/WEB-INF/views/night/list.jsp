@@ -41,14 +41,14 @@
 
     <li data-cliplink-id="384597175">
         <div class="link_contents">
-            <span class="thumb_box">
+            <a href="${root }/night/video/detail" class="thumb_box">
                     <img src="${root }/resources/images/night/KakaoTalk_20180328_233238324.png" class="thumb_img" >
                
-            </span>
+            </a>
             <span class="item_info">
-                <strong class="tit_item">${video.regDate}</strong>
+                <strong class="tit_item">${video.title}</strong>
                 <span class="info_append">
-                    <span class="ico_kakaotv ico_play">조회수 : 230</span>
+                    <span class="ico_kakaotv ico_play">조회수 : ${video.hit}</span>
                     
                 </span>
             </span>
