@@ -37,7 +37,7 @@
             <ul class="list_horizontal ">
 
 
-
+	<c:forEach var="video" items="${videos}">
 
     <li data-cliplink-id="384597175">
         <div class="link_contents">
@@ -46,7 +46,7 @@
                
             </span>
             <span class="item_info">
-                <strong class="tit_item">삘릴리개굴개굴</strong>
+                <strong class="tit_item">${video.regDate}</strong>
                 <span class="info_append">
                     <span class="ico_kakaotv ico_play">조회수 : 230</span>
                     
@@ -54,8 +54,8 @@
             </span>
         </div>
     </li>
-    
-      <li data-cliplink-id="384597175">
+    </c:forEach>
+      <%-- <li data-cliplink-id="384597175">
         <div class="link_contents">
             <span class="thumb_box">
                     <img src="${root }/resources/images/night/t23.PNG" class="thumb_img" >
@@ -178,7 +178,7 @@
                 </span>
             </span>
         </div>
-    </li>
+    </li> --%>
     
     
             </ul>

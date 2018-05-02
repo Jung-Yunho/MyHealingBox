@@ -3,32 +3,30 @@ package myhealingbox.entity.night;
 import java.util.Date;
 
 public class Video {
-
-	private long id;
+	
+	private int id;
 	private String title;
+	private String urlPath;
 	private String content;
-	private String writerId;
 	private Date regDate;
 	private int hit;
-	private int order;
-	private long chapterId;
-
+	private int nightCategoryId;
+	
 	public Video() {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Video(String title, String content, String writerId) {
-		super();
+	public Video(String title, String urlPath, String content) {
 		this.title = title;
+		this.urlPath = urlPath;
 		this.content = content;
-		this.writerId = writerId;
 	}
 
-	public long getId() {
+	public int getId() {
 		return id;
 	}
 
-	public void setId(long id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 
@@ -40,20 +38,20 @@ public class Video {
 		this.title = title;
 	}
 
+	public String getUrlPath() {
+		return urlPath;
+	}
+
+	public void setUrlPath(String urlPath) {
+		this.urlPath = urlPath;
+	}
+
 	public String getContent() {
 		return content;
 	}
 
 	public void setContent(String content) {
 		this.content = content;
-	}
-
-	public String getWriterId() {
-		return writerId;
-	}
-
-	public void setWriterId(String writerId) {
-		this.writerId = writerId;
 	}
 
 	public Date getRegDate() {
@@ -72,20 +70,15 @@ public class Video {
 		this.hit = hit;
 	}
 
-	public int getOrder() {
-		return order;
+	public int getNightCategoryId() {
+		return nightCategoryId;
 	}
 
-	public void setOrder(int order) {
-		this.order = order;
+	public void setNightCategoryId(int nightCategoryId) {
+		this.nightCategoryId = nightCategoryId;
 	}
-
-	public long getChapterId() {
-		return chapterId;
-	}
-
-	public void setChapterId(long chapterId) {
-		this.chapterId = chapterId;
-	}
+	
+	
+	
 
 }
