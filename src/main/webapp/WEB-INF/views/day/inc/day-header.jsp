@@ -30,17 +30,11 @@
 
 
 <script>
-	/* 이게 뭐죠?0?
-		var btn = $('.dot-nav');
-		btn.click(function() {
-		  $('.nav-view').toggleClass('active');
-		}); 
-	*/
-	
 	
 	window.addEventListener("load", function(event){
 		var hamButton = document.querySelector("#ham-button");
 		var aside = document.querySelector(".aside");
+		var logo = document.querySelector(".day");
 
 		hamButton.onclick = function(e){
 			if(aside.classList.contains("show"))
@@ -49,7 +43,12 @@
 				aside.classList.add("show");
 			e.preventDefault();
 		};
-	
+		
+		// 여기 왜 안먹을까...
+		logo.onclick = function(){
+			window.location.href="${root}/day/main";
+			
+		};
 
 	});
 

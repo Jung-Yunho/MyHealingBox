@@ -9,7 +9,7 @@ import myhealingbox.entity.day.WantToDo;
 
 public interface WantToDoDao {
 	
-	List<WantToDo> getList(@Param("page") Integer page);
+	List<WantToDo> getList();
 
 	WantToDo get(Integer id);
 

@@ -9,17 +9,11 @@
 	<div class="day-list">
 		<h1> 나의 박스 </h1>
 		<hr/>
-		
+				
+		<!-- categoryList는 배열상태, 그것을 category로 담아야 거기서 알맹이를 빼서 사용할 수 있다. -->
+		<c:forEach var="category" items="${categoryList}">
 			<div class="category-list">
-				<h2><a href="list"> | 기본 카테고리 </a></h2>
-				<div>
-					<img alt="카테고리명 수정" src="${root}/resources/images/day/categoryEdit_icon.png">
-					<img alt="카테고리 삭제" src="${root}/resources/images/day/categoryDel_icon.png">
-				</div>
-			</div>
-		<c:forEach var="i" begin="0" end="4">
-			<div class="category-list">
-				<h2><a href="list"> | 카테고리1 </a></h2>
+				<h2><a href="${category.id }">| ${category.title} </a></h2>
 				<div>
 					<img alt="카테고리명 수정" src="${root}/resources/images/day/categoryEdit_icon.png">
 					<img alt="카테고리 삭제" src="${root}/resources/images/day/categoryDel_icon.png">

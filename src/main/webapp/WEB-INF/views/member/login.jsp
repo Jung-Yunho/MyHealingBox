@@ -65,12 +65,13 @@
 
 
 					<button type="submit" class="btn_login submit btn_disabled">로그인</button>
-					<div class="info_user">
+					
+					<!-- header에 회원가입이 있으니 주석처리 합니다. -->
+					<%-- <div class="info_user">
 						<div class="join_user">
 							<a href="${root }/member/join" id="signUp">회원가입</a>
 						</div>
-
-					</div>
+					</div> --%>
 				</fieldset>
 			</form>
 
@@ -80,3 +81,15 @@
 	</article>
 </div>
 </main>
+<script>
+	window.addEventListener("load",function(event){
+		var titleImg = document.querySelector(".title-img");
+		
+		titleImg.onclick=function(){
+			window.location.href="${root}/member/index";
+			
+		};
+		
+	});
+
+</script>
