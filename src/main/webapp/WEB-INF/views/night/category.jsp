@@ -9,10 +9,13 @@
 		<h1 class="hidden">카테고리</h1>
 	
 		<ul class="category-box">
-			<li class="category-list"><div>자주보는영상</div></li>
+		<c:forEach var="category" items="${category}">
+			<li class="category-list"><div><a href="${videos.nightCategoryId} ">${category.title }</a></div></li>
+			<!-- <li class="category-list"><div>자주보는영상</div></li>
 			<li class="category-list"><div><input class="input-text" "text" value="폴더1"/></div></li>
 			<li class="category-list"><div>폴더2</div></li>
-			<li class="category-list"><div>폴더3</div></li>
+			<li class="category-list"><div>폴더3</div></li> -->
+			</c:forEach>
 		</ul>	
 		
 	

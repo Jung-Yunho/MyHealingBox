@@ -11,7 +11,6 @@ import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.stereotype.Service;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -33,6 +32,7 @@ public class VideoController {
 
 	@Autowired
 	private CategoryService categoryService;
+
 
 	@RequestMapping("list")
 	public String list(Model model) {
@@ -110,7 +110,7 @@ public class VideoController {
 		return "등록이 완료되었습니다.";
 	}
 
-	@RequestMapping("category")
+	@RequestMapping(value = "category", method = RequestMethod.GET)
 	public String category(Model model) {
 
 		List<NightCategory> list = categoryService.getCategoryList(1);
@@ -120,16 +120,21 @@ public class VideoController {
 		return "night.category";
 	}
 
-	@RequestMapping("category-edit")
+	@RequestMapping(value = "category", method = RequestMethod.POST)
 	public String categoryEdit() {
 
 		return "night.category-edit";
 	}
 
-	@RequestMapping("favorit")
-	public String favorit() {
+	@RequestMapping("favorite")
+	public String favorit(Model model) {
 
-		return "night.favorit";
+		List<Video> list = service.getFavoriteList(1);
+
+		model.addAttribute("favorite", list);
+
+		
+		return "night.favorite";
 	}
 
 	@RequestMapping("list2")
@@ -147,5 +152,13 @@ public class VideoController {
 
 		return "night.reg-edit";
 	}
+	
 
 }
+
+
+
+
+
+
+
