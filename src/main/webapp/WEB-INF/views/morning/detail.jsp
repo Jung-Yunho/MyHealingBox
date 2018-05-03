@@ -47,7 +47,7 @@
 		<form>
 			<fieldset class="donelist">
 				<legend>첨부파일</legend>
-				<c:forEach var="i" begin="0" end="2">
+				<c:forEach var="i" begin="0" end="0">
 					<div class="donelist-detail">
 						<div>
 							<input class="checkBox" type="checkbox"> <span
@@ -59,8 +59,9 @@
 				</c:forEach>
 			</fieldset>
 		</form>
-		<div class="donelist-delButton">
-			<img alt="카테고리삭제" src="${root}/resources/images/morning/clearButton.png" style="width: 48px; height: 48px;">
+		<div class="doneAndfixButton">
+		<input class="doneButton"  type="button" value="작업완료"><br>
+		<input class="fixButton"  type="button" value="수정하기"><br>
 		</div>
 	</div>
 </section>

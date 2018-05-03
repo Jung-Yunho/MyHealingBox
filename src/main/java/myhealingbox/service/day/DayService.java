@@ -28,7 +28,6 @@ public class DayService {
 	public List<DayCategory> getDayCategoryList() {
 		List<DayCategory> categoryList = dayCategoryDao.getList();
 		
-		 		
 		return categoryList;
 	}
 	
@@ -46,8 +45,8 @@ public class DayService {
 	
 
 	// 낮 _하고싶은일들 관련 -------------------------------------------
-	public List<WantToDo> getWantToDoList(int page) {
-		List<WantToDo> list = wantToDoDao.getList(page);
+	public List<WantToDo> getWantToDoList() {
+		List<WantToDo> list = wantToDoDao.getList();
 
 		for(WantToDo n : list) {
 			String content = n.getContent();
