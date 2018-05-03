@@ -5,7 +5,7 @@
 <mapper namespace="myhealingbox.dao.day.DayCategoryDao">
 
 	<select id="getList" resultType="myhealingbox.entity.day.DayCategory">
-		select * from DayCategory
+		select title from DayCategory
 		<!-- limit #{(_parameter-1)*15},15 -->
 	</select>
 

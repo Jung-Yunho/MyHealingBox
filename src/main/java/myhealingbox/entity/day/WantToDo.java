@@ -18,7 +18,6 @@ public class WantToDo {
 	}
 	
 	public WantToDo(String title, String content, String attachedFile) {
-		super();
 		this.title = title;
 		this.content = content;
 		this.attachedFile = attachedFile;
@@ -87,6 +86,13 @@ public class WantToDo {
 
 	public void setDawnCategoryId(long dawnCategoryId) {
 		this.dawnCategoryId = dawnCategoryId;
+	}
+
+	@Override
+	public String toString() {
+		return "WantToDo [id=" + id + ", title=" + title + ", content=" + content + ", attachedFile=" + attachedFile
+				+ ", regDate=" + regDate + ", check=" + check + ", dayCategoryId=" + dayCategoryId + ", dawnCategoryId="
+				+ dawnCategoryId + "]";
 	}
 	
 	

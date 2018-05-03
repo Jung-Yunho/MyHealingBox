@@ -1,6 +1,7 @@
 package myhealingbox.controller.day;
 
 import java.io.File;
+
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -28,12 +29,11 @@ import myhealingbox.service.day.DayService;
 public class DayController {
 	
 		@Autowired
-	   private DayService service;
+		private DayService service;
 	   
 		// category list
 		@RequestMapping("categoryList")
-		public String categoryList(Model model) {
-	
+		public String categoryList(Model model) {	
 			List<DayCategory> categoryList = service.getDayCategoryList();
 	
 			model.addAttribute("categoryList", categoryList);
@@ -43,11 +43,10 @@ public class DayController {
 		
 	   // list
 	   @RequestMapping("list")
-	   public String list(Model model) {
+	   public String list(Model model) {	      
+	      List<WantToDo> list = service.getWantToDoList();
 	      
-	      //List<WantToDo> list = service.getWantToDoList(1);
-	      
-	      //model.addAttribute("videos", list);
+	      model.addAttribute("list", list);
 	      
 	      return "day.list";
 	   }
