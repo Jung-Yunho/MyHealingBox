@@ -55,4 +55,13 @@ public class VideoService {
 		videoDao.insert(video);
 		return 0;
 	}
+
+	public List<Video> getFavoriteList(int page) {
+		
+		List<Video> list = videoDao.getList(page);
+		
+		return list;
+	}
+
+
 }

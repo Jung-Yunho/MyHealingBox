@@ -21,9 +21,11 @@
 	<http> <!--인증과 권한을 알아서 줌-->
 		<form-login login-page="/member/login" default-target-url="/index"/>
 		<logout logout-success-url="/index" invalidate-session="true"/>
+		
 		<!--Login/LogOut 관련 LogOut 후 모든 Session 값 제거-->
 		<intercept-url pattern="/author/**" access="hasRole('ROLE_AUTHOR')"/>
 		<intercept-url pattern="/admin/**" access="hasRole('ROLE_ADMIN')"/>
+		<!-- <intercept-url pattern="/night/**" access="hasRole('ROLE_AUTHOR')"/> -->
 		<!--해당 Url은 인증해야 접근할 수 있음-->
 		<csrf disabled="true"/><!-- csrf 방어하기 위해 추가해야 함 -->
 	</http>
@@ -37,8 +39,8 @@
 				authorities-by-username-query="select memberId id, roleId authority from MemberRole where memberId=?"
 			/>
 			<!-- <user-service>패스워드는 항상 인코딩{noop}이 되어야함
-				<user name="newlec" password="{noop}123qwe" authorities="ROLE_AUTHOR,ROLE_ADMIN"/>
-				<user name="dragon" password="{noop}123qwe" authorities="ROLE_AUTHOR"/>
+				<user name="woo" password="{noop}123" authorities="ROLE_AUTHOR,ROLE_ADMIN"/>
+				<user name="coco" password="{noop}111" authorities="ROLE_AUTHOR"/>
 			</user-service> -->
 		</authentication-provider>
 	</authentication-manager>

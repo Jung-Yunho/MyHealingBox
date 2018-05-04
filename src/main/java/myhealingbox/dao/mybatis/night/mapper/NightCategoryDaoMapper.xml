@@ -14,11 +14,11 @@
 	</select>
 	
 	<select id="update" parameterType="myhealingbox.entity.night.NightCategory">
-		update NightCategory set title=#{title} where id=#{id};
+		update NightCategory set title=#{title} where id=#{id}
 	</select>
 	
 	<select id="delete" parameterType="myhealingbox.entity.night.NightCategory">
-		delete from NightCategory where id=#{id};
+		delete from NightCategory where id=#{id}
 	</select>
   
   </mapper>

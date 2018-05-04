@@ -4,11 +4,12 @@
 	/* width: 100%; */
 	min-height: 500px;
 	
-	margin-left: 10px;
+	/* margin-left: 10px; */
 }
 
 .body{
-	margin-top: 46px;
+	margin: 46px auto 0px auto;
+	width: 95%;
 }
 
 .morning-list {
@@ -16,11 +17,12 @@
 }
 
 .addtodo {
-	width: 88.5%;
+	/* width: 88.5%; */
 }
 
 .todolist {
-	width: 88.5%;
+	/* width: 88.5%; */
+	min-height:10px;
 }
 
 .todolist-detail {
@@ -34,14 +36,13 @@
 }
 
 .donelist {
-	width: 88.5%;
-	min-height:100px;
+	/* width: 88.5%; */
+	min-height:10px;
 }
 
 .donelist-detail {
 	display: flex;
 	justify-content: space-between;
-	/* align-items: ; */
 }
 
 .donelist-title {
@@ -51,8 +52,49 @@
 .donelist-delButton{
 	display: flex;
 	justify-content: center;
-	margin-top: 15px;
+	margin-top: 5px;
 }
+
+.todolist-downButton{
+	display: flex;
+	justify-content: center;
+	margin-top: 5px;
+	margin-bottom: -4px;
+}
+
+.doneButton, .fixButton, .fixfinishButton {
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 12px;
+}
+
+.doneButton {
+	background-color: #ff0000; 
+	margin-right: 8px;
+}
+
+.fixButton {
+    background-color: #4CAF50; 
+    margin-left: 8px;
+}
+
+.fixfinishButton {
+    background-color: #0080c0; 
+}
+
+.doneAndfixButton{
+	width:100%;
+	margin: 0px auto;
+	margin-top: 15px;
+	display:flex;
+	justify-content: center;
+}
+
 /* -----------------------.header -----------------------*/
 .header {
 	background: -webkit-linear-gradient(top,  #005aa7 30%, #fffde4 100%);

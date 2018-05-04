@@ -10,8 +10,9 @@
 ">
 
 	<div>
-		<div>${videos.title }</div>
-		
+	<c:forEach var="category" items="${category}">
+		<div>${category.title }</div>
+		</c:forEach>
 			<div class="detail-title">
 				<div>
 					제목 : ${video.title }

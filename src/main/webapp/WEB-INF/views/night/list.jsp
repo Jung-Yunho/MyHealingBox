@@ -40,11 +40,12 @@
 	<c:forEach var="video" items="${videos}">
 
     <li data-cliplink-id="384597175">
+    	<a href="${video.id }">
         <div class="link_contents">
-            <a href="${root }/night/video/detail" class="thumb_box">
+            <span class="thumb_box">
                     <img src="${root }/resources/images/night/KakaoTalk_20180328_233238324.png" class="thumb_img" >
                
-            </a>
+            </span>
             <span class="item_info">
                 <strong class="tit_item">${video.title}</strong>
                 <span class="info_append">
@@ -53,6 +54,7 @@
                 </span>
             </span>
         </div>
+        </a>
     </li>
     </c:forEach>
       <%-- <li data-cliplink-id="384597175">

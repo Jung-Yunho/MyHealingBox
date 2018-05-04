@@ -4,13 +4,13 @@ import java.util.Date;
 
 public class Video {
 	
-	private int id;
+	private long id;
 	private String title;
 	private String urlPath;
 	private String content;
 	private Date regDate;
 	private int hit;
-	private int nightCategoryId;
+	private long nightCategoryId;
 	
 	public Video() {
 		// TODO Auto-generated constructor stub
@@ -22,11 +22,11 @@ public class Video {
 		this.content = content;
 	}
 
-	public int getId() {
+	public long getId() {
 		return id;
 	}
 
-	public void setId(int id) {
+	public void setId(long id) {
 		this.id = id;
 	}
 
@@ -70,13 +70,14 @@ public class Video {
 		this.hit = hit;
 	}
 
-	public int getNightCategoryId() {
+	public long getNightCategoryId() {
 		return nightCategoryId;
 	}
 
-	public void setNightCategoryId(int nightCategoryId) {
+	public void setNightCategoryId(long nightCategoryId) {
 		this.nightCategoryId = nightCategoryId;
 	}
+
 	
 	
 	
