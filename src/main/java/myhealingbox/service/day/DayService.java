@@ -45,8 +45,8 @@ public class DayService {
 	
 
 	// 낮 _하고싶은일들 관련 -------------------------------------------
-	public List<WantToDo> getWantToDoList() {
-		List<WantToDo> list = wantToDoDao.getList();
+	public List<WantToDo> getWantToDoList(Integer id) {
+		List<WantToDo> list = wantToDoDao.getList(id);
 
 		for(WantToDo n : list) {
 			String content = n.getContent();

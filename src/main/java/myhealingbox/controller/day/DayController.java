@@ -34,39 +34,33 @@ public class DayController {
 		// category list
 		@RequestMapping("categoryList")
 		public String categoryList(Model model) {	
-			List<DayCategory> categoryList = service.getDayCategoryList();
+			List<DayCategory> categoryLists = service.getDayCategoryList();
 	
-			model.addAttribute("categoryList", categoryList);
+			model.addAttribute("categoryLists", categoryLists);
 	
 			return "day.categoryList";
 		}
 		
 	   // list
-	   @RequestMapping("list")
-	   public String list(Model model) {	      
-	      List<WantToDo> list = service.getWantToDoList();
-	      
-	      model.addAttribute("list", list);
+	   @RequestMapping("{id}")
+	   public String list(@PathVariable("id") Integer id
+				, Model model) {	      
+	      List<WantToDo> lists = service.getWantToDoList(id);	      
+	      model.addAttribute("lists", lists);
 	      
 	      return "day.list";
 	   }
 	   
 	   // detail
-	   /*@RequestMapping("{id}")
-	   public String detail(@PathVariable("id") Integer id, Model model) {
-	      
-		   WantToDo wantToDo = service.getWantToDo(id);
-	      
-	      model.addAttribute("WantToDo", wantToDo);
-	      
-	      return "day.detail";
-	   }*/
-	   
-	   @RequestMapping("detail")
-	   public String detail() {
-		   return "day.detail";
-		}
-	   
+		/*@RequestMapping("{id}")
+		public String detail(@PathVariable("id") Integer id
+				, Model model) {
+			WantToDo wantToDo = service.getWantToDo(id);
+			model.addAttribute("wantToDo",wantToDo);
+			
+			return "day.detail";
+		}*/
+		
 	   
 	   // edit
 	   @RequestMapping("edit")
@@ -121,11 +115,11 @@ public class DayController {
 	      return "redirect:list";
 	   }
 	   
-	   @RequestMapping("data")
+	  /* @RequestMapping("data")
 	   @ResponseBody
 	   public String data() {
 
 	      return "안녕하세용";
-	   }
+	   }*/
 	   
 }

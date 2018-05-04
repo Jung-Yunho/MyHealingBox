@@ -4,7 +4,11 @@
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="myhealingbox.dao.day.WantToDoDao">
 	<select id="getList" resultType="myhealingbox.entity.day.WantToDo">
-		select title,content from WantToDo where dayCategoryId=3
+		select title,content from WantToDo
 		<!-- limit #{(_parameter-1)*15},15 -->
+	</select>
+	
+	<select id="get" resultType="myhealingbox.entity.day.WantToDo">
+		select * from DayCategory where id=#{id}
 	</select>
 </mapper>
