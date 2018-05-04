@@ -542,3 +542,7 @@ li {
     font-weight: bold;
     border: none 5px;
 }
+
+.table{
+	margin-top: 80px;
+}

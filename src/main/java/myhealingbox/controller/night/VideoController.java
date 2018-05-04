@@ -4,10 +4,12 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.UnsupportedEncodingException;
 import java.util.List;
 
 import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -67,8 +69,12 @@ public class VideoController {
 	}
 
 	@RequestMapping(value = "reg", method = RequestMethod.POST)
-	public String reg(Video video, MultipartFile file, HttpServletRequest request) {
+	public String reg(Video video, MultipartFile file, HttpServletRequest request, HttpServletResponse response) throws UnsupportedEncodingException {
 
+		response.setCharacterEncoding("UTF-8");
+		response.setContentType("text/html; charset=UTF-8;");
+		request.setCharacterEncoding("UTF-8");
+		
 		ServletContext ctx = request.getServletContext();
 		String path = ctx.getRealPath("/resources/night");
 		File f = new File(path);
@@ -121,6 +127,12 @@ public class VideoController {
 	}
 
 	@RequestMapping(value = "category", method = RequestMethod.POST)
+	public String category() {
+
+		return "redirect:list";
+	}
+	
+	@RequestMapping("category-edit")
 	public String categoryEdit() {
 
 		return "night.category-edit";
