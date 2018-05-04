@@ -10,13 +10,15 @@
 	<div class="reg-box">
 			<div class="category-size">
 				<h3>카테고리</h3>
+			<form method="post" enctype="multipart/form-data">
 				<select class="select-box" >
-					<c:forEach var="category" items="${category}">
+					<%-- <c:forEach var="category" items="${category}">
 					<option value=""> ${category.title } </option>
 					<!-- <option value="default-category" selected="selected"> 폴더1</option>
 					<option value=""> 폴더2 </option>
 					<option value=""> 폴더3 </option> -->
-					</c:forEach>
+					</c:forEach> --%>
+					<option value=""> 폴더1 </option>
 				</select>
 				</div>
 			
@@ -39,6 +41,7 @@
             <input class = "button-submit"type="submit" value="등록"/>
             </a>
          </div>
+     </form>
  
 </main>
 
