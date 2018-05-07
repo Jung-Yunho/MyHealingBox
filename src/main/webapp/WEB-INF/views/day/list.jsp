@@ -13,19 +13,16 @@
 		<!-- 기본적으로 최신순으로 정렬되는데 정렬박스를 추가할 필요가 없지..? 일단 뺌 -->
 		<hr/>
 		
-		<c:forEach var="i" begin="0" end="4">
+		<c:forEach var="list" items="${lists}">
 		<div>
 			<div id="detail-click">
 				<a href="detail">
-					<h3>여기는 제목 부분</h3>
-					<p class="text-concat"> 여기는 내용 부분인데 2줄만 나오게 할거에오...
-					여기는 내용 부분인데 2줄만 나오게 할거에오
-					여기는 내용 부분인데 2줄만 나오게 할거에오 
-					여기는 내용 부분인데 2줄만 나오게 할거에오 </p>
+					<h3>${list.title}</h3>
+					<p class="text-concat"> ${list.content } </p>
 				</a>
 			</div>
 			<div class="list-bottom">
-				<p> 2018년 4월 17일 </p>
+				<p> ${list.regDate} </p>
 				<div>
 					<img alt="새벽으로 보내기" src="${root}/resources/images/day/send_icon.png">
 					<img alt="하고싶은일 삭제" src="${root}/resources/images/day/listDel_icon.png">						

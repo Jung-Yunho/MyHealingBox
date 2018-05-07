@@ -14,10 +14,10 @@ public class MyBatisWantToDoDao implements WantToDoDao{
 	private SqlSession sqlSession;
 	
 	@Override
-	public List<WantToDo> getList(Integer page) {
+	public List<WantToDo> getList(Integer id) {
 		WantToDoDao wantToDoDao = sqlSession.getMapper(WantToDoDao.class);
 		
-		List<WantToDo> result = wantToDoDao.getList(page);
+		List<WantToDo> result = wantToDoDao.getList(id);
 		
 		return result;
 	}

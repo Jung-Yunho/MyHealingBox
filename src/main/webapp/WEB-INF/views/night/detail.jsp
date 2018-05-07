@@ -10,15 +10,16 @@
 ">
 
 	<div>
-		<div>폴더1</div>
-		
+	<c:forEach var="category" items="${category}">
+		<div>${category.title }</div>
+		</c:forEach>
 			<div class="detail-title">
 				<div>
-					제목 : 어쩌고 저쩌고
+					제목 : ${video.title }
 				</div>
 			
 				<div>
-					조회수 : 200
+					조회수 : ${video.hit }
 				</div>
 			
 		</div>
@@ -27,13 +28,13 @@
 			<div class="detail-thm">
 				<img src="${root }/resources/images/night/fff.PNG">
 			</div>
-			<div class="detail-textarea"><span>삘릴리개굴개굴yaho</span></div>
+			<div class="detail-textarea"><span>${video.content }</span></div>
 		</div>
-	<div class="list-button">
+	<%-- <div class="list-button">
 		<a href="${root }/night/video/list">
 		<input class="list-button" type="submit" value="목록"/>
 		</a>
-	</div>
+	</div> --%>
    
    
    <nav class="btn-list">

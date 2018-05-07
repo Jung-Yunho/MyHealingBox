@@ -20,8 +20,8 @@
 		<form>
 			<fieldset class="addtodo">
 				<legend>할일추가</legend>
-				<input type="text" placeholder="할일을 입력해주세요"><input
-					type="button" value="등록"><br>
+				<input type="text" placeholder="할일을 입력해주세요">
+				<input type="button" value="등록"><br>
 			</fieldset>
 		</form>
 	</div>
@@ -42,16 +42,19 @@
 				</c:forEach>
 			</fieldset>
 		</form>
+		<div class="todolist-downButton">
+			<img alt="한일로이동" src="${root}/resources/images/morning/arrowDownButton.png" style="width: 48px; height: 48px;">
+		</div>
 	</div>
 	<div>
 		<form>
 			<fieldset class="donelist">
 				<legend>한일목록</legend>
-				<c:forEach var="i" begin="0" end="2">
+				<c:forEach var="i" begin="0" end="1">
 					<div class="donelist-detail">
 						<div>
 							<input class="checkBox" type="checkbox"> <span
-								class="donelist-title"> <a href="detail">제목부분</a>
+								class="donelist-title"> <a href="detail">한일제목들</a>
 							</span>
 						</div>
 						</span>

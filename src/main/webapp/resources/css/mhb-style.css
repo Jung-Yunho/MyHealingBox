@@ -10,6 +10,7 @@ html{
 body{
    margin: 0px;
    height: 100%;
+   background: -webkit-linear-gradient(top, #243949 0%,#517fa4 100%);
 }
 
 h1,h2,h3,h4,h5,h6{
@@ -73,14 +74,38 @@ form {
 	width:100%;	
 	height:600px;
 	
-	display: flex;
-	flex-direction: column;
-	
-	background-image: url("../images/mhb-main-back.jpg");
+	background-image: url("../images/mhb-main.png");
 	background-size: 100% 100%;
 }
 
-	.mhb-main div{
+	.mhb-main div:first-child > img{
+		width:18px;
+		position:relative;
+		left:330px;
+		top:183px;
+	}
+	
+	
+.main-nav{
+	display:flex;
+	flex-direction:row;
+	position:relative;
+	top:190px;
+}	
+
+	.main-nav div{
+		width:110px;
+		height:388px;		
+		/* border:1px solid red; */
+	}
+	
+	.main-nav div:hover{
+		border:2px solid #e9e9e9;
+	}
+
+
+/* 디자인이 들어와서 아래는 날라가....주륵 */
+/* 	.mhb-main div{
 		height: 100px;	
 		display: flex;
 		justify-content: center;
@@ -109,34 +134,34 @@ form {
 }
 
 #night{
-	/* border : 2px solid red; */
+	border : 2px solid red;
 	position:relative;
 	left:100px;
 	top:25px;
 }
 
 #dawn{
-	/* border : 2px solid blue; */
+	border : 2px solid blue;
 	position:relative;
 	right:100px;
 }
 
 #morning{
-	/* border : 2px solid green; */
+	border : 2px solid green;
 	position:relative;		
 }
 
 #day{
-	/* border : 2px solid yellow; */
+	border : 2px solid yellow;
 	position:relative;	
 	left:70px;
 }
-
+ */
 
 /* --- .main----------------------------------------- */
 
 .main{
-	padding-top: 45px;
+	padding-top: 45px;	
 }
 	
 	
@@ -144,7 +169,7 @@ form {
 
 .footer{
 	height: 70px;
-  	padding :10px;
+  	padding :19px;
 	
 	font-size: 10px;
 	color : #ABB2B9;
@@ -408,6 +433,12 @@ form {
     z-index: 1;
     /* background-color: #243B55; */
 }
-
+.hidden{
+	display: none;
+}
+.title-img{
+	width: 200px;
+    height: 100px;
+}
 
 

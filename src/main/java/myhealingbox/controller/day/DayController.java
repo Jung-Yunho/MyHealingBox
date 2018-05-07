@@ -1,6 +1,7 @@
 package myhealingbox.controller.day;
 
 import java.io.File;
+
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -28,46 +29,38 @@ import myhealingbox.service.day.DayService;
 public class DayController {
 	
 		@Autowired
-	   private DayService service;
+		private DayService service;
 	   
 		// category list
 		@RequestMapping("categoryList")
-		public String categoryList(Model model) {
+		public String categoryList(Model model) {	
+			List<DayCategory> categoryLists = service.getDayCategoryList();
 	
-			//List<DayCategory> categoryList = service.getDayCategoryList();
-	
-			//model.addAttribute("categoryLists", categoryList);
+			model.addAttribute("categoryLists", categoryLists);
 	
 			return "day.categoryList";
 		}
 		
 	   // list
-	   @RequestMapping("list")
-	   public String list(Model model) {
-	      
-	      //List<WantToDo> list = service.getWantToDoList(1);
-	      
-	      //model.addAttribute("videos", list);
+	   @RequestMapping("{id}")
+	   public String list(@PathVariable("id") Integer id
+				, Model model) {	      
+	      List<WantToDo> lists = service.getWantToDoList(id);	      
+	      model.addAttribute("lists", lists);
 	      
 	      return "day.list";
 	   }
 	   
 	   // detail
-	   /*@RequestMapping("{id}")
-	   public String detail(@PathVariable("id") Integer id, Model model) {
-	      
-		   WantToDo wantToDo = service.getWantToDo(id);
-	      
-	      model.addAttribute("WantToDo", wantToDo);
-	      
-	      return "day.detail";
-	   }*/
-	   
-	   @RequestMapping("detail")
-	   public String detail() {
-		   return "day.detail";
-		}
-	   
+		/*@RequestMapping("{id}")
+		public String detail(@PathVariable("id") Integer id
+				, Model model) {
+			WantToDo wantToDo = service.getWantToDo(id);
+			model.addAttribute("wantToDo",wantToDo);
+			
+			return "day.detail";
+		}*/
+		
 	   
 	   // edit
 	   @RequestMapping("edit")
@@ -122,11 +115,11 @@ public class DayController {
 	      return "redirect:list";
 	   }
 	   
-	   @RequestMapping("data")
+	  /* @RequestMapping("data")
 	   @ResponseBody
 	   public String data() {
 
 	      return "안녕하세용";
-	   }
+	   }*/
 	   
 }

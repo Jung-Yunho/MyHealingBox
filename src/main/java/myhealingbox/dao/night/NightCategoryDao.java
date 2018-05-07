@@ -9,7 +9,7 @@ import myhealingbox.entity.night.NightCategory;
 
 public interface NightCategoryDao {
 
-	@Select("select * from DawnCategory order by regDate desc" + 
+	@Select("select * from NightCategory order by regDate " + 
 			"		limit ${(page-1)*15},15")
 	List<NightCategory> getList(@Param("page") Integer page);
 

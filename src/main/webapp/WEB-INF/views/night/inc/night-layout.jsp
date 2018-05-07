@@ -10,7 +10,7 @@
 <head>
 <meta charset="utf-8"/>
    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=1">
-   <title>Insert title here</title>
+   <title>나의 힐링 박스</title>
    <link href="${root }/resources/css/night-style.css" type="text/css" rel="stylesheet" />
 </head>
 

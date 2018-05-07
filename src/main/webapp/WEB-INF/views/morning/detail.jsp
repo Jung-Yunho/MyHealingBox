@@ -19,7 +19,7 @@
 	<div>
 		<form>
 			<fieldset class="addtodo">
-				<legend>할일추가</legend>
+				<legend>기한</legend>
 				<input type="text" placeholder="할일을 입력해주세요"><input
 					type="button" value="등록"><br>
 			</fieldset>
@@ -28,7 +28,7 @@
 	<div>
 		<form>
 			<fieldset class="todolist">
-				<legend>할일목록</legend>
+				<legend>내용</legend>
 				<c:forEach var="i" begin="0" end="4">
 					<div class="todolist-detail">
 						<div>
@@ -46,8 +46,8 @@
 	<div>
 		<form>
 			<fieldset class="donelist">
-				<legend>한일목록</legend>
-				<c:forEach var="i" begin="0" end="2">
+				<legend>첨부파일</legend>
+				<c:forEach var="i" begin="0" end="0">
 					<div class="donelist-detail">
 						<div>
 							<input class="checkBox" type="checkbox"> <span
@@ -59,8 +59,9 @@
 				</c:forEach>
 			</fieldset>
 		</form>
-		<div class="donelist-delButton">
-			<img alt="카테고리삭제" src="${root}/resources/images/morning/clearButton.png" style="width: 48px; height: 48px;">
+		<div class="doneAndfixButton">
+		<input class="doneButton"  type="button" value="작업완료"><br>
+		<input class="fixButton"  type="button" value="수정하기"><br>
 		</div>
 	</div>
 </section>

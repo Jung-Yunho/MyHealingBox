@@ -11,12 +11,12 @@
   
   <!-- 구현 -->
    <select id="get" resultType="myhealingbox.entity.night.Video">
-     select * from Note where id=#{id}
+     select * from PrivateVideo where id=#{id}
   </select>
   
   <insert id="insert" parameterType="myhealingbox.entity.night.Video">
-     insert into Note(title,content,writerId)
-     values(#{title},#{content},#{writerId})
+     insert into PrivateVideo(id,title,urlPath,content)
+     values(#{id},#{title},#{urlPath},#{content})
   </insert>
   
 </mapper>
