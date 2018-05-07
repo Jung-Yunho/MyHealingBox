@@ -6,44 +6,59 @@
 <c:set var="root" value="${pageContext.request.contextPath }"/>
 
 <main class="main">
-
-	<section class="memory-list">
-		<h1 class="hidden">메모리 리스트</h1>
-		<ul>
-			<li class="memory-title-box">
-				<div class="memory-title">영화</div>
-				<div>
+	<h1 class="hidden">새벽: 메모리 글 리스트페이지</h1>
+	<section class="top-box">
+		<form>
+			<ul>
+				<li>
+					영화
+				</li>
+				
+				<li>
 					<select name="filter">
-						<option value="최신순▼">최신순▼</option>
-						<option value="최신순▲">최신순▲</option>
+						<option value="최신순">최신순▼</option>
+						<option value="과거순">최신순▲</option>
 					</select>
-				</div>
-			</li>
-		</ul>
-		
-		<c:forEach var="i" begin="0" end="9">
-			<ul class="memory-content-ul">
-					<li class="memory-content-box">
-							<div><a href="">타이틀</a></div>
-							<div><a href="">컨텐츠</a></div>
-					</li>
-					
-					<li class="memory-img-box">
-						<div><a href=""><img class="memory-img" src="${root}/resources/images/dawn/aboutTime.jpg"></a></div>
-					</li>
-					
-					<li class="memory-edit-box">
-						<div><a href=""><img src="${root}/resources/images/dawn/ic_mode_edit_black_24dp_1x.png"></a></div>
-						<div><a href=""><img src="${root}/resources/images/dawn/ic_cancel_black_24dp_1x.png"></a></div>
-					</li>
+				</li>
 			</ul>
-			</c:forEach>
+		</form>
 	</section>
 	
-	<nav class="memory-button-box">
-		<h1 class="hidden">버튼 목록</h1>
+	<section>
+		<c:forEach var="i" begin="0" end="4">
+		<div class="mid-box">
+			<div class="surmmary">
+				<ul>
+					<li class="title-box"><a href="">Title</a></li>
+					
+					<li class="content-box">
+						<a href="">Content</a>
+					</li>
+					
+					<li class="regDate-box"><span>RegDate</span></li>
+				</ul>
+			</div>
+			
+			<div>
+				<a href=""><img class="img-box" src="${root }/resources/images/dawn/aboutTime.jpg"/></a>
+			</div>
+			
+			<div>
+				<a href=""><img class="icon" src="${root }/resources/images/dawn/ic_cancel_black_24dp_1x.png"/></a>
+			</div>
+			
+			<div>
+				<a href=""><img class="icon" src="${root }/resources/images/dawn/ic_mode_edit_black_24dp_1x.png"/></a>
+			</div>
+		</div>
+		</c:forEach>
+	</section>
+	
+	<nav class="btn-write-go">
 		<ul>
-			<li><a href=""><img class="memory-button-img" src="${root}/resources/images/dawn/add-anchor-point.png"></a></li>
+			<li>
+				<a href="reg"><img src="${root}/resources/images/dawn/writeGo_button_img.png"></a>
+			</li>
 		</ul>
 	</nav>
 </main>

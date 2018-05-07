@@ -36,8 +36,8 @@ public class HomeController {
 	@RequestMapping("{id}")
 	public String detail(@PathVariable("id")Integer id, Model model) {
 		
-		DawnCategory dawnCategory = service.getDawnCategory(id);
-		model.addAttribute("dawnCategory", dawnCategory);
+		//DawnCategory dawnCategory = service.getDawnCategory(id);
+		//model.addAttribute("dawnCategory", dawnCategory);
 		return "dawn.memory.list";
 	}
 	

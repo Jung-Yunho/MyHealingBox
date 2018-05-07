@@ -6,7 +6,7 @@
 
 .aside{
 	width: 50%;
-	height: 35%;
+	height: 50%;
 }
 
 select{
@@ -23,87 +23,202 @@ select{
    select:-ms-expand{
       display: none;
    }
-/*--------------------DawnCategory List--------------------*/
-/* .category-ul{
-	width: 100%;
-	height: inherit;
+   
+.aside2{
+	width:50%;
+	height: 50%;
+	background: #fff;
+	position: fixed;
+	top: 56px;
+	left : -100%;
+	
+	transition : 1s;
 }
 
-.category-list{
-	border-bottom: 2px solid #979797;
-	text-align: center;
-	font-size: 15px;
-	width: 100%;
-	height: 15%;
+	.aside2.show2{
+		left:50%;
+		box-shadow: 0px 3px 5px #544954;
+	}
+/*-------------------- home/index--------------------*/
+/*-------------------- memory/detail --------------------*/
+#edit-button.show{
+	bottom: 80px;
 }
 
-.category-modify{
-	display: flex;
-		justify-content: flex-end;
-} */
-/*--------------------Memory List--------------------*/
+#del-button.show{
+	bottom: 160px;
+}
+/*-------------------- memory/list --------------------*/
 
-.memory-list{
-	width:100%;
-	height:100%;
+.top-box{
 	margin-top: 20px;
-}
-
-.memory-title-box{
-	display: flex;
-		justify-content: space-between;
-	width: 100%;
-	height: 50px;
-	margin-bottom: 10px;
 	border-bottom: 2px solid #979797;
 }
 
-.memory-title{
-	font-size: 20px;
-	padding-left: 10px;
-}
+	.top-box form ul{
+		display: flex;
+		justify-content: space-between;
+	}
+	.top-box form ul:first-child{
+		font-size: 25px;
+		font-weight:bold;		
+	}
 
-.memory-content-ul{
+.mid-box{
 	width:100%;
-	height: 100px;
+	height:100px;	
 	display: flex;
 		justify-content: space-between;
-	border-bottom: 1px solid #979797;
-	padding-bottom: 5px;
-	padding-top: 5px;
+	padding-top: 10px;
+	border-bottom: 2px solid #979797;
 }
 
-	.memory-content-box{
-		width: 60%;
+	.mid-box .surmmary {
+		font-size: 20px;
+		width:70%;
+		height: 100%;
+
 	}
 	
-		.memory-content-box div:first-child{
-			padding-bottom: 10px;
+	.title-box{
+		height: 25px;
+		font-size: 20px;
+	}
+	
+	.content-box{
+		font-size: 15px;
+		height: 60px;
+	}
+	
+	.regDate-box{
+		font-size: 10px;
+		height: 15px;
+	}
+	
+	.img-box{
+		width:130px;
+	}
+	
+	.icon{
+		padding-top: 25px;
+	}
+	
+.btn-write-go{
+	position: fixed;
+	right : 25px;
+	bottom : 30px;
+}
+
+.btn-write-go img{
+	width: 58px;
+}
+
+/*-------------------- memory/reg --------------------*/
+.reg-box{
+	margin-top:15px;
+	margin-left: 10px;
+}
+
+	.reg-title-box{
+		padding: 5px 0px;
+	}
+	
+		.reg-title{
+			font-size: 16px;
+			height: 45px;
+			width: 100%;
+			border: 0px;
 		}
 		
-	.memory-img-box{
-		width: 23%;
-		height: 100%;
+	.reg-file-box{
+		padding: 5px 0px;
 	}
 	
-		.memory-img{
-			width: 100%;
-			height: 100%;
+	.reg-content-box{
+		padding: 5px 0px;
+	}
+	
+		.reg-content{
+			width:95%;
 		}
-	
-	.memory-edit-box{
-		width: 17%;
-		display: flex;
-			justify-content: space-around;
-		padding-top: 15px;
-	}
-	
-.memory-button-box{
-	width: 90px;
-	height: 90px;
+		
+
+		
+		
+.btn-list
+{
+	position: fixed;
+	right: 20px;
+	bottom: 20px;
+	border: 1px solid red;
 }
 
-	.memory-button-img{
-		width: 100%;
-		height: 100%;
+	.btn-list > ul
+	{
+		border: 1px solid blue;
+		display: flex;
+		flex-direction: column;
 	}
+	
+		.btn-list > ul >li
+		{
+			position: absolute;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			bottom:0px;
+			right: 0px;
+			background-color: pink;
+			width: 50px;
+			height: 50px;
+			border-radius: 25px;
+			transition: 500ms;
+		}			
+		
+			.btn-list > ul >li:first-child {
+				z-index: 1;
+				order: 1;
+				background-color: blue;
+			}
+			
+ 			#edit-button.show{
+				bottom: 60px;
+			} 
+			
+			#del-button.show{
+				bottom: 120px;
+			}
+			
+.btn-put{
+	/* 버튼 flex하려구 만듬 ㅠㅠ */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.btn-submit{
+	-webkit-appearance: none;
+	
+	width: 330px;
+	height : 50px;
+	
+	margin-top:10px;
+	margin-bottom:20px;
+	margin-right:10px;
+	margin-left:0px;
+	
+	background: #E4EFE6;
+	color: #808079;
+	font-weight: bold; 
+	
+	border:none 5px;
+	/*  -moz-border-radius-topleft: 5px;
+	-moz-border-radius-topright:5px;
+	-moz-border-radius-bottomleft:5px;
+	-moz-border-radius-bottomright:5px;
+	-webkit-border-top-left-radius:5px;
+	-webkit-border-top-right-radius:5px;
+	-webkit-border-bottom-left-radius:5px;
+	-webkit-border-bottom-right-radius:5px; */
+	
+}
