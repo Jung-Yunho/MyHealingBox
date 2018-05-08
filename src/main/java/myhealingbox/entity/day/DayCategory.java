@@ -15,8 +15,7 @@ public class DayCategory {
 	
 	public DayCategory(String title) {
 		this.title = title;
-	}
-		
+	}		
 	
 	public long getId() {
 		return id;
