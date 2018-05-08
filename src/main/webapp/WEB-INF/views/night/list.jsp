@@ -3,7 +3,26 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %> 
 <c:set var="root" value="${pageContext.request.contextPath}"/>     
 
-<main class="list-main">
+<main class="list-main"> 
+
+<!-- <script
+		src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<script>
+
+$(function() {
+	
+	var iframe = $(".thumb_img");
+	var iframe_src = iframe.attr('src');
+	var youtube_video_id = iframe_src.match(
+			/youtube\.com.*(\?v=|\/embed\/)(.{11})/).pop();
+
+	if (youtube_video_id.length == 11) {
+		var video_thumbnail = $('<img src="//img.youtube.com/vi/'+youtube_video_id+'/mqdefault.jpg">');
+		$(body).append(video_thumbnail);
+	}
+});
+</script> -->
 
 <section>
 
@@ -43,7 +62,9 @@
     	<a href="${video.id }">
         <div class="link_contents">
             <span class="thumb_box">
-                    <img src="${root }/resources/images/night/KakaoTalk_20180328_233238324.png" class="thumb_img" >
+            
+            <img src="https://img.youtube.com/vi/${video.urlPath }/mqdefault.jpg" class="thumb_img"/>
+                    <%-- <img src="${root }/resources/images/night/KakaoTalk_20180328_233238324.png" class="thumb_img" > --%>
                
             </span>
             <span class="item_info">

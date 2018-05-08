@@ -8,6 +8,7 @@ import java.io.UnsupportedEncodingException;
 import java.util.List;
 
 import javax.servlet.ServletContext;
+import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -27,6 +28,7 @@ import myhealingbox.service.night.VideoService;
 
 @Controller("videoController")
 @RequestMapping("/night/video/")
+
 public class VideoController {
 
 	@Autowired
@@ -45,6 +47,18 @@ public class VideoController {
 
 		return "night.list";
 	}
+	
+/*	@RequestMapping("url-list")
+	public String urlList(Model model, Integer id) {
+
+		List<Video> urlList = service.getUrlList(id);
+
+		model.addAttribute("urlList", urlList);
+
+		return "night.list";
+	}
+	*/
+	
 
 	@RequestMapping("{id}")
 	public String detail(@PathVariable("id") Integer id, Model model) {
@@ -81,6 +95,8 @@ public class VideoController {
 
 		if (!f.exists())
 			f.mkdirs();
+		
+		
 
 		if (!file.isEmpty())
 			try {
