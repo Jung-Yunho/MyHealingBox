@@ -4,10 +4,10 @@
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="myhealingbox.dao.dawn.DawnCategoryDao">
 
-	<!-- <select id="getList" resultMap="myhealingbox.entity.dawn.DawnCategory">
+	<select id="getList" resultType="myhealingbox.entity.dawn.DawnCategory">
 		select * from DawnCategory
-		limit ${(_parameter-1)*15},15
-	</select> -->
+		<!-- limit ${(_parameter-1)*15},15 -->
+	</select>
 	
 	<select id="get" resultType="myhealingbox.entity.dawn.DawnCategory">
 		select * from DawnCategory where id=#{id}

@@ -27,8 +27,8 @@ public class HomeController {
 	public String index(@RequestParam(value="p", defaultValue="1")
 					Integer page, Model model) {
 		
-		//List<DawnCategory> categoryList = service.getCategoryList(page);
-		//model.addAttribute("categoryList", categoryList);
+		List<DawnCategory> categoryList = service.getCategoryList(page);
+		model.addAttribute("categoryList", categoryList);
 		
 		return "dawn.home.index";
 	}

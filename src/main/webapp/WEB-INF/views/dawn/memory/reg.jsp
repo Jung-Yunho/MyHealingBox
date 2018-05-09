@@ -14,7 +14,7 @@
 			</div>
 			
 			<div class="reg-file-box">
-				<input type="file" name="file">
+				<input download type="file" name="file">
 			</div>
 			
 			<div class="reg-content-box">
@@ -26,7 +26,7 @@
 					<input class="btn-submit" type="submit" value="작성완료" />
 				</div>
 				<div class="btn-put">
-					<a href=""><input class="btn-submit" type="button" value="취소" /></a>
+					<a href="list"><input class="btn-submit" type="button" value="취소" /></a>
 				</div>
 			</div>
 		</form>
@@ -34,3 +34,9 @@
 </main>
 <script src="http://js.nicedit.com/nicEdit-latest.js" type="text/javascript"></script>
 <script type="text/javascript">bkLib.onDomLoaded(nicEditors.allTextAreas);</script>
+
+
+
+
+
+

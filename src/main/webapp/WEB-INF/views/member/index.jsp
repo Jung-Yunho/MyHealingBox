@@ -62,7 +62,7 @@
 		};
 
 		dawnBox.onclick=function(){
-			window.location.href="${root}/dawn/list";
+			window.location.href="${root}/dawn/home/index";
 		};
 
 		morningBox.onclick=function(){

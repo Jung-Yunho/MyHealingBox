@@ -38,7 +38,6 @@
 		hamButton.onclick = function(e){
 			if(aside.classList.contains("show")){
 				aside.classList.remove("show");
-				aside2.classList.remove("show2");
 			}
 			else
 				aside.classList.add("show");

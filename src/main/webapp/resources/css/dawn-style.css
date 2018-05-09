@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import url('https://fonts.googleapis.com/css?family=Hi+Melody|Nanum+Gothic|Nanum+Myeongjo|Sunflower:300');
 
 .dawn-main{
 	
@@ -7,7 +8,20 @@
 .aside{
 	width: 50%;
 	height: 50%;
+	transition : 500ms;
+	text-align: center;
+	font-size: 25px;
+	background: -webkit-linear-gradient(top,  #948e99 0%, #2e1437 100%);
+	color: #E6E6E6;
 }
+
+	.aside ul li{
+		width: 100%;
+		height: 50px;
+		margin-top: 10px;
+		margin-bottom: 10px;
+		border-bottom: 2px solid #979797;
+	}
 
 select{
    width: 100px;
@@ -31,15 +45,94 @@ select{
 	position: fixed;
 	top: 56px;
 	left : -100%;
+	text-align: center;
+	font-size: 25px;
+	 background: -webkit-linear-gradient(top,  #948e99 0%, #2e1437 100%);
+	color: #E6E6E6;
 	
-	transition : 1s;
+	transition : 500ms;
 }
+
+	.aside2 ul li{
+		width: 100%;
+		height: 50px;
+		margin-top: 10px;
+		margin-bottom: 10px;
+		border-bottom: 2px solid #979797;
+	}
+	
+	.aside2 ul li:last-child{
+		border: none;
+	}
 
 	.aside2.show2{
 		left:50%;
 		box-shadow: 0px 3px 5px #544954;
 	}
+	
+.header{
+   height: 55px;
+   width:100%;
+   position: fixed;
+   background: -webkit-linear-gradient(top,  #948e99 0%, #2e1437 100%);
+   border-bottom: 1px solid #e9e9e9;
+   z-index: 998;
+}
+
+.dawn-logo{
+	width:48px;
+}
 /*-------------------- home/index--------------------*/
+.index{
+	margin-top: 50px;
+	margin-bottom: 40px;
+	text-align: center;
+	font-weight: bold;
+	
+}
+
+	.index .title{
+		height: 25px;
+		font-size: 25px;
+	}
+
+	.index .regDate{
+		font-size: 10px;
+		height: 15px;
+		padding-top: 5px;
+	}
+	
+	.index .list{
+		padding-bottom: 10px;
+		padding-top:10px;
+		width: 100%;
+		height: 60px;
+	}
+	
+/*-------------------- home/edit --------------------*/
+.edit-box{
+	margin-top: 40px;
+	text-align: center;
+	width: 100%;	
+}
+
+	.edit-box ul li {
+		margin-top: 20px;
+		margin-bottom: 20px;
+	}
+
+	.edit-box ul li div{
+		display: flex;
+			justify-content: center;
+	}
+
+.edit-btn{
+	text-align: center;
+	margin-top: 30px;
+	margin-left: 10px;
+}
+
+
 /*-------------------- memory/detail --------------------*/
 #edit-button.show{
 	bottom: 80px;
@@ -48,6 +141,18 @@ select{
 #del-button.show{
 	bottom: 160px;
 }
+
+.detail-box{
+	margin-top: 15px;
+}
+	.detail-title-box{
+		display: flex;
+			justify-content: space-between;
+	}
+	
+	.detail-title-box h5{
+		padding-top: 15px;
+	}
 /*-------------------- memory/list --------------------*/
 
 .top-box{
@@ -110,13 +215,13 @@ select{
 }
 
 .btn-write-go img{
-	width: 58px;
+	width: 60px;
 }
 
 /*-------------------- memory/reg --------------------*/
 .reg-box{
 	margin-top:15px;
-	margin-left: 10px;
+	/* margin-left: 13px; */
 }
 
 	.reg-title-box{
@@ -139,7 +244,7 @@ select{
 	}
 	
 		.reg-content{
-			width:95%;
+			width:100%;
 		}
 		
 
@@ -150,27 +255,28 @@ select{
 	position: fixed;
 	right: 20px;
 	bottom: 20px;
-	border: 1px solid red;
+	/* border: 1px solid red; */
 }
 
 	.btn-list > ul
 	{
-		border: 1px solid blue;
+		/* border: 1px solid blue; */
 		display: flex;
-		flex-direction: column;
+			flex-direction: column;
 	}
 	
 		.btn-list > ul >li
 		{
 			position: absolute;
 			display: flex;
-			justify-content: center;
-			align-items: center;
+				justify-content: center;
+				align-items: center;
 			bottom:0px;
 			right: 0px;
-			background-color: pink;
-			width: 50px;
-			height: 50px;
+			background-color: #6f6276;
+			color:#F2F2F2;
+			width: 55px;
+			height: 55px;
 			border-radius: 25px;
 			transition: 500ms;
 		}			
@@ -178,7 +284,7 @@ select{
 			.btn-list > ul >li:first-child {
 				z-index: 1;
 				order: 1;
-				background-color: blue;
+				/* background-color: blue; */
 			}
 			
  			#edit-button.show{
@@ -202,13 +308,12 @@ select{
 	width: 330px;
 	height : 50px;
 	
-	margin-top:10px;
-	margin-bottom:20px;
-	margin-right:10px;
-	margin-left:0px;
+	margin-top: 8px;
+	margin-bottom: 8px;
+	margin-right: 13px;
 	
-	background: #E4EFE6;
-	color: #808079;
+	background: #6f6276;
+	color: #F2F2F2;
 	font-weight: bold; 
 	
 	border:none 5px;

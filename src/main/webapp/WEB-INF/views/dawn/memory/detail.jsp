@@ -6,22 +6,20 @@
 <c:set var="root" value="${pageContext.request.contextPath }"/>
 
 <main class="main">
-	<article style="margin-top:15px;">
-			<header>
-				<h1>Title</h1>
-				<h4>Sub-Title</h4>
-			</header>
-			
-			<footer>
-				<span>Writer-Id</span>
-				<span>Reg-Date</span>
-				<%-- <span><fmt:formatDate pattern="yyyy-MM-dd a hh:mm E" value="날짜"/></span> --%>
-				<!--fmt는 포매팅-->
-			</footer>
-			
+	<article class="detail-box">
 			<div>
-				Content
+				<h4>Category Name</h4>
 			</div>
+			<div class="detail-title-box">	
+				<h1>Title</h1>
+				<h5>regDate</h5>
+			</div>
+			<hr/>
+		
+			<div>
+				<p>Content</p>
+			</div>
+			<hr/>
 	</article>
 	
 	
@@ -30,8 +28,8 @@
 		<h1 class="hidden">버튼목록</h1>
 		<ul>
 			<li id="sel-button"><span><img src="${root}/resources/images/dawn/writeGo_button_img.png"></span></li>
-			<li id="edit-button"><a href="" >수정</a></li>
-			<li id="del-button"><a href="">삭제</a></li>
+			<li id="edit-button"><a href="edit" >수정</a></li>
+			<li id="del-button"><a href="list">삭제</a></li>
 		</ul>
 	</nav>
 </main>
