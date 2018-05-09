@@ -15,8 +15,8 @@
   </select>
   
   <insert id="insert" parameterType="myhealingbox.entity.night.Video">
-     insert into PrivateVideo(id,title,urlPath,content,thmImg)
-     values(#{id},#{title},#{urlPath},#{content},#{thmImg})
+     insert into PrivateVideo(id,title,urlPath,content)
+     values(#{id},#{title},#{urlPath},#{content})
   </insert>
   
 </mapper>

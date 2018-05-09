@@ -78,8 +78,7 @@ public class Video {
 		this.nightCategoryId = nightCategoryId;
 	}
 
-	
-	
+
 	
 
 }

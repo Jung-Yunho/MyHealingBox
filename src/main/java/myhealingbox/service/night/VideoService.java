@@ -59,7 +59,7 @@ public class VideoService {
 
 	public List<Video> getFavoriteList(int page) {
 		
-		List<Video> list = videoDao.getList(page);
+		List<Video> list = videoDao.getFavoriteList(page);
 		
 		return list;
 	}

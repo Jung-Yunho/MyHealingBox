@@ -58,7 +58,7 @@
 			e.preventDefault(); */
 
 		nightBox.onclick=function(){
-			window.location.href="${root}/night/video/list";
+			window.location.href="${root}/night/video/category";
 		};
 
 		dawnBox.onclick=function(){

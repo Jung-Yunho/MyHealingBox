@@ -164,16 +164,7 @@ public class VideoController {
 		
 		return "night.favorite";
 	}
-
-	@RequestMapping("list2")
-	public String list2(Model model) {
-
-		List<Video> list = service.getVideoList(1);
-
-		model.addAttribute("videos", list);
-
-		return "night.list2";
-	}
+	
 
 	@RequestMapping("reg-edit")
 	public String regEdit() {
