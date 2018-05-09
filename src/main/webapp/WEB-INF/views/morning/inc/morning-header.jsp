@@ -17,10 +17,10 @@
             <li id="ham-button"><a href=""><img src="${root }/resources/images/menu_icon.png"/></a></li>
             <li>
             	<div>
-		            <a href=""><img src="${root }/resources/images/MHB_icon.png"/></a>
+		            <a href="${root }/member/index"><img src="${root }/resources/images/MHB_icon.png"/></a>
             	</div>
             	<div>
-		  			<a href=""><img src="${root }/resources/images/myinfo_icon.png"/></a>        	
+		  			<a href="${root }/member/mypage"><img src="${root }/resources/images/myinfo_icon.png"/></a>        	
             	</div>
 	  		</li>            
          </ul>
