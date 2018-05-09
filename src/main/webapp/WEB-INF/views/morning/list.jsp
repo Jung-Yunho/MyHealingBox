@@ -21,7 +21,7 @@
 			<fieldset class="addtodo">
 				<legend>할일추가</legend>
 				<input type="text" placeholder="할일을 입력해주세요">
-				<input type="button" value="등록"><br>
+				<input type="submit" value="등록"><br>
 			</fieldset>
 		</form>
 	</div>
