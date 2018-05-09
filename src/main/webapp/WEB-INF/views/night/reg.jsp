@@ -6,6 +6,8 @@
 <c:set var="root" value="${pageContext.request.contextPath}"/>
 
 <main class="box">
+
+	<form method="post" enctype="multipart/form-data">
 <div class="reg-form">
 	<div class="reg-box">
 		<div class="category-size">
@@ -20,30 +22,39 @@
 				<option value="">폴더1</option>
 			</select>
 		</div>
+	
 
-		<form method="post" enctype="multipart/form-data">
 			<div class="title">
 				<h3>제목</h3>
 				<input type="text" class="title-style" name="title" />
 			</div>
-	</div>
-	<div class="hidden">
-		<h3>첨부파일</h3>
-		<input type="file" name="file" />
-	</div>
-
-	<div class="editor">
+			
+			<div class="title">
+				<h3>URL ID</h3>
+				<input type="text" class="title-style" name="urlPath" />
+			</div>
+			
+				<div class="hidden">
+					<h3>첨부파일</h3>
+					<input type="file" name="file" />
+				</div>
+				
+				<div class="editor">
 		<h3 class="hidden">내용</h3>
 		<textarea rows="15" cols="50" name="content"></textarea>
+		
 	</div>
+	
 </div>
-
-<div style="display: flex; justify-content: center;">
+			</div>
+			<div style="display: flex; justify-content: center;">
 	<a href="${root }/night/video/list"> <input class="button-submit"
 		type="submit" value="등록" />
 	</a>
 </div>
-</form>
+		</form>
+		
+		
 
 </main>
 
@@ -66,12 +77,12 @@
 	});
 </script>
 
-
+<!-- 
 <script src="http://js.nicedit.com/nicEdit-latest.js" type="text/javascript"></script>
 <script type="text/javascript">bkLib.onDomLoaded(nicEditors.allTextAreas);</script>
 
 
-
+ -->
 
 
 

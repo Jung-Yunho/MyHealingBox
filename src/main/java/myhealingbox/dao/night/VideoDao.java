@@ -17,4 +17,6 @@ public interface VideoDao {
 
 	int insert(Video video);
 
+	/*List<Video> getUrlList(Integer id);*/
+
 }
