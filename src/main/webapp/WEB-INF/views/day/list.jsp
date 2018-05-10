@@ -9,20 +9,20 @@
 <main class="main">
 	<div class="day-list">
 	
-		<h1>| 카테고리1 </h1>
+		<h1>| 카테고리<%-- ${dayCategory.title} --%> </h1>
 		<!-- 기본적으로 최신순으로 정렬되는데 정렬박스를 추가할 필요가 없지..? 일단 뺌 -->
 		<hr/>
 		
 		<c:forEach var="list" items="${lists}">
 		<div>
 			<div id="detail-click">
-				<a href="detail">
+				<a href="${list.id}">
 					<h3>${list.title}</h3>
 					<p class="text-concat"> ${list.content } </p>
 				</a>
 			</div>
 			<div class="list-bottom">
-				<p> ${list.regDate} </p>
+				<p> <fmt:formatDate pattern="yyyy-MM-dd a HH:mm" value="${list.regDate}" /> </p>
 				<div>
 					<img alt="새벽으로 보내기" src="${root}/resources/images/day/send_icon.png">
 					<img alt="하고싶은일 삭제" src="${root}/resources/images/day/listDel_icon.png">						
