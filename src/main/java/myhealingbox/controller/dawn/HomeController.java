@@ -27,8 +27,8 @@ public class HomeController {
 	public String index(@RequestParam(value="p", defaultValue="1")
 					Integer page, Model model) {
 		
-		//List<DawnCategory> categoryList = service.getCategoryList(page);
-		//model.addAttribute("categoryList", categoryList);
+		List<DawnCategory> categoryList = service.getCategoryList(page);
+		model.addAttribute("categoryList", categoryList);
 		
 		return "dawn.home.index";
 	}
@@ -36,8 +36,8 @@ public class HomeController {
 	@RequestMapping("{id}")
 	public String detail(@PathVariable("id")Integer id, Model model) {
 		
-		DawnCategory dawnCategory = service.getDawnCategory(id);
-		model.addAttribute("dawnCategory", dawnCategory);
+		//DawnCategory dawnCategory = service.getDawnCategory(id);
+		//model.addAttribute("dawnCategory", dawnCategory);
 		return "dawn.memory.list";
 	}
 	

@@ -22,14 +22,13 @@
             <ul class="list_horizontal ">
 
 
-
-
-  <c:forEach var="video" items="${favorite}">
+	 <c:forEach var="video" items="${favorite}">
 
     <li data-cliplink-id="384597175">
         <div class="link_contents">
             <a href="${video.id}" class="thumb_box">
-                    <img src="${root }/resources/images/night/KakaoTalk_20180328_233238324.png" class="thumb_img" >
+                    <img src="https://img.youtube.com/vi/${video.urlPath }/mqdefault.jpg" class="thumb_img"/>
+                    <%-- <img src="${root }/resources/images/night/KakaoTalk_20180328_233238324.png" class="thumb_img" > --%>
                
             </a>
             <span class="item_info">

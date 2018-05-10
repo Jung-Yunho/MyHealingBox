@@ -9,8 +9,8 @@ import myhealingbox.entity.dawn.DawnCategory;
 
 public interface DawnCategoryDao {
 
-	@Select("select * from DawnCategory order by regDate desc" + 
-			"		limit ${(page-1)*15},15")
+	/*@Select("select * from DawnCategory order by regDate desc" + 
+			"		limit ${(page-1)*15},15")*/
 	List<DawnCategory> getList(@Param("page") Integer page);
 
 	DawnCategory get(Integer id);

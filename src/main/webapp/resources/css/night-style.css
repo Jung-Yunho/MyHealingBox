@@ -120,6 +120,38 @@ li {
 	box-shadow: 3px 3px 3px #544954; /* 마지막 3은 깊이. 종이와 얼마나 떠있는지 */
 }
 
+.aside2{
+	width:50%;
+	height: 50%;
+	background: #fff;
+	position: fixed;
+	top: 56px;
+	left : -100%;
+	text-align: center;
+	font-size: 25px;
+	 background: -webkit-linear-gradient(top,  #948e99 0%, #2e1437 100%);
+	color: #E6E6E6;
+	
+	transition : 500ms;
+}
+
+	.aside2 ul li{
+		width: 100%;
+		height: 50px;
+		margin-top: 10px;
+		margin-bottom: 10px;
+		border-bottom: 2px solid #979797;
+	}
+	
+	.aside2 ul li:last-child{
+		border: none;
+	}
+
+	.aside2.show2{
+		left:50%;
+		box-shadow: 0px 3px 5px #544954;
+	}
+
 /* --- .footer----------------------------------------- */
 .footer {
 	height: 70px;

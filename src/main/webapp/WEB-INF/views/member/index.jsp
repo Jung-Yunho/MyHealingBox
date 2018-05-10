@@ -58,11 +58,11 @@
 			e.preventDefault(); */
 
 		nightBox.onclick=function(){
-			window.location.href="${root}/night/video/list";
+			window.location.href="${root}/night/video/category";
 		};
 
 		dawnBox.onclick=function(){
-			window.location.href="${root}/dawn/list";
+			window.location.href="${root}/dawn/home/index";
 		};
 
 		morningBox.onclick=function(){

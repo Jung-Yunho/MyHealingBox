@@ -6,19 +6,70 @@
 <c:set var="root" value="${pageContext.request.contextPath }"/>
 
 <main class="main">
-	<%-- <section>
-		<h1 class="hidden">새벽 인덱스</h1>
-		<ul class="category-ul">
-			<c:forEach var="i" begin="0" end="4">
-				<li class="category-list">Category Title</li>
-			</c:forEach>
-		</ul>
+	<h1 class="hidden">새벽 : 인덱스 페이지</h1>
+	<section class="index">
+		<c:forEach var="categoryList" items="${categoryList}">
+			<div class="list">
+				<div>
+					<ul>
+						<li class="title"><a href="${categoryList.id }">${categoryList.title}</a></li>
+						<li class="regDate"><a href="${categoryList.id }">${categoryList.regDate}</a></li>
+					</ul>
+				</div>
+			</div>
+		</c:forEach>
+		
+		<!-- <div class="list">
+			<div class="">
+				<ul>
+					<li class="title"><a href="">Title1</a></li>
+					<li class="regDate"><a href="">RegDate1</a></li>
+				</ul>
+			</div>
+		</div>
+		
+		<div class="list">
+			<div class="">
+				<ul>
+					<li class="title"><a href="">Title2</a></li>
+					<li class="regDate"><a href="">RegDate3</a></li>
+				</ul>
+			</div>
+		</div>
+		
+		<div class="list">
+			<div class="">
+				<ul>
+					<li class="title"><a href="">Title3</a></li>
+					<li class="regDate"><a href="">RegDate3</a></li>
+				</ul>
+			</div>
+		</div>
+		
+		<div class="list">
+			<div class="">
+				<ul>
+					<li class="title"><a href="">Title4</a></li>
+					<li class="regDate"><a href="">RegDate4</a></li>
+				</ul>
+			</div>
+		</div>
+		
+		<div class="list">
+			<div class="">
+				<ul>
+					<li class="title"><a href="">Title5</a></li>
+					<li class="regDate"><a href="">RegDate5</a></li>
+				</ul>
+			</div>
+		</div>-->
 	</section>
 	
-	<nav>
-		<h1 class="hidden">카테고리 편집 버튼</h1>
+	<nav class="btn-write-go">
 		<ul>
-			<li class="category-modify"><a href=""><img src="">편집</a></li>
+			<li>
+				<a href="edit"><img src="${root}/resources/images/dawn/writeGo_button_img.png"></a>
+			</li>
 		</ul>
-	</nav> --%>
+	</nav>
 </main>

@@ -26,9 +26,11 @@
 	</div>
 		<div>
 			<div class="detail-thm">
-				<img src="${root }/resources/images/night/fff.PNG">
+				<%-- <img src="${root }/resources/images/night/fff.PNG"> --%>
+			<iframe width="400" height="300" src="https://www.youtube.com/embed/${video.urlPath }" frameborder="0" allowfullscreen></iframe>
 			</div>
-			<div class="detail-textarea"><span>${video.content }</span></div>
+			<div class="detail-textarea"><span>${video.content }</span>
+			</div>
 		</div>
 	<%-- <div class="list-button">
 		<a href="${root }/night/video/list">

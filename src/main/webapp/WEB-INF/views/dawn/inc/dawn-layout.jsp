@@ -17,6 +17,7 @@
 		<tiles:insertAttribute name="header"></tiles:insertAttribute>
 	<!-- aside -->
 		<tiles:insertAttribute name="aside"></tiles:insertAttribute>
+		<tiles:insertAttribute name="aside2"></tiles:insertAttribute>
 	<!-- main -->
 		<tiles:insertAttribute name="main"></tiles:insertAttribute>
 	<!-- footer -->

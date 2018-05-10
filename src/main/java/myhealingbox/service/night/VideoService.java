@@ -1,5 +1,6 @@
 package myhealingbox.service.night;
 
+import java.util.Iterator;
 import java.util.List;
 
 import org.jsoup.Jsoup;
@@ -58,10 +59,17 @@ public class VideoService {
 
 	public List<Video> getFavoriteList(int page) {
 		
-		List<Video> list = videoDao.getList(page);
+		List<Video> list = videoDao.getFavoriteList(page);
 		
 		return list;
 	}
 
+/*	public List<Video> getUrlList(Integer id) {
+		
+		List<Video> list = videoDao.getUrlList(id);
+		
+
+		return list;
+	}*/
 
 }

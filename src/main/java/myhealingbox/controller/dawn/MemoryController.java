@@ -41,8 +41,8 @@ public class MemoryController {
 	@RequestMapping("{id}")
 	public String detail(@PathVariable("id")Integer id, Model model) {
 		
-		Memory memory = service.getMemory(id);
-		model.addAttribute("memory", memory);
+		//Memory memory = service.getMemory(id);
+		//model.addAttribute("memory", memory);
 		
 		return "dawn.memory.detail";
 	}

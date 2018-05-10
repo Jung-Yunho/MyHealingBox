@@ -43,4 +43,23 @@ public class MyBatisVideoDao implements VideoDao {
 
 	}
 
+	@Override
+	public List<Video> getFavoriteList(Integer page) {
+		VideoDao videoDao = sqlSession.getMapper(VideoDao.class);
+
+		List<Video> result = videoDao.getFavoriteList(page);
+
+		return result;
+	}
+
+/*	@Override
+	public List<Video> getUrlList(Integer id) {
+
+		VideoDao videoDao = sqlSession.getMapper(VideoDao.class);
+		
+		List <Video> result = videoDao.getThmList(id);
+		
+		return result;
+	}
+*/
 }
