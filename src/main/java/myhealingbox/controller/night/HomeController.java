@@ -32,7 +32,7 @@ public class HomeController {
 		return "night.category";
 	}
 	
-	@RequestMapping("{id}")
+	/*@RequestMapping("{id}")
 	public String detail(@PathVariable("id")Integer id, Model model) {
 		
 		NightCategory nightCategory = service.getNightCategory(id);
@@ -67,5 +67,5 @@ public class HomeController {
 		int result = service.updateNightCategory(nightCategory);
 		
 		return "redirect:night.category";
-	}
+	}*/
 }

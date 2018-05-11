@@ -50,11 +50,8 @@ public class VideoController {
 	
 /*	@RequestMapping("url-list")
 	public String urlList(Model model, Integer id) {
-
 		List<Video> urlList = service.getUrlList(id);
-
 		model.addAttribute("urlList", urlList);
-
 		return "night.list";
 	}
 	*/
@@ -136,9 +133,9 @@ public class VideoController {
 	public String category(Model model) {
 
 		List<NightCategory> list = categoryService.getCategoryList(1);
-
+		
 		model.addAttribute("category", list);
-
+		
 		return "night.category";
 	}
 
@@ -174,10 +171,3 @@ public class VideoController {
 	
 
 }
-
-
-
-
-
-
-

@@ -13,7 +13,7 @@
 			
         </h3>
     </div>
-            <div class="division_line"></div>
+           <div class="division_line"></div>
 
 <div class="smr_allitem">
    
@@ -22,15 +22,17 @@
             <ul class="list_horizontal ">
 
 
-	 <c:forEach var="video" items="${favorite}">
+	<c:forEach var="video" items="${favorite}">
 
     <li data-cliplink-id="384597175">
+    	<a href="${video.id }">
         <div class="link_contents">
-            <a href="${video.id}" class="thumb_box">
-                    <img src="https://img.youtube.com/vi/${video.urlPath }/mqdefault.jpg" class="thumb_img"/>
+            <span class="thumb_box">
+            
+            <img src="https://img.youtube.com/vi/${video.urlPath }/mqdefault.jpg" class="thumb_img"/>
                     <%-- <img src="${root }/resources/images/night/KakaoTalk_20180328_233238324.png" class="thumb_img" > --%>
                
-            </a>
+            </span>
             <span class="item_info">
                 <strong class="tit_item">${video.title}</strong>
                 <span class="info_append">
@@ -39,15 +41,18 @@
                 </span>
             </span>
         </div>
+        </a>
     </li>
     </c:forEach>
    
 
     
             </ul>
+            
             <a href="" class="link_more"><span class="ico_kakaotv"><img class="more-img" src="${root }/resources/images/night/ic_keyboard_arrow_down_black_36dp_2x.png"></span></a>
         </div>
     </div>
+    
     <div class="u_bt_top" style="position: fixed; bottom: 0px; right: 0px; display: block; opacity: 1;">
     <a href="#"><img src="/myhealingbox/resources/images/night/ic_arrow_upward_black_24dp_1x.png" style="border-radius: 50px;"></a>
 </div>

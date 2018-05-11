@@ -1,16 +1,13 @@
 package myhealingbox.service.night;
 
-import java.util.Iterator;
 import java.util.List;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 
 import myhealingbox.dao.night.VideoDao;
-import myhealingbox.entity.night.NightCategory;
 import myhealingbox.entity.night.Video;
 
 public class VideoService {
@@ -63,13 +60,5 @@ public class VideoService {
 		
 		return list;
 	}
-
-/*	public List<Video> getUrlList(Integer id) {
-		
-		List<Video> list = videoDao.getUrlList(id);
-		
-
-		return list;
-	}*/
 
 }
