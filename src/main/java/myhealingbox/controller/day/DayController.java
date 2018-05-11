@@ -54,14 +54,12 @@ public class DayController {
 	   }
 	   
 	   // detail
-		/*@RequestMapping("{id}")
+		@RequestMapping("day/{id}")
 		public String detail(@PathVariable("id") Integer id, Model model) {
 			WantToDo wantToDo = service.getWantToDo(id);
-			model.addAttribute("wantToDo",wantToDo);
-			
+			model.addAttribute("wantToDo",wantToDo);			
 			return "day.detail";
-		}*/
-		
+		}	
 	   
 	   // edit
 	   @RequestMapping("edit")
@@ -69,7 +67,6 @@ public class DayController {
 
 	      return "day.edit";
 	   }
-
 	   
 	   // write는 get과 post 둘 다 처리 하기 때문에 둘로 나눠
 	   @RequestMapping(value="write", method=RequestMethod.GET)
