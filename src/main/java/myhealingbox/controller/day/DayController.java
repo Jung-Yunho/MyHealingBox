@@ -19,6 +19,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 
+import myhealingbox.entity.dawn.DawnCategory;
 import myhealingbox.entity.day.DayCategory;
 import myhealingbox.entity.day.WantToDo;
 import myhealingbox.service.day.DayService;
@@ -35,16 +36,17 @@ public class DayController {
 		@RequestMapping("categoryList")
 		public String categoryList(Model model) {	
 			List<DayCategory> categoryLists = service.getDayCategoryList();
-	
+			//DayCategory dayCategory = service.getDayCategory(title);
+			
 			model.addAttribute("categoryLists", categoryLists);
-	
+			//model.addAttribute("DayCategory", dayCategory);
 			return "day.categoryList";
 		}
 		
 	   // list
 	   @RequestMapping("{id}")
-	   public String list(@PathVariable("id") Integer id
-				, Model model) {	      
+	   public String list(@PathVariable("id") Integer id, Model model) {
+		   
 	      List<WantToDo> lists = service.getWantToDoList(id);	      
 	      model.addAttribute("lists", lists);
 	      
@@ -53,8 +55,7 @@ public class DayController {
 	   
 	   // detail
 		/*@RequestMapping("{id}")
-		public String detail(@PathVariable("id") Integer id
-				, Model model) {
+		public String detail(@PathVariable("id") Integer id, Model model) {
 			WantToDo wantToDo = service.getWantToDo(id);
 			model.addAttribute("wantToDo",wantToDo);
 			

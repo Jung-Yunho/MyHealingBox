@@ -8,13 +8,13 @@
 <main class="main">
 	<div class="day-detail">	
 		<div>
-			<h4>카테고리명</h4>
-			<h1>운동하자</h1>
+			<h4>영화</h4>
+			<h1>디즈니 애니메이션 정주행</h1>
 		</div>	
 		<hr/>
 		
 		<div class="box-detail">
-			<p>오늘 배우진씨가 내 헤더를 반딧불이라고 놀렸다..... 오늘부터 운동을 배워서 크게 혼쭐내줘야지.</p>
+			<p>인사이드 아웃, 미녀와 야수, 인어공주 1~3, 코코, 모아나, 빅 히어로, 메리다와 마법의 숲, 팅커벨 시리즈, 라푼젤, 공주와 개구리, 크리스마스 캐롤, 알라딘 시리즈</p>
 			<img class="img-attached-file" alt="여기는 첨부 이미지"
 					src="${root}/resources/images/day/test.jpg">
 		</div>
@@ -22,7 +22,7 @@
 	
 	
 		<div class="list-bottom">
-			<p>여기는 작성 날짜와 시간</p>
+			<p><fmt:formatDate pattern="yyyy-MM-dd a HH:mm" value="${wantToDo.regDate}" /></p>
 			<div>
 				<img alt="새벽으로 보내기" src="${root}/resources/images/day/send_icon.png">
 				<img alt="하고싶은일 삭제"
