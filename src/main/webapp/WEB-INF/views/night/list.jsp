@@ -31,8 +31,8 @@ $(function() {
         </h1>
  
     <div class="form">
-    	<select onchange="">
-			<option value="${root}/night/video/favorit">자주 보는 영상</option>
+    	<select id="select-box" onchange="location.href=this.value">
+			<option value="${root }/night/video/favorite">자주 보는 영상</option>
 			<option value="폴더1" selected="selected">폴더1</option>
 			<option value="폴더2">폴더2</option>
 			<option value="폴더3">폴더3</option>
@@ -78,130 +78,7 @@ $(function() {
         </a>
     </li>
     </c:forEach>
-      <%-- <li data-cliplink-id="384597175">
-        <div class="link_contents">
-            <span class="thumb_box">
-                    <img src="${root }/resources/images/night/t23.PNG" class="thumb_img" >
-                
-            </span>
-            <span class="item_info">
-                <strong class="tit_item">정수오빠가 좋아하는 소라게</strong>
-                <span class="info_append">
-                    <span class="ico_kakaotv ico_play">조회수 : 32</span>
-                    
-                </span>
-            </span>
-        </div>
-    </li>
-    
-      <li data-cliplink-id="384597175">
-        <div class="link_contents">
-            <span class="thumb_box">
-                    <img src="${root }/resources/images/night/fff.PNG" class="thumb_img" >
-                	
-            </span>
-            <span class="item_info">
-                <strong class="tit_item">뿌에엥</strong>
-                <span class="info_append">
-                    <span class="ico_kakaotv ico_play">조회수 : 10</span>
-                    
-                </span>
-            </span>
-        </div>
-    </li>
-    
-      <li data-cliplink-id="384597175">
-        <div class="link_contents">
-            <span class="thumb_box">
-                    <img src="${root }/resources/images/night/gsdf.PNG" class="thumb_img" >
-              
-            </span>
-            <span class="item_info">
-                <strong class="tit_item">폴킴 노래 좋아요 들어보세요 제발</strong>
-                <span class="info_append">
-                    <span class="ico_kakaotv ico_play">조회수 : 22</span>
-                    
-                </span>
-            </span>
-        </div>
-    </li>
-      <li data-cliplink-id="384597175">
-        <div class="link_contents">
-            <span class="thumb_box">
-                   <img src="${root }/resources/images/night/fsf.PNG" class="thumb_img" >
-                
-            </span>
-            <span class="item_info">
-                <strong class="tit_item">바쿄신짱짱맨</strong>
-                <span class="info_append">
-                    <span class="ico_kakaotv ico_play">조회수 : 18</span>
-                    
-                </span>
-            </span>
-        </div>
-    </li>
-    
-      <li data-cliplink-id="384597175">
-        <div class="link_contents">
-            <span class="thumb_box">
-                    <img src="${root }/resources/images/night/gsf.PNG" class="thumb_img" >
-               
-            </span>
-            <span class="item_info">
-                <strong class="tit_item">도원겨엉</strong>
-                <span class="info_append">
-                    <span class="ico_kakaotv ico_play">조회수 : 37</span>
-                    
-                </span>
-            </span>
-        </div>
-        
-    </li>
-      <li data-cliplink-id="384597175">
-        <div class="link_contents">
-            <span class="thumb_box">
-                    <img src="${root }/resources/images/night/fsfsff.PNG" class="thumb_img" >
-               
-            </span>
-            <span class="item_info">
-                <strong class="tit_item">정승환 비가온다</strong>
-                <span class="info_append">
-                    <span class="ico_kakaotv ico_play">조회수 : 80</span>
-                    
-                </span>
-            </span>
-        </div>
-    </li>
-    
-      <li data-cliplink-id="384597175">
-        <div class="link_contents">
-            <span class="thumb_box">
-                    <img src="${root }/resources/images/night/aaa.PNG" class="thumb_img" >
-                
-            </span>
-            <span class="item_info">
-                <strong class="tit_item">개굴개굴</strong>
-                <span class="info_append">
-                    <span class="ico_kakaotv ico_play">조회수 : 26</span>
-                    
-                </span>
-            </span>
-        </div>
-    </li>
-      <li data-cliplink-id="384597175">
-        <div class="link_contents">
-            <span class="thumb_box">
-                    <img src="${root }/resources/images/night/adfas.PNG" class="thumb_img" >
-            </span>
-            <span class="item_info">
-                <strong class="tit_item">바악효오시인</strong>
-                <span class="info_append">
-                    <span class="ico_kakaotv ico_play">조회수 : 74</span>
-                    
-                </span>
-            </span>
-        </div>
-    </li> --%>
+     
     
     
             </ul>
@@ -228,7 +105,8 @@ $(function() {
 	window.addEventListener("load", function(event){
 		var searchButton = document.querySelector("#search-button");
 		var searchBox = document.querySelector(".search-box");
-
+		var target = document.querySelector("#select-box");
+	 
 		searchButton.onclick = function(e){
 			if(searchBox.classList.contains("show"))
 				searchBox.classList.remove("show");
@@ -236,8 +114,6 @@ $(function() {
 				searchBox.classList.add("show");
 			e.preventDefault();
 		};
-		
-		
 
 	});
 

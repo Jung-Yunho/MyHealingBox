@@ -14,13 +14,13 @@ public class MyBatisNightCategoryDao implements NightCategoryDao{
 	private SqlSession sqlSession;
 	
 	@Override
-	public List<NightCategory> getList(Integer page) {
+	public List<NightCategory> getCategoryList(Integer page) {
 		
 		NightCategoryDao nightCategoryDao = sqlSession.getMapper(NightCategoryDao.class);
 
-		List<NightCategory> categoryList = nightCategoryDao.getList(page);
+		List<NightCategory> result = nightCategoryDao.getCategoryList(page);
 
-		return categoryList;
+		return result;
 	}
 
 	@Override
@@ -28,9 +28,9 @@ public class MyBatisNightCategoryDao implements NightCategoryDao{
 		
 		NightCategoryDao nightCategoryDao = sqlSession.getMapper(NightCategoryDao.class);
 
-		NightCategory nightCategory = nightCategoryDao.get(id);
+		NightCategory result = nightCategoryDao.get(id);
 
-		return nightCategory;
+		return result;
 	}
 
 	@Override

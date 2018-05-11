@@ -54,7 +54,6 @@ public class MyBatisVideoDao implements VideoDao {
 
 /*	@Override
 	public List<Video> getUrlList(Integer id) {
-
 		VideoDao videoDao = sqlSession.getMapper(VideoDao.class);
 		
 		List <Video> result = videoDao.getThmList(id);

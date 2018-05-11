@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import myhealingbox.dao.night.NightCategoryDao;
 import myhealingbox.entity.night.NightCategory;
+import myhealingbox.entity.night.Video;
 
 public class CategoryService {
 
@@ -14,16 +15,17 @@ public class CategoryService {
 	
 	public List<NightCategory> getCategoryList(Integer page) {
 
-		List<NightCategory> categoryList = nightCategoryDao.getList(page);
+		List<NightCategory> result = nightCategoryDao.getCategoryList(page);
 		
-		return categoryList;
+		return result;
+		
 	}
 
 	public NightCategory getNightCategory(Integer id) {
 
-		NightCategory nightCategory = nightCategoryDao.get(id);
+		NightCategory result = nightCategoryDao.get(id);
 		
-		return nightCategory;
+		return result;
 	}
 	
 	public int insertNightCategory(NightCategory nightCategory) {
