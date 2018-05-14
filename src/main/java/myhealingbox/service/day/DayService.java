@@ -26,19 +26,16 @@ public class DayService {
 	
 	// 낮 _카테고리 관련 ----------------------------------------------
 	public List<DayCategory> getDayCategoryList() {
-		List<DayCategory> categoryList = dayCategoryDao.getList();
-		
+		List<DayCategory> categoryList = dayCategoryDao.getList();		
 		return categoryList;
 	}
 	
 	public DayCategory getDayCategory(Integer id) {
-		DayCategory dayCategory = dayCategoryDao.get(id);
-		
+		DayCategory dayCategory = dayCategoryDao.get(id);		
 		return dayCategory ;
 	}
 	
-	public int insertDayCategory(DayCategory dayCategory) {
-		
+	public int insertDayCategory(DayCategory dayCategory) {		
 		dayCategoryDao.insert(dayCategory);
 		return 0;
 	}
