@@ -8,7 +8,7 @@
       <nav class="main-menu">
          <h1 class="hidden">메인메뉴</h1>
          <ul>
-            <li id="ham-button"><a href=""><img src="${root }/resources/images/menu_icon.png"/></a></li>
+            <li id="ham-button" onclick="openNav()"><a href="javascript:void(0)"><img src="${root }/resources/images/menu_icon.png"/></a></li>
             <li>
             	<div>
 		            <a href="${root }/member/index"><img src="${root }/resources/images/MHB_icon.png"/></a>
@@ -31,7 +31,7 @@
 	*/
 	
 	
-	window.addEventListener("load", function(event){
+/* 	window.addEventListener("load", function(event){
 		var hamButton = document.querySelector("#ham-button");
 		var aside = document.querySelector(".aside");
 
@@ -43,6 +43,6 @@
 			e.preventDefault();
 		};
 
-	});
+	}); */
 
 </script>

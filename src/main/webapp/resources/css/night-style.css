@@ -102,11 +102,11 @@ li {
 }
 
 /* --- .aside----------------------------------------- */
-.aside {
+/* .aside {
 	width: 80%;
 	height: 150px;
-	background: #fff; /* #00000077 r,g,b,alpha(투명) */
-	/* position: relative; 밀어내버림 ㅠㅡㅠ */
+	background: #fff; #00000077 r,g,b,alpha(투명)
+	position: relative; 밀어내버림 ㅠㅡㅠ
 	position: fixed;
 	top: 56px;
 	left: -80%;
@@ -117,7 +117,7 @@ li {
 .aside.show {
 	z-index: 1;
 	left: 0%;
-	box-shadow: 3px 3px 3px #544954; /* 마지막 3은 깊이. 종이와 얼마나 떠있는지 */
+	box-shadow: 3px 3px 3px #544954; 마지막 3은 깊이. 종이와 얼마나 떠있는지
 }
 
 .aside2{
@@ -150,7 +150,48 @@ li {
 	.aside2.show2{
 		left:50%;
 		box-shadow: 0px 3px 5px #544954;
-	}
+	} */
+
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
 
 /* --- .footer----------------------------------------- */
 .footer {
@@ -386,7 +427,7 @@ li {
 	/* flex-direction: column; */
 }
 
-.search-img {
+/* .search-img {
 	width: 30px;
 	height: 30px;
 }
@@ -401,7 +442,37 @@ li {
 
 .search-box.show {
 	border-bottom: 1px solid black;
+} */
+
+
+
+
+/*--------------------------------------*/
+.search {
+    width: 100px;
+    height : 30px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
 }
+
+.search:focus {
+    width: 80%;
+}
+
+/*--------------------------------------*/
+
+
+
+
+
 
 .u_bt_top {
 	position: absolute;
@@ -578,3 +649,5 @@ li {
 .table{
 	margin-top: 80px;
 }
+
+

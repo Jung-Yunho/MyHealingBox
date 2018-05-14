@@ -75,7 +75,7 @@ public class VideoController {
 	// reg는 get과 post 둘 다 처리 하기 때문에 둘로 나눠
 	@RequestMapping(value = "reg", method = RequestMethod.GET)
 	public String reg() {
-
+		
 		return "night.reg";
 	}
 
@@ -86,7 +86,7 @@ public class VideoController {
 		response.setContentType("text/html; charset=UTF-8;");
 		request.setCharacterEncoding("UTF-8");
 		
-		ServletContext ctx = request.getServletContext();
+		/*ServletContext ctx = request.getServletContext();
 		String path = ctx.getRealPath("/resources/night");
 		File f = new File(path);
 
@@ -115,7 +115,7 @@ public class VideoController {
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
-			}
+			}*/
 
 		int result = service.insertVideo(video);
 
