@@ -16,11 +16,11 @@ public interface VideoDao {
 	@Select("select * from PrivateVideo order by hit desc" + 
 	         "     limit ${(page-1)*10},10")
 	List<Video> getFavoriteList(@Param("page") Integer page);
-
+	
 	Video get(Integer id);
 
 	int insert(Video video);
-
+	
 	/*List<Video> getUrlList(Integer id);*/
 
 }

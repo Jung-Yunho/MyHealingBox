@@ -4,7 +4,7 @@
 <c:set var="root" value="${pageContext.request.contextPath}"/>
 
 <header class="header">
-      <h1><a href="${root }/night/video/category"><img class="header-logo" src="/myhealingbox/resources/images/night-logo.png"></a></h1>
+      <h1><a href="${root }/night/category"><img class="header-logo" src="/myhealingbox/resources/images/night-logo.png"></a></h1>
       <nav class="main-menu">
          <h1 class="hidden">메인메뉴</h1>
          <ul>

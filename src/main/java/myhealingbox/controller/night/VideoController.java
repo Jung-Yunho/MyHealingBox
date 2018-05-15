@@ -1,14 +1,8 @@
 package myhealingbox.controller.night;
 
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
 import java.io.UnsupportedEncodingException;
 import java.util.List;
 
-import javax.servlet.ServletContext;
-import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -21,9 +15,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 
-import myhealingbox.entity.night.NightCategory;
 import myhealingbox.entity.night.Video;
-import myhealingbox.service.night.CategoryService;
 import myhealingbox.service.night.VideoService;
 
 @Controller("videoController")
@@ -34,8 +26,8 @@ public class VideoController {
 	@Autowired
 	private VideoService service;
 
-	@Autowired
-	private CategoryService categoryService;
+	/*@Autowired
+	private CategoryService categoryService;*/
 
 
 	@RequestMapping("list")
@@ -122,14 +114,28 @@ public class VideoController {
 		return "redirect:list";
 	}
 
+	@RequestMapping("{id}/delete")
+	public String delete(@PathVariable("id") Integer id, Model model) {
+		
+		
+		return "redirect:list";
+	}
+	
 	@RequestMapping("data")
 	@ResponseBody
 	public String data() {
 
 		return "등록이 완료되었습니다.";
 	}
+	
+	/*@RequestMapping("edit-data")
+	@ResponseBody
+	public String editData() {
 
-	@RequestMapping(value = "category", method = RequestMethod.GET)
+		return "수정이 완료되었습니다.";
+	}*/
+
+	/*@RequestMapping(value = "category", method = RequestMethod.GET)
 	public String category(Model model) {
 
 		List<NightCategory> list = categoryService.getCategoryList(1);
@@ -149,7 +155,7 @@ public class VideoController {
 	public String categoryEdit() {
 
 		return "night.category-edit";
-	}
+	}*/
 
 	@RequestMapping("favorite")
 	public String favorit(Model model) {
@@ -162,12 +168,32 @@ public class VideoController {
 		return "night.favorite";
 	}
 	
+	@RequestMapping("{id}/edit")
+	public String edit(@PathVariable("id") Integer id, Model model) {
 
-	@RequestMapping("reg-edit")
-	public String regEdit() {
+		Video video = service.getVideo(id);
 
-		return "night.reg-edit";
+		model.addAttribute("video", video);
+
+		return "night.edit";
 	}
 	
+	
 
+/*	@RequestMapping("{id}/ajax-list/edit")
+	@ResponseBody
+	public String ajaxList(@PathVariable("id") Integer id, Model model) {
+
+		Video video = service.getVideo(id);
+		
+		model.addAttribute("video", video);
+		
+		//return "night.edit";
+		return new Gson().toJson(video);
+	}
+*/
 }
+
+
+
+
