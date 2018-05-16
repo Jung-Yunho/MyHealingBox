@@ -5,7 +5,7 @@
 
 <header class="header">
       <h1>
-      	<a href="${root }/day/main">
+      	<a class="day-link" href="${root }/day/main">
     		<img class="day" src="${root }/resources/images/day-logo.png" />
       	</a>
 	  </h1>
