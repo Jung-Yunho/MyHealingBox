@@ -38,10 +38,13 @@ $(function() {
 			<option value="폴더3">폴더3</option>
 		</select>
 		
-		<div class="search">
-			<input class="search-box" type="text" name="q" style="width: 130px;"/>
+		<div >
+			<%-- <input class="search-box" type="text" name="q" style="width: 130px;"/>
 			<input class="hidden" type="submit" value="검색" />
-			<img id="search-button" class="search-img" src="${root }/resources/images/night/ic_search_black_48dp_1x.png">
+			<img id="search-button" class="search-img" src="${root }/resources/images/night/ic_search_black_48dp_1x.png"> --%>
+			<form>
+  <input class="search" type="text" name="search" placeholder="Search..">
+</form>
 	</div>
 					
     </div>
@@ -101,7 +104,7 @@ $(function() {
     </main>
 
 <script>
-
+/* 
 	window.addEventListener("load", function(event){
 		var searchButton = document.querySelector("#search-button");
 		var searchBox = document.querySelector(".search-box");
@@ -115,7 +118,8 @@ $(function() {
 			e.preventDefault();
 		};
 
-	});
+	}); */
+
 
 </script>
 

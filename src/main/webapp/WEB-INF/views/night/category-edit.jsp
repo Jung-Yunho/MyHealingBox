@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=1">
+<!--장비넓이에 맞게 / 최소사이즈 / 줌 인,아웃  -->
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %> 
 <c:set var="root" value="${pageContext.request.contextPath}"/> 
 <main class="main-box" style="height:570px;">
@@ -12,7 +14,7 @@
 			
 			<li>
 				<div class="category-list"><input type="checkbox"/>
-				<input class="input-text-edit" "text" value="폴더1"/>
+				<input class="input-text-edit" type="text" value="폴더1"/>
 				<div>
 						<img class="edit-icon" src="${root }/resources/images/night/ic_create_black_24dp_1x.png" style="padding-right: 15px;">
 						<img class="edit-icon" src="${root }/resources/images/night/ic_clear_black_24dp_1x.png">
@@ -40,9 +42,6 @@
 				</div>
 			</li>
 			
-			<li id="field">
-			</li>
-				
 		</ul>
 		
 			<div>
@@ -51,6 +50,7 @@
            		<input class="btn-default" type="submit" value="완료"/>
             </a>
          </div>
+         
 	</section>
 </main>
 

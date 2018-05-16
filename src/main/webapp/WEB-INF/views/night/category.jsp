@@ -16,6 +16,7 @@
 			<li class="category-list"><div>폴더2</div></li>
 			<li class="category-list"><div>폴더3</div></li> -->
 			</c:forEach>
+			
 		</ul>	
 		
 	

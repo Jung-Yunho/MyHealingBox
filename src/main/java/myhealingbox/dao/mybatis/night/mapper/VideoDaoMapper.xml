@@ -19,4 +19,8 @@
      values(#{id},#{title},#{urlPath},#{content})
   </insert>
   
+  <select id="delete" parameterType="myhealingbox.entity.night.Video">
+		delete from PrivateVideo where id=#{id}
+	</select>
+  
 </mapper>

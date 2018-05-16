@@ -1,5 +1,7 @@
 package myhealingbox.controller.night;
 
+import java.util.List;
+
 import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,7 +24,7 @@ public class HomeController {
 	@Autowired
 	private CategoryService service;
 	
-	@RequestMapping("index")
+/*	@RequestMapping("index")
 	public String index(@RequestParam(value="p", defaultValue="1")
 					Integer page, Model model) {
 		
@@ -30,7 +32,7 @@ public class HomeController {
 		//model.addAttribute("categoryList", categoryList);
 		
 		return "night.category";
-	}
+	}*/
 	
 	/*@RequestMapping("{id}")
 	public String detail(@PathVariable("id")Integer id, Model model) {
@@ -68,4 +70,26 @@ public class HomeController {
 		
 		return "redirect:night.category";
 	}*/
+	
+	@RequestMapping(value = "category", method = RequestMethod.GET)
+	public String category(Model model) {
+
+		List<NightCategory> list = service.getCategoryList(1);
+		
+		model.addAttribute("category", list);
+		
+		return "night.category";
+	}
+
+	@RequestMapping(value = "category", method = RequestMethod.POST)
+	public String category() {
+
+		return "redirect:list";
+	}
+	
+	@RequestMapping("category-edit")
+	public String categoryEdit() {
+
+		return "night.category-edit";
+	}
 }
