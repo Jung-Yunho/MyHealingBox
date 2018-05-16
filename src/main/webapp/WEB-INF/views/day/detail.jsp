@@ -8,13 +8,12 @@
 <main class="main">
 	<div class="day-detail">	
 		<div>
-			<h4>영화</h4>
-			<h1>디즈니 애니메이션 정주행</h1>
+			<h1>${wantToDo.title }</h1>
 		</div>	
 		<hr/>
 		
 		<div class="box-detail">
-			<p>인사이드 아웃, 미녀와 야수, 인어공주 1~3, 코코, 모아나, 빅 히어로, 메리다와 마법의 숲, 팅커벨 시리즈, 라푼젤, 공주와 개구리, 크리스마스 캐롤, 알라딘 시리즈</p>
+			<p>${wantToDo.content }</p>
 			<img class="img-attached-file" alt="여기는 첨부 이미지"
 					src="${root}/resources/images/day/test.jpg">
 		</div>

@@ -75,6 +75,11 @@ public class DayService {
 		wantToDoDao.insert(wantToDo);
 		return 0;
 	}
+
+	public String getListTitle(Integer id) {
+		
+		return null;
+	}
 	
 	
 	
