@@ -13,12 +13,12 @@
 		<div class="category-size">
 			<h3>카테고리</h3>
 			<select class="select-box">
-				<c:forEach var="category" items="${category}">
-					<option value="${category.title }"> ${category.title } </option>
-					<!-- <option value="default-category" selected="selected"> 폴더1</option>
+				<%-- <c:forEach var="category" items="${category}">
+					<option value="${category.title }"> ${category.title } </option> --%>
+					<option value="default-category" selected="selected"> 폴더1</option>
 					<option value=""> 폴더2 </option>
-					<option value=""> 폴더3 </option> -->
-					</c:forEach>
+					<option value=""> 폴더3 </option>
+					<%-- </c:forEach> --%>
 				<!-- <option value="">폴더1</option> -->
 			</select>
 		</div>

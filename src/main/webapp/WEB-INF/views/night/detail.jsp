@@ -14,11 +14,12 @@
 		<div>${category.title }</div>
 		</c:forEach>
 			<div class="detail-title">
-				<div>
+				<div style="margin-left:10px;">
+	
 					제목 : ${video.title }
 				</div>
 			
-				<div>
+				<div style="margin-right:10px;">
 					조회수 : ${video.hit }
 				</div>
 			
@@ -43,7 +44,7 @@
       <h1 class="hidden">버튼목록</h1>
       <ul>
          <li> <span id="sel-button">
-         <img src="/myhealingbox/resources/images/night/plus.png" style="width: 50px; height: 50px;border-radius: 50px;"></span> </li>
+         <img src="/myhealingbox/resources/images/night/plus2.png" style="width: 50px; height: 50px;border-radius: 50px;"></span> </li>
          <li id="edit-button"> <a href="${root }/night/video/${video.id}/edit" ><img src="${root }/resources/images/night/ic_create_black_24dp_2x.png"></a> </li>
          <li id="del-button"> <a href="" ><img src="${root }/resources/images/night/ic_delete_black_24dp_2x.png"></a> </li>
       </ul>

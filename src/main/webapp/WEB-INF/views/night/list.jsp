@@ -95,7 +95,7 @@ $(function() {
 		<h1 class="hidden">버튼목록</h1>
 		<ul>
          <li> <span id="sel-button"> <a href="${root }/night/video/reg" >
-         <img src="/myhealingbox/resources/images/night/plus.png" style="width: 50px; height: 50px;border-radius: 50px;"></a></span> </li>
+         <img src="/myhealingbox/resources/images/night/plus2.png" style="width: 50px; height: 50px;border-radius: 50px;"></a></span> </li>
          
       </ul>
 	</nav>
