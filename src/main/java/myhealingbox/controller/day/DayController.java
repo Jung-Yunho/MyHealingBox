@@ -46,18 +46,22 @@ public class DayController {
 	   // list
 	   @RequestMapping("{id}")
 	   public String list(@PathVariable("id") Integer id, Model model) {
+		  String title = service.getListTitle(id);
 		   
 	      List<WantToDo> lists = service.getWantToDoList(id);	      
+	      
 	      model.addAttribute("lists", lists);
+	      model.addAttribute("title", title);
 	      
 	      return "day.list";
 	   }
 	   
 	   // detail
-		@RequestMapping("day/{id}")
-		public String detail(@PathVariable("id") Integer id, Model model) {
+		@RequestMapping("{dayCategoryId}/{id}")
+		public String detail(@PathVariable("id") Integer id, @PathVariable("dayCategoryId") Integer dayCategoryId, Model model) {
 			WantToDo wantToDo = service.getWantToDo(id);
-			model.addAttribute("wantToDo",wantToDo);			
+			model.addAttribute("wantToDo",wantToDo);	
+			
 			return "day.detail";
 		}	
 	   

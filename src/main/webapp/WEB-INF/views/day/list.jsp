@@ -16,7 +16,7 @@
 		<c:forEach var="list" items="${lists}">
 		<div>
 			<div id="detail-click">
-				<a href="${list.id}">
+				<a href="${list.dayCategoryId}/${list.id}">
 					<h3>${list.title}</h3>
 					<p class="text-concat"> ${list.content } </p>
 				</a>

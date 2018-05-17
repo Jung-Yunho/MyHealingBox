@@ -9,6 +9,12 @@
 	</select>
 	
 	<select id="get" resultType="myhealingbox.entity.day.WantToDo">
-		select * from DayCategory where id=#{id}
+		select * from WantToDo where id=#{id}
+	</select>
+	
+	
+	<select id="getListTitle" resultType="myhealingbox.entity.day.WantToDo">
+		select title from dayCategory where id=#{id}
+		<!-- limit #{(_parameter-1)*15},15 -->
 	</select>
 </mapper>
