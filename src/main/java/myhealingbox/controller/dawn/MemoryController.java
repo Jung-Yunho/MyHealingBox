@@ -28,18 +28,20 @@ public class MemoryController {
 	@Autowired
 	private MemoryService service;
 	
-	@RequestMapping("list")
-	public String list(@RequestParam(value="p", defaultValue="1")Integer page,
-							Model model) {
+	@RequestMapping("list/{id}")
+	public String list(@RequestParam(value="p", defaultValue="1")Integer page
+							,Model model
+							,@PathVariable("id")Integer id) {
 		
-		//List<Memory> memoryList = service.getMemoryList(page);
-		//model.addAttribute("memoryList", memoryList);
+		List<Memory> memoryList = service.getMemoryList(page, id);
+		model.addAttribute("memoryList", memoryList);
 		
 		return "dawn.memory.list";
 	}
 	
-	@RequestMapping("{id}")
-	public String detail(@PathVariable("id")Integer id, Model model) {
+	@RequestMapping("list/{id}/{memoryId}")
+	public String detail(@PathVariable("id")Integer id, Model model
+							,@PathVariable("memoryId")Integer memoryId) {
 		
 		//Memory memory = service.getMemory(id);
 		//model.addAttribute("memory", memory);

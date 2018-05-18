@@ -14,9 +14,9 @@ public class MemoryService {
 	@Autowired
 	private MemoryDao memoryDao;
 	
-	public List<Memory> getMemoryList(Integer page) {
+	public List<Memory> getMemoryList(Integer page, Integer id) {
 
-		List<Memory> memoryList = memoryDao.getList(page);
+		List<Memory> memoryList = memoryDao.getList(page, id);
 		
 		return memoryList;
 	}

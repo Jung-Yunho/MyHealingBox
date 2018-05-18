@@ -1,6 +1,10 @@
 @charset "UTF-8";
 @import url('https://fonts.googleapis.com/css?family=Hi+Melody|Nanum+Gothic|Nanum+Myeongjo|Sunflower:300');
 
+html{
+	font-family: 'Nanum Gothic', sans-serif;
+}
+
 .dawn-main{
 	
 }
@@ -10,8 +14,9 @@
 	height: 50%;
 	transition : 500ms;
 	text-align: center;
-	font-size: 25px;
-	background: -webkit-linear-gradient(top,  #948e99 0%, #2e1437 100%);
+	font-size: 20px;
+	/* background: -webkit-linear-gradient(top,  #948e99 0%, #2e1437 100%); */
+	background: #111;
 	color: #E6E6E6;
 }
 
@@ -20,9 +25,42 @@
 		height: 50px;
 		margin-top: 10px;
 		margin-bottom: 10px;
-		border-bottom: 2px solid #979797;
+		/* border-bottom: 2px solid #979797; */
 	}
 
+   
+.aside2{
+	width:50%;
+	height: 50%;
+	position: fixed;
+	top: 56px;
+	left : -100%;
+	text-align: center;
+	font-size: 20px;
+	/* background: -webkit-linear-gradient(top,  #948e99 0%, #2e1437 100%); */
+	background: #111;
+	color: #E6E6E6;
+	
+	transition : 500ms;
+}
+
+	.aside2 ul li{
+		width: 100%;
+		height: 50px;
+		margin-top: 10px;
+		margin-bottom: 10px;
+		/* border-bottom: 2px solid #979797; */
+	}
+	
+	.aside2 ul li:last-child{
+		border: none;
+	}
+
+	.aside2.show2{
+		left:50%;
+		box-shadow: 0px 3px 5px #544954;
+	}
+	
 select{
    width: 100px;
    padding:.8em .5em;
@@ -37,38 +75,6 @@ select{
    select:-ms-expand{
       display: none;
    }
-   
-.aside2{
-	width:50%;
-	height: 50%;
-	background: #fff;
-	position: fixed;
-	top: 56px;
-	left : -100%;
-	text-align: center;
-	font-size: 25px;
-	 background: -webkit-linear-gradient(top,  #948e99 0%, #2e1437 100%);
-	color: #E6E6E6;
-	
-	transition : 500ms;
-}
-
-	.aside2 ul li{
-		width: 100%;
-		height: 50px;
-		margin-top: 10px;
-		margin-bottom: 10px;
-		border-bottom: 2px solid #979797;
-	}
-	
-	.aside2 ul li:last-child{
-		border: none;
-	}
-
-	.aside2.show2{
-		left:50%;
-		box-shadow: 0px 3px 5px #544954;
-	}
 	
 .header{
    height: 55px;
@@ -76,9 +82,17 @@ select{
    position: fixed;
    background: -webkit-linear-gradient(top,  #948e99 0%, #2e1437 100%);
    border-bottom: 1px solid #e9e9e9;
-   z-index: 998;
+   z-index: 1;
 }
 
+	.dawn-logo-box{
+		z-index: 998;
+	}
+	
+	.header>h1>a{
+		z-index: 999;
+	}
+	
 .dawn-logo{
 	width:48px;
 }
@@ -134,13 +148,6 @@ select{
 
 
 /*-------------------- memory/detail --------------------*/
-#edit-button.show{
-	bottom: 80px;
-}
-
-#del-button.show{
-	bottom: 160px;
-}
 
 .detail-box{
 	margin-top: 15px;
@@ -153,6 +160,8 @@ select{
 	.detail-title-box h5{
 		padding-top: 15px;
 	}
+
+
 /*-------------------- memory/list --------------------*/
 
 .top-box{
@@ -210,14 +219,17 @@ select{
 	
 .btn-write-go{
 	position: fixed;
-	right : 25px;
-	bottom : 30px;
+	right : 30px;
+	bottom : 70px;
 }
 
 .btn-write-go img{
-	width: 60px;
+	width: 40px;
 }
 
+.detail-first-img{
+	width: 50px;
+}
 /*-------------------- memory/reg --------------------*/
 .reg-box{
 	margin-top:15px;
@@ -233,6 +245,7 @@ select{
 			height: 45px;
 			width: 100%;
 			border: 0px;
+			padding-left : 10px;
 		}
 		
 	.reg-file-box{
@@ -271,12 +284,12 @@ select{
 			display: flex;
 				justify-content: center;
 				align-items: center;
-			bottom:0px;
-			right: 0px;
-			background-color: #6f6276;
+			bottom:50px;
+			right: 10px;
+			/* background-color: #6f6276; */
 			color:#F2F2F2;
-			width: 55px;
-			height: 55px;
+			width: 40px;
+			height: 40px;
 			border-radius: 25px;
 			transition: 500ms;
 		}			
@@ -284,16 +297,21 @@ select{
 			.btn-list > ul >li:first-child {
 				z-index: 1;
 				order: 1;
-				/* background-color: blue; */
+				background-color: #fff;
+			}
+			
+			.detail-img > li {
+				right: 5px;
 			}
 			
  			#edit-button.show{
-				bottom: 60px;
-			} 
+				bottom: 100px;
+			}
 			
 			#del-button.show{
-				bottom: 120px;
+				bottom: 150px;
 			}
+			
 			
 .btn-put{
 	/* 버튼 flex하려구 만듬 ㅠㅠ */
@@ -326,4 +344,10 @@ select{
 	-webkit-border-bottom-left-radius:5px;
 	-webkit-border-bottom-right-radius:5px; */
 	
+}
+
+
+#my-box img {
+	width: 90px;
+	height: 40px;
 }

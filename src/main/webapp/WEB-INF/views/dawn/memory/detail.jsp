@@ -26,10 +26,10 @@
 	<!-- div는 block span은 content -->
 	<nav class="btn-list btn-write-go">
 		<h1 class="hidden">버튼목록</h1>
-		<ul>
-			<li id="sel-button"><span><img src="${root}/resources/images/dawn/writeGo_button_img.png"></span></li>
-			<li id="edit-button"><a href="edit" >수정</a></li>
-			<li id="del-button"><a href="list">삭제</a></li>
+		<ul class="detail-img">
+			<li id="sel-button" style="background:white"><span><img class="detail-first-img" src="${root}/resources/images/dawn/plus.png"></span></li>
+			<li id="edit-button"><a href="edit" ><img src="${root}/resources/images/dawn/tool.png"></a></li>
+			<li id="del-button"><a href="list"><img src="${root}/resources/images/dawn/delete.png"></a></li>
 		</ul>
 	</nav>
 </main>

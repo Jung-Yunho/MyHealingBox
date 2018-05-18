@@ -9,9 +9,7 @@ public class WantToDo {
 	private String content;
 	private String attachedFile;
 	private Date regDate;
-	private int check;
 	private long dayCategoryId;
-	private long dawnCategoryId;
 
 	public WantToDo() {
 
@@ -64,14 +62,6 @@ public class WantToDo {
 		this.regDate = regDate;
 	}
 
-	public int getCheck() {
-		return check;
-	}
-
-	public void setCheck(int check) {
-		this.check = check;
-	}
-
 	public long getDayCategoryId() {
 		return dayCategoryId;
 	}
@@ -80,20 +70,12 @@ public class WantToDo {
 		this.dayCategoryId = dayCategoryId;
 	}
 
-	public long getDawnCategoryId() {
-		return dawnCategoryId;
-	}
-
-	public void setDawnCategoryId(long dawnCategoryId) {
-		this.dawnCategoryId = dawnCategoryId;
-	}
-
 	@Override
 	public String toString() {
 		return "WantToDo [id=" + id + ", title=" + title + ", content=" + content + ", attachedFile=" + attachedFile
-				+ ", regDate=" + regDate + ", check=" + check + ", dayCategoryId=" + dayCategoryId + ", dawnCategoryId="
-				+ dawnCategoryId + "]";
+				+ ", regDate=" + regDate + ", dayCategoryId=" + dayCategoryId + "]";
 	}
+
 	
 	
 	
