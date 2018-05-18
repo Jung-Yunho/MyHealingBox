@@ -5,7 +5,7 @@
 <mapper namespace="myhealingbox.dao.dawn.DawnCategoryDao">
 
 	<select id="getList" resultType="myhealingbox.entity.dawn.DawnCategory">
-		select * from DawnCategory
+		select * from DawnCategory order by regDate desc;
 		<!-- limit ${(_parameter-1)*15},15 -->
 	</select>
 	

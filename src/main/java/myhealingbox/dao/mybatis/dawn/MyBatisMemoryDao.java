@@ -16,11 +16,11 @@ public class MyBatisMemoryDao implements MemoryDao{
 	private SqlSession sqlSession;
 	
 	@Override
-	public List<Memory> getList(Integer page) {
+	public List<Memory> getList(Integer page, Integer id) {
 		
 		MemoryDao memoryDao = sqlSession.getMapper(MemoryDao.class);
 		
-		List<Memory> memoryList = memoryDao.getList(page);
+		List<Memory> memoryList = memoryDao.getList(page, id);
 		
 		return memoryList;
 	}

@@ -33,13 +33,13 @@ public class HomeController {
 		return "dawn.home.index";
 	}
 	
-	@RequestMapping("{id}")
+	/*@RequestMapping("{id}")
 	public String detail(@PathVariable("id")Integer id, Model model) {
 		
 		//DawnCategory dawnCategory = service.getDawnCategory(id);
 		//model.addAttribute("dawnCategory", dawnCategory);
 		return "dawn.memory.list";
-	}
+	}*/
 	
 	@RequestMapping(value="reg", method=RequestMethod.GET)
 	public String reg() {
