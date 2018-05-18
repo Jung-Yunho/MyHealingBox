@@ -53,6 +53,8 @@ public class DayCategory {
 	public String toString() {
 		return "DayCategory [id=" + id + ", title=" + title + ", regDate=" + regDate + ", memberId=" + memberId + "]";
 	}
+
+
 		
 	
 	

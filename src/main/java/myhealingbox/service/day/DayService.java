@@ -35,6 +35,13 @@ public class DayService {
 		return dayCategory ;
 	}
 	
+	/*public String getDayCategoryTitle(String title) {
+		String dayCategory = dayCategoryDao.getTitle(title);	
+		
+		return dayCategory;
+	}*/
+
+	
 	public int insertDayCategory(DayCategory dayCategory) {		
 		dayCategoryDao.insert(dayCategory);
 		return 0;
@@ -76,10 +83,9 @@ public class DayService {
 		return 0;
 	}
 
-	public String getListTitle(Integer id) {
-		
-		return null;
-	}
+	
+	
+
 	
 	
 	

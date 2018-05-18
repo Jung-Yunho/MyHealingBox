@@ -45,13 +45,13 @@ public class DayController {
 		
 	   // list
 	   @RequestMapping("{id}")
-	   public String list(@PathVariable("id") Integer id, Model model) {
-		  String title = service.getListTitle(id);
-		   
+	   public String list(@PathVariable("id") Integer id, Model model, String title) {
+		  
+		  /*title = service.getDayCategoryTitle(title);*/
 	      List<WantToDo> lists = service.getWantToDoList(id);	      
 	      
+	      /*model.addAttribute("title", title);*/
 	      model.addAttribute("lists", lists);
-	      model.addAttribute("title", title);
 	      
 	      return "day.list";
 	   }
