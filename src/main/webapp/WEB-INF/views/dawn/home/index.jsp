@@ -12,8 +12,8 @@
 			<div class="list">
 				<div>
 					<ul>
-						<li class="title"><a href="${categoryList.id }">${categoryList.title}</a></li>
-						<li class="regDate"><a href="${categoryList.id }">${categoryList.regDate}</a></li>
+						<li class="title"><a href="${root}/dawn/memory/list/${categoryList.id }">${categoryList.title}</a></li>
+						<li class="regDate"><a href="${root}/dawn/memory/list/${categoryList.id }">${categoryList.regDate}</a></li>
 					</ul>
 				</div>
 			</div>
@@ -68,7 +68,7 @@
 	<nav class="btn-write-go">
 		<ul>
 			<li>
-				<a href="edit"><img src="${root}/resources/images/dawn/writeGo_button_img.png"></a>
+				<a href="edit"><img src="${root}/resources/images/dawn/plus.png"></a>
 			</li>
 		</ul>
 	</nav>

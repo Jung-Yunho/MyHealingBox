@@ -5,7 +5,7 @@
 <nav class="aside">
 	<h1 class="hidden">햄버거 메뉴</h1>
 	<ul>
-		<li id="my-box"><a href="">내 힐링박스</a></li>
+		<li id="my-box"><a href=""><img src="${root}/resources/images/mhb-title-logo.png"></a></li>
 		<li><a href="${root }/member/mypage">내 정보</a></li>
 	</ul>
 </nav>

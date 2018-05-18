@@ -9,9 +9,7 @@ public class Memory {
 	private String content;
 	private Date regDate;
 	private String attachedFile;
-	private int check;
 	private long dawnCategoryId;
-	private long wantToDoId;
 	
 	public Memory() {
 
@@ -64,13 +62,6 @@ public class Memory {
 		this.attachedFile = attachedFile;
 	}
 
-	public int getCheck() {
-		return check;
-	}
-
-	public void setCheck(int check) {
-		this.check = check;
-	}
 
 	public long getDawnCategoryId() {
 		return dawnCategoryId;
@@ -80,13 +71,12 @@ public class Memory {
 		this.dawnCategoryId = dawnCategoryId;
 	}
 
-	public long getWantToDoId() {
-		return wantToDoId;
+	@Override
+	public String toString() {
+		return "Memory [id=" + id + ", title=" + title + ", content=" + content + ", regDate=" + regDate
+				+ ", attachedFile=" + attachedFile + ", dawnCategoryId=" + dawnCategoryId + "]";
 	}
 
-	public void setWantToDoId(long wantToDoId) {
-		this.wantToDoId = wantToDoId;
-	}
 	
 	
 }

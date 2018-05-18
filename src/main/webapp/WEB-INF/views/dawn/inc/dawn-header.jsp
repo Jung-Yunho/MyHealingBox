@@ -5,7 +5,7 @@
 
 <header class="header">
 
-	<h1>
+	<h1 class="dawn-logo-box">
 		<a href="${root }/dawn/home/index">
 			<img class="dawn-logo" src="${root }/resources/images/dawn-logo.png" />
 		</a>

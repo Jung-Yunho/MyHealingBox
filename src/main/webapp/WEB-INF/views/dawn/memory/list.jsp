@@ -57,7 +57,7 @@
 	<nav class="btn-write-go">
 		<ul>
 			<li>
-				<a href="reg"><img src="${root}/resources/images/dawn/writeGo_button_img.png"></a>
+				<a href="reg"><img src="${root}/resources/images/dawn/plus.png"></a>
 			</li>
 		</ul>
 	</nav>

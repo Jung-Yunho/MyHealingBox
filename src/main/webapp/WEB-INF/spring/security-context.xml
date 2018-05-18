@@ -31,12 +31,12 @@
 	</http>
 	
 	<authentication-manager>
-		<authentication-provider><!--DB연결 / 로그인 정보 / 권한 설정-->
+		<authentication-provider><!--DB연결 / 로그인 정보 / 권한 설정x-->
 		<password-encoder hash="bcrypt"/>
 			<jdbc-user-service 
 				data-source-ref="dataSource"
 				users-by-username-query="select id, pwd password, 1 enabled from Member where id=?"
-				authorities-by-username-query="select memberId id, roleId authority from MemberRole where memberId=?"
+				
 			/>
 			<!-- <user-service>패스워드는 항상 인코딩{noop}이 되어야함
 				<user name="woo" password="{noop}123" authorities="ROLE_AUTHOR,ROLE_ADMIN"/>
