@@ -52,6 +52,7 @@
       
 </main>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script>
 	window.addEventListener("load", function() {
 		var selButton = document.querySelector("#sel-button");
@@ -70,4 +71,34 @@
 			}
 		};
 	});
+	
+	$(function() {
+		
+		var editButton = $("#edit-button");
+		var title = $(".title input[name='title']");
+		var url = $(".title input[name='urlPath']");
+		var content = $(".editor textarea[name='content']");
+		
+		editButton.click(function(e){
+			e.preventDefault();
+		
+		$.getJSON("${video.id}/ajax-list/edit", function(video) {
+			
+		});
+			
+			
+		});
+		
+	});
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 </script>

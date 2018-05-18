@@ -15,6 +15,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 
+import com.google.gson.Gson;
+
 import myhealingbox.entity.night.Video;
 import myhealingbox.service.night.VideoService;
 
@@ -48,16 +50,16 @@ public class VideoController {
 	}
 	*/
 	
-
 	@RequestMapping("{id}")
 	public String detail(@PathVariable("id") Integer id, Model model) {
-
+		
 		Video video = service.getVideo(id);
-
+		
 		model.addAttribute("video", video);
-
+		
 		return "night.detail";
 	}
+	
 	/*
 	 * @RequestMapping("edit") public String edit() {
 	 * 
@@ -180,7 +182,7 @@ public class VideoController {
 	
 	
 
-/*	@RequestMapping("{id}/ajax-list/edit")
+	@RequestMapping("{id}/ajax-list/edit")
 	@ResponseBody
 	public String ajaxList(@PathVariable("id") Integer id, Model model) {
 
@@ -191,7 +193,7 @@ public class VideoController {
 		//return "night.edit";
 		return new Gson().toJson(video);
 	}
-*/
+
 }
 
 
