@@ -9,7 +9,7 @@
 <main class="main">
 	<div class="day-list">
 	
-		<h1>|  카테고리명 </h1>
+		<h1>|  ${dayView.categoryTitle} </h1>
 		<!-- 기본적으로 최신순으로 정렬되는데 정렬박스를 추가할 필요가 없지..? 일단 뺌 -->
 		<hr/>
 		

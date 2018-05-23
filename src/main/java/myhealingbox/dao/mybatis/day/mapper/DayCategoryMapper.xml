@@ -17,7 +17,6 @@
 		select title from DayCategory where id=#{id}
 	</select> -->
 
-
 	<insert id="insert" parameterType="myhealingbox.entity.day.DayCategory">
 		insert into DayCategory(title)
 		values(#{title})

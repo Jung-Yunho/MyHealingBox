@@ -7,7 +7,6 @@ public class WantToDo {
 	private long id;
 	private String title;
 	private String content;
-	private String attachedFile;
 	private Date regDate;
 	private long dayCategoryId;
 
@@ -15,10 +14,9 @@ public class WantToDo {
 
 	}
 	
-	public WantToDo(String title, String content, String attachedFile) {
+	public WantToDo(String title, String content) {
 		this.title = title;
 		this.content = content;
-		this.attachedFile = attachedFile;
 	}
 
 	
@@ -46,13 +44,6 @@ public class WantToDo {
 		this.content = content;
 	}
 
-	public String getAttachedFile() {
-		return attachedFile;
-	}
-
-	public void setAttachedFile(String attachedFile) {
-		this.attachedFile = attachedFile;
-	}
 
 	public Date getRegDate() {
 		return regDate;
@@ -72,10 +63,11 @@ public class WantToDo {
 
 	@Override
 	public String toString() {
-		return "WantToDo [id=" + id + ", title=" + title + ", content=" + content + ", attachedFile=" + attachedFile
-				+ ", regDate=" + regDate + ", dayCategoryId=" + dayCategoryId + "]";
+		return "WantToDo [id=" + id + ", title=" + title + ", content=" + content + ", regDate=" + regDate
+				+ ", dayCategoryId=" + dayCategoryId + "]";
 	}
 
+	
 	
 	
 	

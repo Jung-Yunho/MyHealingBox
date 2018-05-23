@@ -21,6 +21,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 import myhealingbox.entity.dawn.DawnCategory;
 import myhealingbox.entity.day.DayCategory;
+import myhealingbox.entity.day.DayView;
 import myhealingbox.entity.day.WantToDo;
 import myhealingbox.service.day.DayService;
 
@@ -44,17 +45,30 @@ public class DayController {
 		}
 		
 	   // list
-	   @RequestMapping("{id}")
+	   /*@RequestMapping("{id}")
 	   public String list(@PathVariable("id") Integer id, Model model, String title) {
 		  
-		  /*title = service.getDayCategoryTitle(title);*/
+		  title = service.getDayCategoryTitle(title);
 	      List<WantToDo> lists = service.getWantToDoList(id);	      
 	      
-	      /*model.addAttribute("title", title);*/
+	      model.addAttribute("title", title);
 	      model.addAttribute("lists", lists);
 	      
 	      return "day.list";
-	   }
+	   }*/
+
+		// list(뷰로 뽑음)
+		@RequestMapping("{id}")
+		public String list(@PathVariable("id") Integer id, Model model) {
+	
+			List<DayView> lists = service.getDayViewList(id);
+			DayView dayView = service.getDayViewTitle(id);
+	
+			model.addAttribute("lists", lists);
+			model.addAttribute("dayView",dayView);
+	
+			return "day.list";
+		}
 	   
 	   // detail
 		@RequestMapping("{dayCategoryId}/{id}")
