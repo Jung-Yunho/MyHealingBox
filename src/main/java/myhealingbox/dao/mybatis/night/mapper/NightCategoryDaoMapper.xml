@@ -17,8 +17,8 @@
 		update NightCategory set title=#{title} where id=#{id}
 	</select>
 	
-	<select id="delete" parameterType="myhealingbox.entity.night.NightCategory">
+	<delete id="delete" parameterType="Integer">
 		delete from NightCategory where id=#{id}
-	</select>
+	</delete>
   
   </mapper>
