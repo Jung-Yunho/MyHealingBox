@@ -52,13 +52,13 @@ public class MyBatisVideoDao implements VideoDao {
 		return result;
 	}
 
-/*	@Override
-	public List<Video> getUrlList(Integer id) {
+	@Override
+	public int delete(Video video) {
 		VideoDao videoDao = sqlSession.getMapper(VideoDao.class);
 		
-		List <Video> result = videoDao.getThmList(id);
+		int result = videoDao.delete(video);
 		
 		return result;
 	}
-*/
+
 }

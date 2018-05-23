@@ -70,6 +70,17 @@
 
 			}
 		};
+		
+		delButton.onclick = function(e) {
+			
+			var request = new XMLHttpRequest();
+			request.onload = function(evt) {
+				alert(request.responseText);
+			}
+			request.open("GET", "del-data"); /* data는 요청하기 위한 url */
+			request.send();
+		};
+		
 	});
 	
 	$(function() {
