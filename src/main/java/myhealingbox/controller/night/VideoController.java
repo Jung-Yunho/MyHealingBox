@@ -1,8 +1,13 @@
 package myhealingbox.controller.night;
 
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
 import java.io.UnsupportedEncodingException;
 import java.util.List;
 
+import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -10,10 +15,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
+
+import com.google.gson.Gson;
 
 import myhealingbox.entity.night.Video;
 import myhealingbox.service.night.VideoService;
@@ -48,16 +56,16 @@ public class VideoController {
 	}
 	*/
 	
-
 	@RequestMapping("{id}")
 	public String detail(@PathVariable("id") Integer id, Model model) {
-
+		
 		Video video = service.getVideo(id);
-
+		
 		model.addAttribute("video", video);
-
+		
 		return "night.detail";
 	}
+	
 	/*
 	 * @RequestMapping("edit") public String edit() {
 	 * 
@@ -78,7 +86,7 @@ public class VideoController {
 		response.setContentType("text/html; charset=UTF-8;");
 		request.setCharacterEncoding("UTF-8");
 		
-		/*ServletContext ctx = request.getServletContext();
+		ServletContext ctx = request.getServletContext();
 		String path = ctx.getRealPath("/resources/night");
 		File f = new File(path);
 
@@ -107,28 +115,30 @@ public class VideoController {
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
-			}*/
+			}
 
 		int result = service.insertVideo(video);
 
 		return "redirect:list";
 	}
 
-	@RequestMapping("{id}/delete")
-	public String delete(@PathVariable("id") Integer id, Model model) {
-		
-		
-		return "redirect:list";
-	}
-	
 	@RequestMapping("data")
 	@ResponseBody
 	public String data() {
-
+		
 		return "등록이 완료되었습니다.";
 	}
 	
-	/*@RequestMapping("edit-data")
+	@RequestMapping("{id}/delete")
+	public String delete(@PathVariable("id") Integer id) {
+		
+		int result = service.deleteVideo(id);
+			
+		return "redirect:../list";
+	}
+
+	
+/*	@RequestMapping("edit-data")
 	@ResponseBody
 	public String editData() {
 
@@ -180,7 +190,7 @@ public class VideoController {
 	
 	
 
-/*	@RequestMapping("{id}/ajax-list/edit")
+	@RequestMapping("{id}/ajax-list/edit")
 	@ResponseBody
 	public String ajaxList(@PathVariable("id") Integer id, Model model) {
 
@@ -191,7 +201,7 @@ public class VideoController {
 		//return "night.edit";
 		return new Gson().toJson(video);
 	}
-*/
+
 }
 
 

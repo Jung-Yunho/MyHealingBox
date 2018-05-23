@@ -42,6 +42,9 @@
 				</div>
 			</li>
 			
+			<li id="field">
+			</li>
+			
 		</ul>
 		
 			<div>
@@ -52,6 +55,19 @@
          </div>
          
 	</section>
+	
+	<div id="pre_set" style="display: none" class="category-list">
+	<input type="checkbox" /> <input class="input-text-edit" type="text"
+		name="" value="">
+	<div>
+		<img class="edit-icon"
+			src="${root }/resources/images/night/ic_create_black_24dp_1x.png"
+			style="padding-right: 15px;"> <img class="edit-icon"
+			src="${root }/resources/images/night/ic_clear_black_24dp_1x.png">
+	</div>
+	<input type="button" value="삭제" onclick="remove_item(this)"
+		style="display: none;">
+</div>
 </main>
 
 <script>
@@ -70,18 +86,7 @@
 </script>
 
 
-<div id="pre_set" style="display: none" class="category-list">
-	<input type="checkbox" /> <input class="input-text-edit" type="text"
-		name="" value="">
-	<div>
-		<img class="edit-icon"
-			src="${root }/resources/images/night/ic_create_black_24dp_1x.png"
-			style="padding-right: 15px;"> <img class="edit-icon"
-			src="${root }/resources/images/night/ic_clear_black_24dp_1x.png">
-	</div>
-	<input type="button" value="삭제" onclick="remove_item(this)"
-		style="display: none;">
-</div>
+
 
 
 

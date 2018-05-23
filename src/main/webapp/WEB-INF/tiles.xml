@@ -43,7 +43,6 @@
 	<definition name="night.*" template="/WEB-INF/views/night/inc/night-layout.jsp">    
 	   <put-attribute name="header" value="/WEB-INF/views/night/inc/night-header.jsp" />
 	   <put-attribute name="aside" value="/WEB-INF/views/night/inc/night-aside.jsp" />
-	   <put-attribute name="aside2" value="/WEB-INF/views/night/inc/night-aside2.jsp" />
 	   <put-attribute name="main" value="/WEB-INF/views/night/{1}.jsp" />
 	   <put-attribute name="footer" value="/WEB-INF/views/inc/footer.jsp" />
 	</definition>

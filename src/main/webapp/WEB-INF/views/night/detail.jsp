@@ -46,12 +46,13 @@
          <li> <span id="sel-button">
          <img src="/myhealingbox/resources/images/night/plus2.png" style="width: 50px; height: 50px;border-radius: 50px;"></span> </li>
          <li id="edit-button"> <a href="${root }/night/video/${video.id}/edit" ><img src="${root }/resources/images/night/ic_create_black_24dp_2x.png"></a> </li>
-         <li id="del-button"> <a href="" ><img src="${root }/resources/images/night/ic_delete_black_24dp_2x.png"></a> </li>
+         <li id="del-button"> <a href="${root }/night/video/${video.id}/delete" ><img src="${root }/resources/images/night/ic_delete_black_24dp_2x.png"></a> </li>
       </ul>
    </nav>
       
 </main>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script>
 	window.addEventListener("load", function() {
 		var selButton = document.querySelector("#sel-button");
@@ -69,5 +70,41 @@
 
 			}
 		};
+		
+		 delButton.onclick = function() {
+			alert("삭제가 완료되었습니다.");
+			
+		}; 
+		
 	});
+	
+	$(function() {
+		
+		var editButton = $("#edit-button");
+		var title = $(".title input[name='title']");
+		var url = $(".title input[name='urlPath']");
+		var content = $(".editor textarea[name='content']");
+		
+		editButton.click(function(e){
+			e.preventDefault();
+		
+		$.getJSON("${video.id}/ajax-list/edit", function(video) {
+			
+		});
+			
+			
+		});
+		
+	});
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 </script>

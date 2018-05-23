@@ -103,24 +103,23 @@ $(function() {
         </section>
     </main>
 
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script>
-/* 
-	window.addEventListener("load", function(event){
-		var searchButton = document.querySelector("#search-button");
-		var searchBox = document.querySelector(".search-box");
-		var target = document.querySelector("#select-box");
-	 
-		searchButton.onclick = function(e){
-			if(searchBox.classList.contains("show"))
-				searchBox.classList.remove("show");
-			else
-				searchBox.classList.add("show");
-			e.preventDefault();
-		};
-
-	}); */
-
+	
 
 </script>
+
+
+
+
+
+
+
+
+
+
+
+
 
 

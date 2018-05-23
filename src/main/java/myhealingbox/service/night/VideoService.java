@@ -61,5 +61,11 @@ public class VideoService {
 		return list;
 	}
 
+	public int deleteVideo(Integer id) {
+		
+		videoDao.delete(id);
+		return 0;
+	}
+
 
 }

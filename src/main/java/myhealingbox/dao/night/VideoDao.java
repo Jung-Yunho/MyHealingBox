@@ -20,6 +20,8 @@ public interface VideoDao {
 	Video get(Integer id);
 
 	int insert(Video video);
+
+	int delete(Integer id);
 	
 	/*List<Video> getUrlList(Integer id);*/
 
