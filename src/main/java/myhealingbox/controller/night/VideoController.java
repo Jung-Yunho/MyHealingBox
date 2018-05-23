@@ -122,18 +122,18 @@ public class VideoController {
 		return "redirect:list";
 	}
 
-	@PostMapping("{id}/delete")
-	public String delete(@PathVariable("id") Integer id, Model model, Video video, HttpServletRequest request) {
+	@RequestMapping("{id}/delete")
+	public String delete(@PathVariable("id") Integer id) {
 		
-		int result = service.deleteVideo(video);
-		
-		return "redirect:list";
+		service.deleteVideo(id);
+			
+		return "redirect:../list";
 	}
 	
-	@RequestMapping("del-data")
+	/*@RequestMapping("del-data")
 	@ResponseBody
-	public String delData() {
-
+	public String delData(Video video) {
+		int result = service.deleteVideo(video);
 		return "삭제가 완료되었습니다.";
 	}
 	
@@ -142,7 +142,7 @@ public class VideoController {
 	public String data() {
 
 		return "등록이 완료되었습니다.";
-	}
+	}*/
 	
 	/*@RequestMapping("edit-data")
 	@ResponseBody

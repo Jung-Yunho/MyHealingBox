@@ -53,10 +53,10 @@ public class MyBatisVideoDao implements VideoDao {
 	}
 
 	@Override
-	public int delete(Video video) {
+	public int delete(Integer id) {
 		VideoDao videoDao = sqlSession.getMapper(VideoDao.class);
 		
-		int result = videoDao.delete(video);
+		int result = videoDao.delete(id);
 		
 		return result;
 	}

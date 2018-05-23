@@ -3,24 +3,23 @@
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="myhealingbox.dao.night.VideoDao">
-  
-<!--   <select id="getList" resultType="com.newlecture.entity.Note">
-     select * from Note 
-     limit #{(_parameter-1)*15},15
-  </select> -->
-  
-  <!-- 구현 -->
-   <select id="get" resultType="myhealingbox.entity.night.Video">
-     select * from PrivateVideo where id=#{id}
-  </select>
-  
-  <insert id="insert" parameterType="myhealingbox.entity.night.Video">
-     insert into PrivateVideo(id,title,urlPath,content)
-     values(#{id},#{title},#{urlPath},#{content})
-  </insert>
-  
-  <select id="delete" parameterType="myhealingbox.entity.night.Video">
-		delete from PrivateVideo where id=#{id}
+
+	<!-- <select id="getList" resultType="com.newlecture.entity.Note"> select 
+		* from Note limit #{(_parameter-1)*15},15 </select> -->
+
+	<!-- 구현 -->
+	<select id="get" resultType="myhealingbox.entity.night.Video">
+		select * from PrivateVideo where id=#{id}
 	</select>
-  
+
+	<insert id="insert" parameterType="myhealingbox.entity.night.Video">
+		insert into PrivateVideo(id,title,urlPath,content)
+		values(#{id},#{title},#{urlPath},#{content})
+	</insert>
+
+	<delete id="delete" parameterType="Integer">
+		delete from PrivateVideo where
+		id=#{id}
+	</delete>
+
 </mapper>
