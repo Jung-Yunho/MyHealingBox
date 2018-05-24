@@ -14,9 +14,10 @@ public class WantToDo {
 
 	}
 	
-	public WantToDo(String title, String content) {
+	public WantToDo(String title, String content, long dayCategoryId) {
 		this.title = title;
 		this.content = content;
+		this.dayCategoryId = dayCategoryId;
 	}
 
 	

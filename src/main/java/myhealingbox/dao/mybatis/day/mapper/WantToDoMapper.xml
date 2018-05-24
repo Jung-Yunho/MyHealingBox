@@ -10,11 +10,15 @@
 	
 	<select id="get" resultType="myhealingbox.entity.day.WantToDo">
 		select * from WantToDo where id=#{id}
-	</select>
-	
+	</select>	
 	
 	<select id="getListTitle" resultType="myhealingbox.entity.day.WantToDo">
 		select title from dayCategory where id=#{id}
 		<!-- limit #{(_parameter-1)*15},15 -->
 	</select>
+	
+	<insert id="insert" parameterType="myhealingbox.entity.day.WantToDo">
+		insert into WantToDo(id,title,content,dayCategoryId)
+		values(#{id},#{title},#{content},#{dayCategoryId})
+	</insert>
 </mapper>

@@ -16,6 +16,5 @@ public interface WantToDoDao {
 	int insert(WantToDo wantToDo);
 
 	/*@Select("select * from Note order by regDate desc" + 
-	         "     limit ${(page-1)*15},15")
-	List<Video> getList(@Param("page") Integer page);*/
+	         "     limit ${(page-1)*15},15");*/
 }

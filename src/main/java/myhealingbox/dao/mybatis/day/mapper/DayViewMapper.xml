@@ -9,7 +9,7 @@
 	</select>
 	
 	<select id="getDayViewTitle" resultType="myhealingbox.entity.day.DayView">
-		select DCTitle from DayView where #{id}=DCId
+		select distinct DCTitle from DayView where #{id}=DCId
 	</select>
 	
 	<!--

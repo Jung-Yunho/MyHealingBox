@@ -14,8 +14,8 @@
 		
 		<div class="box-detail">
 			<p>${wantToDo.content }</p>
-			<img class="img-attached-file" alt="여기는 첨부 이미지"
-					src="${root}/resources/images/day/test.jpg">
+			<%-- <img class="img-attached-file" alt="여기는 첨부 이미지"
+					src="${root}/resources/images/day/test.jpg"> --%>
 		</div>
 		<hr/>
 	
