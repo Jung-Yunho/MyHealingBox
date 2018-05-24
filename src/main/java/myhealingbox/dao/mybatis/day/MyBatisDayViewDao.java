@@ -16,10 +16,10 @@ public class MyBatisDayViewDao implements DayViewDao{
 	private SqlSession sqlSession;
 	
 	@Override
-	public List<DayView> getList(Integer id) {
+	public List<DayView> getDayViewList(Integer id) {
 		DayViewDao dayViewDao = sqlSession.getMapper(DayViewDao.class);
 		
-		List<DayView> result = dayViewDao.getList(id);
+		List<DayView> result = dayViewDao.getDayViewList(id);
 		
 		return result;
 	}

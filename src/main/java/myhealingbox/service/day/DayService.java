@@ -84,10 +84,10 @@ public class DayService {
 	
 	// 낮 _DayView 관련 -------------------------------------------
 	public List<DayView> getDayViewList(Integer id) {
-		List<DayView> list = dayViewDao.getList(id);
+		List<DayView> list = dayViewDao.getDayViewList(id);
 
 		for(DayView n : list) {
-			String content = n.getContent();
+			String content = n.getWTDcontent();
 			
 			if(content==null)
 				continue;
@@ -97,10 +97,10 @@ public class DayService {
 			Element img = doc.select("img").first();
 			
 			if(img!=null) {
-				n.setContent(img.toString()+text);
+				n.setWTDcontent(img.toString()+text);
 			}
 			else
-				n.setContent(text);
+				n.setWTDcontent(text);
 		}
 		
 		return list;

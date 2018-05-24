@@ -6,7 +6,7 @@ import myhealingbox.entity.day.DayView;
 
 public interface DayViewDao {
 
-	List<DayView> getList(Integer id);
+	List<DayView> getDayViewList(Integer id);
 
 	DayView getDayViewTitle(Integer id);
 	
