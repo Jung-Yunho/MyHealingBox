@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import myhealingbox.dao.dawn.DawnCategoryDao;
 import myhealingbox.entity.dawn.DawnCategory;
+import myhealingbox.entity.dawn.DawnView;
 
 @Service
 public class CategoryService {
@@ -14,19 +15,19 @@ public class CategoryService {
 	@Autowired
 	private DawnCategoryDao dawnCategoryDao;
 	
-	public List<DawnCategory> getCategoryList(Integer page) {
+	public List<DawnView> getCategoryList(Integer page) {
 
-		List<DawnCategory> categoryList = dawnCategoryDao.getList(page);
+		List<DawnView> categoryList = dawnCategoryDao.getList(page);
 		
 		return categoryList;
 	}
 
-	public DawnCategory getDawnCategory(Integer id) {
+	/*public DawnView getDawnCategory(Integer DCId) {
 
-		DawnCategory dawnCategory = dawnCategoryDao.get(id);
+		DawnView dawnView = dawnCategoryDao.get(DCId);
 		
-		return dawnCategory;
-	}
+		return dawnView;
+	}*/
 	
 	public int insertDawnCategory(DawnCategory dawnCategory) {
 		
@@ -43,9 +44,9 @@ public class CategoryService {
 		return result;
 	}
 
-	public int deleteDawnCategory(DawnCategory dawnCategory) {
+	public int deleteDawnCategory(Integer id) {
 
-		int result = dawnCategoryDao.delete(dawnCategory);
+		int result = dawnCategoryDao.delete(id);
 
 		return result;
 	}

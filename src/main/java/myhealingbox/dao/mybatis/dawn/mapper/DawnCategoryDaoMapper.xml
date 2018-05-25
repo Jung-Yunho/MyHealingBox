@@ -4,26 +4,26 @@
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="myhealingbox.dao.dawn.DawnCategoryDao">
 
-	<select id="getList" resultType="myhealingbox.entity.dawn.DawnCategory">
-		select * from DawnCategory order by regDate desc;
+	<select id="getList" resultType="myhealingbox.entity.dawn.DawnView">
+		select * from DawnView order by DCRegDate desc
 		<!-- limit ${(_parameter-1)*15},15 -->
 	</select>
 	
-	<select id="get" resultType="myhealingbox.entity.dawn.DawnCategory">
-		select * from DawnCategory where id=#{id}
-	</select>
+	<!-- <select id="get" resultType="myhealingbox.entity.dawn.DawnView">
+		select * from DawnView where DCId=#{id}
+	</select> -->
 	
-	<select id="insert" parameterType="myhealingbox.entity.dawn.DawnCategory">
+	<insert id="insert" parameterType="myhealingbox.entity.dawn.DawnCategory">
 		insert into DawnCategory(title)
 		values(#{title})
-	</select>
+	</insert>
 	
-	<select id="update" parameterType="myhealingbox.entity.dawn.DawnCategory">
-		update DawnCategory set title=#{title} where id=#{id};
-	</select>
+	<update id="update" parameterType="myhealingbox.entity.dawn.DawnCategory">
+		update DawnCategory set title=#{title} where id=#{id}
+	</update>
 	
-	<select id="delete" parameterType="myhealingbox.entity.dawn.DawnCategory">
-		delete from DawnCategory where id=#{id};
-	</select>
+	<delete id="delete" parameterType="Integer">
+		delete from DawnCategory where id=#{id}
+	</delete>
 
 </mapper>

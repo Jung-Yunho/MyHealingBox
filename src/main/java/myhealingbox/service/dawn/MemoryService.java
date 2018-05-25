@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import myhealingbox.dao.dawn.MemoryDao;
+import myhealingbox.entity.dawn.DawnView;
 import myhealingbox.entity.dawn.Memory;
 
 @Service
@@ -14,16 +15,16 @@ public class MemoryService {
 	@Autowired
 	private MemoryDao memoryDao;
 	
-	public List<Memory> getMemoryList(Integer page, Integer id) {
+	public List<DawnView> getMemoryList(Integer page, Integer id) {
 
-		List<Memory> memoryList = memoryDao.getList(page, id);
+		List<DawnView> memoryList = memoryDao.getList(page, id);
 		
 		return memoryList;
 	}
 
-	public Memory getMemory(Integer id) {
+	public DawnView getMemory(Integer DMId) {
 		
-		Memory memory = memoryDao.get(id);
+		DawnView memory = memoryDao.get(DMId);
 		
 		return memory;
 	}
@@ -42,9 +43,9 @@ public class MemoryService {
 		return result;
 	}
 	
-	public int deleteMemory(Memory memory) {
+	public int deleteMemory(Integer DMId) {
 
-		int result = memoryDao.delete(memory);
+		int result = memoryDao.delete(DMId);
 		
 		return result;
 	}

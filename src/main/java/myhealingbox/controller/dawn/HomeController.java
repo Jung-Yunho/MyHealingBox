@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 
 import myhealingbox.entity.dawn.DawnCategory;
+import myhealingbox.entity.dawn.DawnView;
 import myhealingbox.service.dawn.CategoryService;
 
 @Controller("DawnHomeController")
@@ -27,7 +28,7 @@ public class HomeController {
 	public String index(@RequestParam(value="p", defaultValue="1")
 					Integer page, Model model) {
 		
-		List<DawnCategory> categoryList = service.getCategoryList(page);
+		List<DawnView> categoryList = service.getCategoryList(page);
 		model.addAttribute("categoryList", categoryList);
 		
 		return "dawn.home.index";
@@ -68,5 +69,13 @@ public class HomeController {
 		int result = service.updateDawnCategory(dawnCategory);
 		
 		return "redirect:dawn.home.index";
+	}
+	
+	@RequestMapping("{id}/delete")
+	public String delete(@PathVariable("id")Integer id) {
+	
+		int result = service.deleteDawnCategory(id);
+		
+		return "redirect:../index";
 	}
 }

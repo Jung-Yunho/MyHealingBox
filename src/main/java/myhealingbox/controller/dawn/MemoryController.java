@@ -18,6 +18,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 
+import myhealingbox.entity.dawn.DawnView;
 import myhealingbox.entity.dawn.Memory;
 import myhealingbox.service.dawn.MemoryService;
 
@@ -33,18 +34,18 @@ public class MemoryController {
 							,Model model
 							,@PathVariable("id")Integer id) {
 		
-		List<Memory> memoryList = service.getMemoryList(page, id);
+		List<DawnView> memoryList = service.getMemoryList(page, id);
 		model.addAttribute("memoryList", memoryList);
 		
 		return "dawn.memory.list";
 	}
 	
-	@RequestMapping("list/{id}/{memoryId}")
+	@RequestMapping("list/{id}/{DMId}")
 	public String detail(@PathVariable("id")Integer id, Model model
-							,@PathVariable("memoryId")Integer memoryId) {
+							,@PathVariable("DMId")Integer DMId) {
 		
-		//Memory memory = service.getMemory(id);
-		//model.addAttribute("memory", memory);
+		DawnView memory = service.getMemory(DMId);
+		model.addAttribute("memory", memory);
 		
 		return "dawn.memory.detail";
 	}
@@ -106,5 +107,13 @@ public class MemoryController {
 		int result = service.updateMemory(memory);
 		
 		return "redirect:dawn.memory.list";
+	}
+	
+	@RequestMapping("list/{id}/{DMId}/delete")
+	public String delete(@PathVariable("DMId")Integer DMId) {
+		
+		int result = service.deleteMemory(DMId);
+		
+		return "redirect:../../";
 	}
 }

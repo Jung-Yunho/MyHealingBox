@@ -8,6 +8,7 @@ import org.springframework.stereotype.Repository;
 
 import myhealingbox.dao.dawn.DawnCategoryDao;
 import myhealingbox.entity.dawn.DawnCategory;
+import myhealingbox.entity.dawn.DawnView;
 
 @Repository
 public class MyBatisDawnCategoryDao implements DawnCategoryDao{
@@ -16,24 +17,24 @@ public class MyBatisDawnCategoryDao implements DawnCategoryDao{
 	private SqlSession sqlSession;
 	
 	@Override
-	public List<DawnCategory> getList(Integer page) {
+	public List<DawnView> getList(Integer page) {
 		
 		DawnCategoryDao dawnCategoryDao = sqlSession.getMapper(DawnCategoryDao.class);
 		
-		List<DawnCategory> categoryList = dawnCategoryDao.getList(page);
+		List<DawnView> categoryList = dawnCategoryDao.getList(page);
 		
 		return categoryList;
 	}
 
-	@Override
-	public DawnCategory get(Integer id) {
+	/*@Override
+	public DawnView get(Integer DCId) {
 		
 		DawnCategoryDao dawnCategoryDao = sqlSession.getMapper(DawnCategoryDao.class);
 		
-		DawnCategory dawnCategory = dawnCategoryDao.get(id);
+		DawnView dawnView = dawnCategoryDao.get(DCId);
 		
-		return dawnCategory;
-	}
+		return dawnView;
+	}*/
 
 	@Override
 	public int insert(DawnCategory dawnCategory) {
@@ -56,11 +57,11 @@ public class MyBatisDawnCategoryDao implements DawnCategoryDao{
 	}
 
 	@Override
-	public int delete(DawnCategory dawnCategory) {
+	public int delete(Integer id) {
 
 		DawnCategoryDao dawnCategoryDao = sqlSession.getMapper(DawnCategoryDao.class);
 		
-		int result = dawnCategoryDao.delete(dawnCategory);
+		int result = dawnCategoryDao.delete(id);
 		
 		return result;
 	}

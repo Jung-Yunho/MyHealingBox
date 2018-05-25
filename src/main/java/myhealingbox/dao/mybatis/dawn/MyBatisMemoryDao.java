@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import myhealingbox.dao.dawn.MemoryDao;
+import myhealingbox.entity.dawn.DawnView;
 import myhealingbox.entity.dawn.Memory;
 
 @Repository
@@ -16,21 +17,21 @@ public class MyBatisMemoryDao implements MemoryDao{
 	private SqlSession sqlSession;
 	
 	@Override
-	public List<Memory> getList(Integer page, Integer id) {
+	public List<DawnView> getList(Integer page, Integer id) {
 		
 		MemoryDao memoryDao = sqlSession.getMapper(MemoryDao.class);
 		
-		List<Memory> memoryList = memoryDao.getList(page, id);
+		List<DawnView> memoryList = memoryDao.getList(page, id);
 		
 		return memoryList;
 	}
 
 	@Override
-	public Memory get(Integer id) {
+	public DawnView get(Integer DMId) {
 		
 		MemoryDao memoryDao = sqlSession.getMapper(MemoryDao.class);
 		
-		Memory memory = memoryDao.get(id);
+		DawnView memory = memoryDao.get(DMId);
 		
 		return memory;
 	}
@@ -56,11 +57,11 @@ public class MyBatisMemoryDao implements MemoryDao{
 	}
 
 	@Override
-	public int delete(Memory memory) {
+	public int delete(Integer DMId) {
 		
 		MemoryDao memoryDao = sqlSession.getMapper(MemoryDao.class);
 		
-		int result = memoryDao.delete(memory);
+		int result = memoryDao.delete(DMId);
 		
 		return result;
 	}

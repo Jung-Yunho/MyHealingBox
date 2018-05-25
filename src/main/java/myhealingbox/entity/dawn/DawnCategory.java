@@ -2,6 +2,7 @@ package myhealingbox.entity.dawn;
 
 import java.util.Date;
 
+
 public class DawnCategory {
 
 	private long id;
