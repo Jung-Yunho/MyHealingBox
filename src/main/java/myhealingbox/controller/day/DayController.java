@@ -16,11 +16,13 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 
 import myhealingbox.entity.dawn.DawnCategory;
 import myhealingbox.entity.day.DayCategory;
+import myhealingbox.entity.day.DayView;
 import myhealingbox.entity.day.WantToDo;
 import myhealingbox.service.day.DayService;
 
@@ -36,25 +38,37 @@ public class DayController {
 		@RequestMapping("categoryList")
 		public String categoryList(Model model) {	
 			List<DayCategory> categoryLists = service.getDayCategoryList();
-			//DayCategory dayCategory = service.getDayCategory(title);
 			
 			model.addAttribute("categoryLists", categoryLists);
-			//model.addAttribute("DayCategory", dayCategory);
+			
 			return "day.categoryList";
 		}
 		
 	   // list
-	   @RequestMapping("{id}")
+	   /*@RequestMapping("{id}")
 	   public String list(@PathVariable("id") Integer id, Model model, String title) {
 		  
-		  /*title = service.getDayCategoryTitle(title);*/
+		  title = service.getDayCategoryTitle(title);
 	      List<WantToDo> lists = service.getWantToDoList(id);	      
 	      
-	      /*model.addAttribute("title", title);*/
+	      model.addAttribute("title", title);
 	      model.addAttribute("lists", lists);
 	      
 	      return "day.list";
-	   }
+	   }*/
+
+		// list(뷰로 뽑음)
+		@RequestMapping("{id}")
+		public String list(@PathVariable("id") Integer id, Model model) {
+	
+			List<DayView> lists = service.getDayViewList(id);
+			DayView dayView = service.getDayViewTitle(id);
+	
+			model.addAttribute("lists", lists);
+			model.addAttribute("dayView",dayView);
+	
+			return "day.list";
+		}
 	   
 	   // detail
 		@RequestMapping("{dayCategoryId}/{id}")
@@ -74,54 +88,26 @@ public class DayController {
 	   
 	   // write는 get과 post 둘 다 처리 하기 때문에 둘로 나눠
 	   @RequestMapping(value="write", method=RequestMethod.GET)
-	   public String write() {
-		   
+	   public String write(Model model) {
+		  List<DayCategory> categoryLists = service.getDayCategoryList();
+			
+		  model.addAttribute("categoryLists", categoryLists);
+		  
 	      return "day.write";
 	   }
 	   
 	   @RequestMapping(value="write", method=RequestMethod.POST)
-	   public String write(WantToDo wantToDo, MultipartFile file, HttpServletRequest request) {
-	      
-	      ServletContext ctx = request.getServletContext();
-	      String path = ctx.getRealPath("/resources/day");
-	      File f = new File(path);
-	      
-	      if(!f.exists())
-	         f.mkdirs();
-	      
-	      if(!file.isEmpty())
-	      try {
-	         String fname = file.getOriginalFilename();
-	         InputStream fis = file.getInputStream();
-	         FileOutputStream fos = new FileOutputStream(path + File.separator + fname);
-	         
-	         byte[] buf = new byte[1024];
-	         
-	         int size = 0;
-	         
-	         while((size = fis.read(buf, 0, 1024)) != -1) {
-	            fos.write(buf, 0, size);
-	            
-	            fis.close();
-	            fos.close();
-	         }
-	            
-	      } catch (IOException e) {
-	         // TODO Auto-generated catch block
-	         e.printStackTrace();
-	      }
-	      
-	      
+	   public String write(WantToDo wantToDo,HttpServletRequest request
+			   , @RequestParam("value")Integer dayCategoryId) {
+		  
+		   /*WantToDo wantToDo;*/
+		  
+		  wantToDo.setDayCategoryId(dayCategoryId);
+		  
 	      int result = service.insertWantToDo(wantToDo);
 	      
-	      return "redirect:list";
+	      return "redirect:day.categoryList";
 	   }
 	   
-	  /* @RequestMapping("data")
-	   @ResponseBody
-	   public String data() {
-
-	      return "안녕하세용";
-	   }*/
-	   
+	  
 }

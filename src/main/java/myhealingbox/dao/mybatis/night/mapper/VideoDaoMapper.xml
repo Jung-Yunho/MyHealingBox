@@ -18,8 +18,7 @@
 	</insert>
 
 	<delete id="delete" parameterType="Integer">
-		delete from PrivateVideo where
-		id=#{id}
+		delete from PrivateVideo where id=#{id}
 	</delete>
 
 </mapper>

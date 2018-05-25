@@ -33,14 +33,6 @@ public class MyBatisDayCategoryDao implements DayCategoryDao {
 		return result;
 	}
 
-/*	@Override
-	public String getTitle(String title) {
-		DayCategoryDao dayCategoryDao = sqlSession.getMapper(DayCategoryDao.class);
-		
-		String result = dayCategoryDao.getTitle(title);
-		return result;
-	}*/
-	
 	
 	@Override
 	public int insert(DayCategory dayCategory) {

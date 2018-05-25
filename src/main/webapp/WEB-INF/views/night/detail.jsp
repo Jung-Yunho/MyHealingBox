@@ -71,15 +71,10 @@
 			}
 		};
 		
-		/* delButton.onclick = function(e) {
+		 delButton.onclick = function() {
+			alert("삭제가 완료되었습니다.");
 			
-			var request = new XMLHttpRequest();
-			request.onload = function(evt) {
-				alert(request.responseText);
-			}
-			request.open("GET", "del-data"); /* data는 요청하기 위한 url 
-			request.send();
-		}; */
+		}; 
 		
 	});
 	

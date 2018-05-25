@@ -13,14 +13,14 @@ public class MyBatisWantToDoDao implements WantToDoDao{
 	@Autowired
 	private SqlSession sqlSession;
 	
-	@Override
+	/*@Override
 	public List<WantToDo> getList(Integer id) {
 		WantToDoDao wantToDoDao = sqlSession.getMapper(WantToDoDao.class);
 		
 		List<WantToDo> result = wantToDoDao.getList(id);
 		
 		return result;
-	}
+	}*/
 
 	@Override
 	public WantToDo get(Integer id) {
