@@ -2,6 +2,7 @@ package myhealingbox.controller.dawn;
 
 import java.util.List;
 
+
 import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,8 +29,8 @@ public class HomeController {
 	public String index(@RequestParam(value="p", defaultValue="1")
 					Integer page, Model model) {
 		
-		List<DawnView> categoryList = service.getCategoryList(page);
-		model.addAttribute("categoryList", categoryList);
+		/*List<DawnView> categoryList = service.getCategoryList(page);
+		model.addAttribute("categoryList", categoryList);*/
 		
 		return "dawn.home.index";
 	}

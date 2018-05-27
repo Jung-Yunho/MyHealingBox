@@ -2,6 +2,7 @@ package myhealingbox.dao.day;
 
 import java.util.List;
 
+
 import myhealingbox.entity.day.DayCategory;
 
 public interface DayCategoryDao {

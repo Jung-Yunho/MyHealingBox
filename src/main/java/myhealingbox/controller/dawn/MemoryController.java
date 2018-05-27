@@ -34,8 +34,8 @@ public class MemoryController {
 							,Model model
 							,@PathVariable("id")Integer id) {
 		
-		List<DawnView> memoryList = service.getMemoryList(page, id);
-		model.addAttribute("memoryList", memoryList);
+		/*List<DawnView> memoryList = service.getMemoryList(page, id);
+		model.addAttribute("memoryList", memoryList);*/
 		
 		return "dawn.memory.list";
 	}
@@ -44,8 +44,8 @@ public class MemoryController {
 	public String detail(@PathVariable("id")Integer id, Model model
 							,@PathVariable("DMId")Integer DMId) {
 		
-		DawnView memory = service.getMemory(DMId);
-		model.addAttribute("memory", memory);
+		/*DawnView memory = service.getMemory(DMId);
+		model.addAttribute("memory", memory);*/
 		
 		return "dawn.memory.detail";
 	}
