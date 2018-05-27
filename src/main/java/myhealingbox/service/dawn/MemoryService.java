@@ -15,17 +15,19 @@ public class MemoryService {
 	private MemoryDao memoryDao;
 	
 	public List<Memory> getMemoryList(Integer id) {
+		return null;
 
-		List<Memory> memoryList = memoryDao.getList(id);
+		/*List<Memory> memoryList = memoryDao.getList(id);
 		
-		return memoryList;
+		return memoryList;*/
 	}
 
 	public Memory getMemory(Integer id, Integer DMId) {
+		return null;
 		
-		Memory memory = memoryDao.get(id, DMId);
+		/*Memory memory = memoryDao.get(id, DMId);
 		
-		return memory;
+		return memory;*/
 	}	
 
 	public int insertMemory(Memory memory) {
