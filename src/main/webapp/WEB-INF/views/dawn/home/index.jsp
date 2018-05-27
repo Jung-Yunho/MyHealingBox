@@ -12,8 +12,8 @@
 			<div class="list">
 				<div>
 					<ul>
-						<li class="title"><a href="${root}/dawn/memory/list/${categoryList.DCId }">${categoryList.DCTitle}</a></li>
-						<li class="regDate"><a href="${root}/dawn/memory/list/${categoryList.DCId }">${categoryList.DCRegDate}</a></li>
+						<li class="title"><a href="${root}/dawn/memory/list/${categoryList.id }">${categoryList.title}</a></li>
+						<li class="regDate"><a href="${root}/dawn/memory/list/${categoryList.id }">${categoryList.regDate}</a></li>
 					</ul>
 				</div>
 			</div>

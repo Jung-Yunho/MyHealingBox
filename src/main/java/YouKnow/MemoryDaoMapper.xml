@@ -3,12 +3,13 @@
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="myhealingbox.dao.dawn.MemoryDao">
-	<select id="getList" resultMap="myhealingbox.entity.dawn.Memory">
-		select * from Memory order by regDate desc
+	<select id="getList" resultMap="myhealingbox.entity.dawn.DawnView">
+		select * from DawnView order by DMRegDate desc
+		<!-- limit ${(_parameter-1)*15},15 -->
 	</select>
 
-	<select id="get" resultType="myhealingbox.entity.dawn.Memory">
-		select * from Memory where id=#{id}
+	<select id="get" resultType="myhealingbox.entity.dawn.DawnView">
+		select * from DawnView where DMId=#{DMId}
 	</select>
 	
 	<insert id="insert" parameterType="myhealingbox.entity.dawn.Memory">
@@ -17,11 +18,11 @@
 	</insert>
 	
 	<update id="update" parameterType="myhealingbox.entity.dawn.Memory">
-		update Memory set title=#{title}, content=#{content}, attachedFile=#{attachedFile}
+		update Memory set title=#{title}, content=#{content}, attachedFile=${attachedFile}
 		where id=#{id}
 	</update>
 	
 	<delete id="delete" parameterType="Integer">
-		delete from Memory where id=#{id}
+		delete from Memory where DMId=#{id}
 	</delete>
 </mapper>
