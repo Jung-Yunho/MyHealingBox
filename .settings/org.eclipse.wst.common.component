@@ -9,10 +9,7 @@
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
                 
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/resources"/>
-<<<<<<< HEAD
-=======
                 
->>>>>>> branch 'master' of https://github.com/Nhyeonyeong/MyHealingBox.git
         <property name="context-root" value="MyHealingBox"/>
                 
         <property name="java-output-path" value="/MyHealingBox/target/classes"/>
