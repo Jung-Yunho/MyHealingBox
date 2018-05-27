@@ -2,20 +2,21 @@ package myhealingbox.service.day;
 
 import java.util.List;
 
+
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
+
 
 import myhealingbox.dao.day.DayCategoryDao;
 import myhealingbox.dao.day.DayViewDao;
 import myhealingbox.dao.day.WantToDoDao;
-import myhealingbox.dao.night.VideoDao;
+
 import myhealingbox.entity.day.DayCategory;
 import myhealingbox.entity.day.DayView;
 import myhealingbox.entity.day.WantToDo;
-import myhealingbox.entity.night.Video;
+
 
 
 public class DayService {

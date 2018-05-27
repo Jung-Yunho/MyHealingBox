@@ -3,6 +3,7 @@ package myhealingbox.controller.dawn;
 import java.io.UnsupportedEncodingException;
 import java.util.List;
 
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -34,7 +35,6 @@ public class HomeController {
 		List<DawnCategory> categoryList = service.getCategoryList();
 		
 		model.addAttribute("categoryList", categoryList);
-		
 		return "dawn.home.index";
 	}*/
 	
