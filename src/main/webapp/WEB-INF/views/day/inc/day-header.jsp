@@ -12,9 +12,9 @@
 	  
       <nav class="main-menu">
          <h1 class="hidden">메인메뉴</h1>
-         <ul>
-            <li id="ham-button">
-            	<img src="${root }/resources/images/menu_icon.png"/>
+         <ul>                        
+            <li id="ham-button" onclick="openNav()">
+            	<a href="javascript:void(0)"><img src="${root }/resources/images/menu_icon.png"/></a>
             </li>
             <li>
             	<div>
@@ -32,17 +32,17 @@
 <script>
 	
 	window.addEventListener("load", function(event){
-		var hamButton = document.querySelector("#ham-button");
-		var aside = document.querySelector(".aside");
+		/* var hamButton = document.querySelector("#ham-button");
+		var aside = document.querySelector(".aside"); */
 		var logo = document.querySelector(".day");
 
-		hamButton.onclick = function(e){
+		/* hamButton.onclick = function(e){
 			if(aside.classList.contains("show"))
 				aside.classList.remove("show");
 			else
 				aside.classList.add("show");
 			e.preventDefault();
-		};
+		}; */
 		
 		// 여기 왜 안먹을까...
 		logo.onclick = function(){
