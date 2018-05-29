@@ -61,4 +61,13 @@ public class MyBatisVideoDao implements VideoDao {
 		return result;
 	}
 
+	@Override
+	public int update(Integer id) {
+		VideoDao videoDao = sqlSession.getMapper(VideoDao.class);
+		
+		int result = videoDao.update(id);
+		
+		return result;
+	}
+
 }

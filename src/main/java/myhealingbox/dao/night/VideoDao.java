@@ -22,7 +22,7 @@ public interface VideoDao {
 	int insert(Video video);
 
 	int delete(Integer id);
-	
-	/*List<Video> getUrlList(Integer id);*/
+
+	int update(Integer id);
 
 }

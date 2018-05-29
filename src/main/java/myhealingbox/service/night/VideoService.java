@@ -67,5 +67,11 @@ public class VideoService {
 		return 0;
 	}
 
+	public int updateVideo(Integer id) {
+
+		videoDao.update(id);
+		return 0;
+	}
+
 
 }

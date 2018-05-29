@@ -18,6 +18,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -34,10 +35,6 @@ public class VideoController {
 	@Autowired
 	private VideoService service;
 
-	/*@Autowired
-	private CategoryService categoryService;*/
-
-
 	@RequestMapping("list")
 	public String list(Model model) {
 
@@ -48,13 +45,6 @@ public class VideoController {
 		return "night.list";
 	}
 	
-/*	@RequestMapping("url-list")
-	public String urlList(Model model, Integer id) {
-		List<Video> urlList = service.getUrlList(id);
-		model.addAttribute("urlList", urlList);
-		return "night.list";
-	}
-	*/
 	
 	@RequestMapping("{id}")
 	public String detail(@PathVariable("id") Integer id, Model model) {
@@ -66,11 +56,6 @@ public class VideoController {
 		return "night.detail";
 	}
 	
-	/*
-	 * @RequestMapping("edit") public String edit() {
-	 * 
-	 * return "night.edit"; }
-	 */
 
 	// reg는 get과 post 둘 다 처리 하기 때문에 둘로 나눠
 	@RequestMapping(value = "reg", method = RequestMethod.GET)
@@ -137,35 +122,6 @@ public class VideoController {
 		return "redirect:../list";
 	}
 
-	
-/*	@RequestMapping("edit-data")
-	@ResponseBody
-	public String editData() {
-
-		return "수정이 완료되었습니다.";
-	}*/
-
-	/*@RequestMapping(value = "category", method = RequestMethod.GET)
-	public String category(Model model) {
-
-		List<NightCategory> list = categoryService.getCategoryList(1);
-		
-		model.addAttribute("category", list);
-		
-		return "night.category";
-	}
-
-	@RequestMapping(value = "category", method = RequestMethod.POST)
-	public String category() {
-
-		return "redirect:list";
-	}
-	
-	@RequestMapping("category-edit")
-	public String categoryEdit() {
-
-		return "night.category-edit";
-	}*/
 
 	@RequestMapping("favorite")
 	public String favorit(Model model) {
@@ -186,6 +142,14 @@ public class VideoController {
 		model.addAttribute("video", video);
 
 		return "night.edit";
+	}
+	
+	@RequestMapping("{id}/update")
+	public String update(@PathVariable("id") Integer id, Video video) {
+		
+		int result = service.updateVideo(id);
+		
+		return "night.detail";
 	}
 	
 	
