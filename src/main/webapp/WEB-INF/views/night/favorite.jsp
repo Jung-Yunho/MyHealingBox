@@ -25,12 +25,11 @@
 	<c:forEach var="video" items="${favorite}">
 
     <li data-cliplink-id="384597175">
-    	<a href="${video.id }">
+    	<a href="${root }/night/video/${video.id}/update">
         <div class="link_contents">
             <span class="thumb_box">
             
             <img src="https://img.youtube.com/vi/${video.urlPath }/mqdefault.jpg" class="thumb_img"/>
-                    <%-- <img src="${root }/resources/images/night/KakaoTalk_20180328_233238324.png" class="thumb_img" > --%>
                
             </span>
             <span class="item_info">
@@ -62,15 +61,6 @@
         </section>
     </main>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
-<script>
-	
-	$.getJSON("{id}/ajax-list/edit", function(video) {
-		
-	});
-	
-</script>
 
 
 

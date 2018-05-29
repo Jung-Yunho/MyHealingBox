@@ -5,25 +5,6 @@
 
 <main class="list-main"> 
 
-<!-- <script
-		src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
-<script>
-
-$(function() {
-	
-	var iframe = $(".thumb_img");
-	var iframe_src = iframe.attr('src');
-	var youtube_video_id = iframe_src.match(
-			/youtube\.com.*(\?v=|\/embed\/)(.{11})/).pop();
-
-	if (youtube_video_id.length == 11) {
-		var video_thumbnail = $('<img src="//img.youtube.com/vi/'+youtube_video_id+'/mqdefault.jpg">');
-		$(body).append(video_thumbnail);
-	}
-});
-</script> -->
-
 <section>
 
         <h1 class="hidden">
@@ -33,7 +14,7 @@ $(function() {
     <div class="form">
     	<select id="select-box" onchange="location.href=this.value">
 			<option value="${root }/night/video/favorite">자주 보는 영상</option>
-			<option value="폴더1" selected="selected">폴더1</option>
+			<option value="${root }/night/video/list" selected="selected">폴더1</option>
 			<option value="폴더2">폴더2</option>
 			<option value="폴더3">폴더3</option>
 		</select>
@@ -106,7 +87,6 @@ $(function() {
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script>
-	
 
 </script>
 

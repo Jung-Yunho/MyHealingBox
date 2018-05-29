@@ -20,5 +20,9 @@
 	<delete id="delete" parameterType="Integer">
 		delete from PrivateVideo where id=#{id}
 	</delete>
+	
+	<update id="update" parameterType="Integer">
+		update PrivateVideo set hit=#{hit+1} where id=#{id}
+	</update>
 
 </mapper>

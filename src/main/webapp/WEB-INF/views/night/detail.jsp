@@ -33,13 +33,7 @@
 			<div class="detail-textarea"><span>${video.content }</span>
 			</div>
 		</div>
-	<%-- <div class="list-button">
-		<a href="${root }/night/video/list">
-		<input class="list-button" type="submit" value="목록"/>
-		</a>
-	</div> --%>
-   
-   
+
    <nav class="btn-list">
       <h1 class="hidden">버튼목록</h1>
       <ul>

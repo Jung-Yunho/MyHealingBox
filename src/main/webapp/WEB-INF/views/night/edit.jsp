@@ -76,10 +76,10 @@
 			//e.preventDefault();
 		};
 	});
-/* 
-	$.getJSON("${video.id}/ajax-list/edit", function(video) {
+ 
+/* 	$.getJSON("${video.id}/ajax-list/edit", function(video) {
 
-	}); */
+	});  */
 </script>
 
 
