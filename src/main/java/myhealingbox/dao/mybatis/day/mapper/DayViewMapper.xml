@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="myhealingbox.dao.day.DayViewDao">
+	<select id="getDayViewList" resultType="myhealingbox.entity.day.DayView">
+		select * from DayView where DCId=#{id}
+		
+	</select>
+	
+	<select id="getDayViewTitle" resultType="myhealingbox.entity.day.DayView">
+		select distinct DCTitle from DayView where #{id}=DCId
+	</select>
+	
+	<!--
+	<select id="getListTitle" resultType="myhealingbox.entity.day.WantToDo">
+		select title from dayCategory where id=#{id}
+		limit #{(_parameter-1)*15},15
+	</select> -->
+</mapper>

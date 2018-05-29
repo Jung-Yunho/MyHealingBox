@@ -2,6 +2,7 @@ package myhealingbox.dao.mybatis.day;
 
 import java.util.List;
 
+
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -33,14 +34,6 @@ public class MyBatisDayCategoryDao implements DayCategoryDao {
 		return result;
 	}
 
-/*	@Override
-	public String getTitle(String title) {
-		DayCategoryDao dayCategoryDao = sqlSession.getMapper(DayCategoryDao.class);
-		
-		String result = dayCategoryDao.getTitle(title);
-		return result;
-	}*/
-	
 	
 	@Override
 	public int insert(DayCategory dayCategory) {

@@ -5,25 +5,19 @@
 <mapper namespace="myhealingbox.dao.dawn.DawnCategoryDao">
 
 	<select id="getList" resultType="myhealingbox.entity.dawn.DawnCategory">
-		select * from DawnCategory order by regDate desc;
-		<!-- limit ${(_parameter-1)*15},15 -->
+		select * from DawnCategory order by regDate desc
 	</select>
 	
-	<select id="get" resultType="myhealingbox.entity.dawn.DawnCategory">
-		select * from DawnCategory where id=#{id}
-	</select>
+	<insert id="insert" parameterType="myhealingbox.entity.dawn.DawnCategory">
+		insert into DawnCategory(title) values(#{title})
+	</insert>
 	
-	<select id="insert" parameterType="myhealingbox.entity.dawn.DawnCategory">
-		insert into DawnCategory(title)
-		values(#{title})
-	</select>
+	<update id="update" parameterType="myhealingbox.entity.dawn.DawnCategory">
+		update DawnCategory set title=#{title} where id=#{id}
+	</update>
 	
-	<select id="update" parameterType="myhealingbox.entity.dawn.DawnCategory">
-		update DawnCategory set title=#{title} where id=#{id};
-	</select>
+	<delete id="delete" parameterType="Integer">
+		delete from DawnCategory where id=#{id}
+	</delete>
 	
-	<select id="delete" parameterType="myhealingbox.entity.dawn.DawnCategory">
-		delete from DawnCategory where id=#{id};
-	</select>
-
 </mapper>
