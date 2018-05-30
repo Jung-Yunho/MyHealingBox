@@ -46,6 +46,10 @@ public class DayService {
 		return 0;
 	}
 	
+	public int deleteCategory(Integer id) {
+		dayCategoryDao.delete(id);
+		return 0;
+	}
 
 	// 낮 _WantToDo 관련 -------------------------------------------
 	/*public List<WantToDo> getWantToDoList(Integer id) {
@@ -81,7 +85,13 @@ public class DayService {
 		wantToDoDao.insert(wantToDo);
 		return 0;
 	}
+	
+	public int deleteWantToDo(Integer id) {
+		wantToDoDao.delete(id);
+		return 0;
+	}
 
+	
 	
 	// 낮 _DayView 관련 -------------------------------------------
 	public List<DayView> getDayViewList(Integer id) {
@@ -115,11 +125,5 @@ public class DayService {
 
 
 
-	
-	
-
-	
-	
-	
 
 }

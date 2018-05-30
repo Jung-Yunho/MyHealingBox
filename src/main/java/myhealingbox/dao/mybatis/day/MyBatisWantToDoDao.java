@@ -39,7 +39,14 @@ public class MyBatisWantToDoDao implements WantToDoDao{
 		
 		return result;
 	}
-	
+
+	@Override
+	public int delete(Integer id) {
+		WantToDoDao wantToDoDao = sqlSession.getMapper(WantToDoDao.class);
+		
+		int result = wantToDoDao.delete(id);
+		return result;
+	}
 
 
 }

@@ -18,5 +18,9 @@
 		insert into DayCategory(title)
 		values(#{title})
 	</insert>
+	
+	<delete id="delete" parameterType="Integer">
+		delete from DayCategory where id=#{id}
+	</delete>
   
 </mapper>

@@ -15,6 +15,10 @@ public interface WantToDoDao {
 
 	int insert(WantToDo wantToDo);
 
+	int delete(Integer id);
+
+	
+
 	/*@Select("select * from Note order by regDate desc" + 
 	         "     limit ${(page-1)*15},15");*/
 }

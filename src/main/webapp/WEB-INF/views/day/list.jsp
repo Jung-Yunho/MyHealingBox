@@ -25,7 +25,9 @@
 				<p> <fmt:formatDate pattern="yyyy-MM-dd a HH:mm" value="${list.WTDRegDate}" /> </p>
 				<div>
 					<img alt="새벽으로 보내기" src="${root}/resources/images/day/send_icon.png">
-					<img alt="하고싶은일 삭제" src="${root}/resources/images/day/listDel_icon.png">						
+					<a href="${root }/day/${list.WTDId }/delete">
+						<img id="wtdDrop" alt="하고싶은일 삭제" src="${root}/resources/images/day/listDel_icon.png">
+					</a>
 				</div>
 			</div>
 		</div>
@@ -45,5 +47,18 @@
 	</nav>
 	
 	
-
 </main>
+<script>
+	/* window.addEventListener("load",function(event){
+		var dropButton = document.querySelector("#wtdDrop");
+		
+		dropButton.onclick() = function(){
+			if(confirm("삭제하시겠습니까?"))
+			
+		};
+		
+		
+	}); */
+</script>
+
+

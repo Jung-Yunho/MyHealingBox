@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import myhealingbox.dao.day.DayCategoryDao;
+import myhealingbox.dao.day.WantToDoDao;
 import myhealingbox.entity.day.DayCategory;
 
 
@@ -41,6 +42,14 @@ public class MyBatisDayCategoryDao implements DayCategoryDao {
 		
 		int result = dayCategoryDao.insert(dayCategory);		
 		
+		return result;
+	}
+
+	@Override
+	public int delete(Integer id) {
+		DayCategoryDao dayCategoryDao = sqlSession.getMapper(DayCategoryDao.class);
+		
+		int result = dayCategoryDao.delete(id);
 		return result;
 	}
 

@@ -17,4 +17,8 @@
 		insert into WantToDo(id,title,content,dayCategoryId)
 		values(#{id},#{title},#{content},#{dayCategoryId})
 	</insert>
+	
+	<delete id="delete" parameterType="Integer">		
+		delete from WantToDo where id=#{id}
+	</delete>
 </mapper>

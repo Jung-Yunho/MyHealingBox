@@ -3,6 +3,7 @@ package myhealingbox.dao.day;
 import java.util.List;
 
 
+
 import myhealingbox.entity.day.DayCategory;
 
 public interface DayCategoryDao {
@@ -12,6 +13,8 @@ public interface DayCategoryDao {
 	DayCategory get(Integer id);
 	
 	int insert(DayCategory dayCategory);
+
+	int delete(Integer id);
 
 
 }

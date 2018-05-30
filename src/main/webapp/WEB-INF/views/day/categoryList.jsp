@@ -18,7 +18,9 @@
 				
 				<div>
 					<img alt="카테고리명 수정" src="${root}/resources/images/day/categoryEdit_icon.png">
-					<img alt="카테고리 삭제" src="${root}/resources/images/day/categoryDel_icon.png">
+					<a href="${root }/day/categoryList/delete">
+						<img alt="카테고리 삭제" src="${root}/resources/images/day/categoryDel_icon.png">					
+					</a>
 				</div>
 			</div>
 		</c:forEach>

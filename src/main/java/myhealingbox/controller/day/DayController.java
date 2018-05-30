@@ -44,6 +44,14 @@ public class DayController {
 			return "day.categoryList";
 		}
 		
+		@RequestMapping("categoryList/delete")
+		public String categoryDelete( Integer id) {
+
+			int result = service.deleteCategory(id);
+				
+			return "redirect:day.categoryList";
+		}
+		
 	   // list
 	   /*@RequestMapping("{id}")
 	   public String list(@PathVariable("id") Integer id, Model model, String title) {
@@ -63,12 +71,22 @@ public class DayController {
 	
 			List<DayView> lists = service.getDayViewList(id);
 			DayView dayView = service.getDayViewTitle(id);
-	
+
 			model.addAttribute("lists", lists);
 			model.addAttribute("dayView",dayView);
 	
 			return "day.list";
 		}
+		
+		// delete(list)
+		@RequestMapping("{id}/delete")
+		public String delete(@PathVariable("id") Integer id) {
+
+			int result = service.deleteWantToDo(id);
+				
+			return "redirect:day.list";
+		}
+		
 	   
 	   // detail
 		@RequestMapping("{dayCategoryId}/{id}")
@@ -79,6 +97,7 @@ public class DayController {
 			return "day.detail";
 		}	
 	   
+		
 	   // edit
 	   @RequestMapping("edit")
 	   public String edit() {
